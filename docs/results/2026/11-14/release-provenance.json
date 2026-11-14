@@ -1,0 +1,267 @@
+{
+  "schema": "intakelet.release",
+  "version": 1,
+  "release": "0.1.0",
+  "qualifiedSource": "6c7b587f8921d346cb1e7df6f9287c8a4e944ed3",
+  "archive": {
+    "file": "alvarovillalbaa-intakelet-0.1.0.tgz",
+    "bytes": 39058,
+    "sha256": "1022fe5bae7c585e74c6c9684d7355f88f912e9c58c1cdde301a33c2ef9028f5",
+    "members": [
+      {
+        "path": "LICENSE",
+        "mode": 420,
+        "bytes": 1078,
+        "sha256": "6e3ae862a0f98e9f377f98f71fd86160932dad7186416f5509a335703c6fe3b5"
+      },
+      {
+        "path": "src/element.css",
+        "mode": 420,
+        "bytes": 5134,
+        "sha256": "8354ae58da46881bf388bfeca42347657907de91d8f91f8252b8ca235578fdd6"
+      },
+      {
+        "path": "examples/contacts.csv",
+        "mode": 420,
+        "bytes": 157,
+        "sha256": "a9f559e8b0d75e88f4050fcebd7202916b56fe5bf8b913742ce9b95c6ed734d5"
+      },
+      {
+        "path": "package.json",
+        "mode": 420,
+        "bytes": 1146,
+        "sha256": "f96fff727b82e22d65286ba93989b652def61a2002aeb0a9afb5ee79dfe29342"
+      },
+      {
+        "path": "examples/react.jsx",
+        "mode": 420,
+        "bytes": 841,
+        "sha256": "b5239566f859907ba0ca281169d11049900cb80de7db55d429a1745b18d06a93"
+      },
+      {
+        "path": "examples/handbook.md",
+        "mode": 420,
+        "bytes": 420,
+        "sha256": "fd61754160bb2b5670e1a569c9b4c8d573e3cfa041565572686419aa6209826a"
+      },
+      {
+        "path": "docs/references/integration.md",
+        "mode": 420,
+        "bytes": 4094,
+        "sha256": "51970b6f8e5026aae84f102a876fea1a9adfe861479cb40e0b4b5deecaf96c14"
+      },
+      {
+        "path": "docs/specs/qualification-v1.md",
+        "mode": 420,
+        "bytes": 5861,
+        "sha256": "dc2c9da744ae9f859cfb1fe0504dd873261b6c31091de507e5b198bd9aea7f85"
+      },
+      {
+        "path": "README.md",
+        "mode": 420,
+        "bytes": 3996,
+        "sha256": "43c6b85b1d4eda7c1da63751809afa2e83bb151cc6467474d94e2936c40c7703"
+      },
+      {
+        "path": "docs/specs/sdk-v1.md",
+        "mode": 420,
+        "bytes": 4286,
+        "sha256": "de01357ba3d3af28fc8056d1d54ced9ae49255dbbeb1022ea1a8b9a9c1605760"
+      },
+      {
+        "path": "docs/references/sources.md",
+        "mode": 420,
+        "bytes": 1830,
+        "sha256": "600171b89bb688f384883b01c0e4b122ef7ebbac3064cd63749889b917640e9b"
+      },
+      {
+        "path": "src/browser-research.mjs",
+        "mode": 420,
+        "bytes": 1885,
+        "sha256": "db281a0072caf8c950a665f0cc91e74a54153ed0770d020a94824a237e7197bc"
+      },
+      {
+        "path": "src/csv.mjs",
+        "mode": 420,
+        "bytes": 2205,
+        "sha256": "eb7713e38b23bc45d774e37a87c8737046109b22395b8d3eb6aa949aa7a37cc2"
+      },
+      {
+        "path": "src/element.mjs",
+        "mode": 420,
+        "bytes": 22433,
+        "sha256": "e73b4fe678a12e1484191b0776e9ee7e667ed1ae1fab54ab61d6b4afcd70f96d"
+      },
+      {
+        "path": "src/host.mjs",
+        "mode": 420,
+        "bytes": 9152,
+        "sha256": "8e7bc7230e17eb816bee18f833305dfb4a9ccb02b86631ddc5102867c711f902"
+      },
+      {
+        "path": "src/index.mjs",
+        "mode": 420,
+        "bytes": 349,
+        "sha256": "04913f7ff2dda5b39eb9c19ddc17ff2539cf27f5fe4706102d8349b83da7ca4c"
+      },
+      {
+        "path": "src/indexeddb.mjs",
+        "mode": 420,
+        "bytes": 4297,
+        "sha256": "cc8e7365e50882bc62fcc6b9a6ce7b5aee93c0e9ad19c87fcd21a3b6286c9814"
+      },
+      {
+        "path": "src/ingest.mjs",
+        "mode": 420,
+        "bytes": 5753,
+        "sha256": "0e58e507ec1436bc5c4e36c5fb5acfd303d7450acd9f714416c2ed75bfb8b533"
+      },
+      {
+        "path": "bin/intakelet.mjs",
+        "mode": 493,
+        "bytes": 6447,
+        "sha256": "0dbdc524f84833a0fdc8caa5060dae1183456245705d274452694c5c97394a34"
+      },
+      {
+        "path": "src/knowledge.mjs",
+        "mode": 420,
+        "bytes": 2626,
+        "sha256": "6f52404c6c95d31d4f1ab0ec445141d8a30894b8eacf6faeccc29383c663de38"
+      },
+      {
+        "path": "examples/node.mjs",
+        "mode": 420,
+        "bytes": 807,
+        "sha256": "b0e12fe8ccf0ac7198d580e1e3c15be2bce106e19a3a513d9bcc425ec06b1903"
+      },
+      {
+        "path": "src/node.mjs",
+        "mode": 420,
+        "bytes": 329,
+        "sha256": "c7209e0242e234d794336dacc1fd6bd6eed157f4772b1bf578eefa37a1a34b9a"
+      },
+      {
+        "path": "src/plan.mjs",
+        "mode": 420,
+        "bytes": 6573,
+        "sha256": "5ba374b449dbd120755bba89992c5b065c4cf9b5929d6d92caa3f3d2fda92b0b"
+      },
+      {
+        "path": "src/react.mjs",
+        "mode": 420,
+        "bytes": 722,
+        "sha256": "d43bf113d4f05dbb8bf23ce2de34e6a19ad246393e806796cf20dfb40d7acb6a"
+      },
+      {
+        "path": "src/research.mjs",
+        "mode": 420,
+        "bytes": 13746,
+        "sha256": "060a2e156a70fdcc202dcd350f479c78e256ea156e1c728173429b2de0d48787"
+      },
+      {
+        "path": "src/strict-json.mjs",
+        "mode": 420,
+        "bytes": 3572,
+        "sha256": "53dfdceeeb5c465e69dd322c8dd353b2799987728de46646f2aa8220900179e3"
+      },
+      {
+        "path": "src/transport.mjs",
+        "mode": 420,
+        "bytes": 5580,
+        "sha256": "7b40b6fb973af21749524990a85e7d505727fe0a70d7465cdbeb40edf325b167"
+      },
+      {
+        "path": "src/values.mjs",
+        "mode": 420,
+        "bytes": 2495,
+        "sha256": "b73108a5e1905cd517cd012c7af5411ab4d744d3767da0acf7e4497fa03384f9"
+      },
+      {
+        "path": "src/element.d.mts",
+        "mode": 420,
+        "bytes": 812,
+        "sha256": "02f532d07d9f369141dca7ee71796f509d4cadfe306955a23822fa60432b809b"
+      },
+      {
+        "path": "src/index.d.mts",
+        "mode": 420,
+        "bytes": 5638,
+        "sha256": "438ddc3a0154b4ed3000e28ad4cac2c7507f9d6571267c6541d5a943eaee6f9a"
+      },
+      {
+        "path": "src/node.d.mts",
+        "mode": 420,
+        "bytes": 174,
+        "sha256": "d857d5e19137a76dfa246dd70ca4df02fd82aff7e822bbd072bf629a7596df99"
+      },
+      {
+        "path": "src/react.d.mts",
+        "mode": 420,
+        "bytes": 350,
+        "sha256": "8455df3857ee8406427c855d51c4de4cd346420ea8d9b5bb8db9b54d1ad8e7b5"
+      }
+    ]
+  },
+  "installedRuntime": {
+    "source": "036f865fea6749b2cbf6333b55b2a43d0cc5d2ad",
+    "run": 43593597498,
+    "passedCases": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08"
+    ],
+    "overallRunPassed": false,
+    "laterFailure": "React18 optional Article.span declaration",
+    "allRuntimeBytesAndModesEqualToRelease": true
+  },
+  "typedAndSSR": {
+    "source": "0c6012bf33cca1d71140a8852f6e953f47de6d5f",
+    "run": 43594982551,
+    "passed": true,
+    "allPublicDeclarationsEqualToRelease": true
+  },
+  "browser": {
+    "initialRun": 43595531837,
+    "initialPassed": [
+      "E01",
+      "E02",
+      "E03",
+      "E04-18",
+      "E04-19",
+      "E06-390",
+      "E06-320"
+    ],
+    "initialOverallPassed": false,
+    "repairRun": 43595737176,
+    "repairPassed": [
+      "E05"
+    ],
+    "repairOverallPassed": true,
+    "archiveEqualAcrossBrowserRuns": true,
+    "publicDeployment": "dpl_HLz4UrN1ur3gKRK3WmK9x2mV8sWx",
+    "publicSource": "1ae34cdbaed79c341897ee8f8cdad517d7c0540c",
+    "publicURL": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/",
+    "anonymousBodies": 16,
+    "anonymousBytes": 417992
+  },
+  "earlierScopes": {
+    "core": 30,
+    "virtualResearch": 15,
+    "networkInputGuards": 5
+  },
+  "offlineInstallBoundary": "Fresh consumer, same archive, public dependencies pre-cached by normal archive install; not dependency-free fresh-machine proof.",
+  "limits": [
+    "No npm-registry publication",
+    "No LLM or measured onboarding speed claim",
+    "Bounded static-site research; public demo same-origin only",
+    "Host owns authentication/workspace authority/server persistence/rate limits",
+    "No physical devices or Safari/Firefox qualification",
+    "Notion intent snapshot is unverified 10 November, edited 3 November"
+  ],
+  "finalSource": "See separate final-source-and-deployment.json asset after evidence/control retirement."
+}

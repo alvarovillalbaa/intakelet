@@ -1,0 +1,365 @@
+{
+  "articles": [
+    {
+      "id": "kb-a0496999683d82f4d08ab48353cc229ca5a3aa22375ca3bb60f1437238bb7709",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+      "span": {
+        "end": 420,
+        "start": 0
+      },
+      "text": "# Morrow Works onboarding\n\nThis is authored fictional company information for the Intakelet playground.\n\n## The first week\n\nNew collaborators review the product guide and meet their named project owner.\nThe project owner confirms scope before any customer work begins.\n\n## Keeping context\n\nKeep source links with project notes. Record a question when information is\nmissing rather than inventing a policy or commitment.\n",
+      "title": "Morrow Works onboarding"
+    },
+    {
+      "id": "kb-b88ec6771dde52548606099229444d5c64a4431e4f8055a33289208058c2b784",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-0fc46b08954683b29a57dd21ec7b4014fc8af931f2d4c7bd5de89dfa7aea24df",
+      "span": {
+        "end": 300,
+        "start": 0
+      },
+      "text": "# Morrow Works — fictional company\n\nMorrow Works\n\nWe design modular objects for calmer desks. This company, its people, products and policies are authored fiction for the Intakelet demo.\n\nMade for small workspaces\n\nOur sample range contains Loop Stand and Desk Tray. Both use replaceable components.\n",
+      "title": "Morrow Works — fictional company",
+      "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/"
+    },
+    {
+      "id": "kb-78e4cee506efb473e82444eb7ad3e53f4d15ca3932882eab4b1f4caeac266a4a",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-be63316de724917d7da40f7e30a637609217b130fb625313d8f7952f37f0935d",
+      "span": {
+        "end": 314,
+        "start": 0
+      },
+      "text": "# Products — Morrow Works fixture\n\nProducts\n\nLoop Stand\n\nLoop Stand is a fictional adjustable stand for small notebooks. Its modular joints can be replaced separately.\n\nDesk Tray\n\nDesk Tray is a fictional shallow organizer with three removable dividers. It belongs to the same authored sample range.\n\nCompany home\n",
+      "title": "Products — Morrow Works fixture",
+      "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/products.html"
+    },
+    {
+      "id": "kb-219f5fa40989fbb3e94b81d335ff72e4494ee34f959abeaab08484ab4b37a930",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-30168f56968273073d412299e5d02102a181eb5f9ca6f2e971d1f630c27ef424",
+      "span": {
+        "end": 319,
+        "start": 0
+      },
+      "text": "# About — Morrow Works fixture\n\nAbout our studio\n\nMorrow Works is a fictional two-person studio. Ada Example coordinates projects and Ben Sample maintains the product guide.\n\nEvery statement on this website was authored for software checks. It does not describe a real company or employment relationship.\n\nCompany home\n",
+      "title": "About — Morrow Works fixture",
+      "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/about.html"
+    },
+    {
+      "id": "kb-58f544483da3ae3fc7570d1f155ea6ab50d791c58cf38d6d6612de2021220060",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-c784c873ee38066670ca22222c81162c715281813e31beb899762c52d53ffede",
+      "span": {
+        "end": 306,
+        "start": 0
+      },
+      "text": "# Support — Morrow Works fixture\n\nSupport and source notes\n\nFor this fictional workflow, a project owner responds to product questions within two sample working days.\n\nRecord the product name, the source page and the unresolved question. Do not invent a warranty, promise or contact address.\n\nCompany home\n",
+      "title": "Support — Morrow Works fixture",
+      "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/support.html"
+    },
+    {
+      "id": "kb-b3c7bc1a924b23b8c01ace183026d9b22cd0e5d333471f940de44b7db084a209",
+      "method": "structured_records",
+      "part": 0,
+      "provenance": [
+        {
+          "row": 0,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 74,
+            "start": 32
+          }
+        },
+        {
+          "row": 2,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 157,
+            "start": 115
+          }
+        },
+        {
+          "row": 1,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 115,
+            "start": 74
+          }
+        }
+      ],
+      "recordIds": [
+        "rec-b677573399a3d455c393a9b9678ca1db91a9c67bb9c9bef9213180236ba3a693",
+        "rec-627955756fb32c2381463df41b7ad9c04f45ad8a1e44ab789506e5f94121807a"
+      ],
+      "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+      "text": "[{\"company\":\"Morrow Works\",\"email\":\"ada@example.test\",\"name\":\"Ada Example\"},{\"company\":\"Morrow Works\",\"email\":\"ben@example.test\",\"name\":\"Ben Sample\"}]",
+      "title": "Imported records"
+    }
+  ],
+  "draft": {
+    "documents": [
+      {
+        "format": "markdown",
+        "sourceId": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+        "title": "Morrow Works onboarding"
+      },
+      {
+        "format": "markdown",
+        "sourceId": "src-0fc46b08954683b29a57dd21ec7b4014fc8af931f2d4c7bd5de89dfa7aea24df",
+        "title": "Morrow Works — fictional company"
+      },
+      {
+        "format": "markdown",
+        "sourceId": "src-be63316de724917d7da40f7e30a637609217b130fb625313d8f7952f37f0935d",
+        "title": "Products — Morrow Works fixture"
+      },
+      {
+        "format": "markdown",
+        "sourceId": "src-30168f56968273073d412299e5d02102a181eb5f9ca6f2e971d1f630c27ef424",
+        "title": "About — Morrow Works fixture"
+      },
+      {
+        "format": "markdown",
+        "sourceId": "src-c784c873ee38066670ca22222c81162c715281813e31beb899762c52d53ffede",
+        "title": "Support — Morrow Works fixture"
+      }
+    ],
+    "draftId": "sha256:0da622e103ca91d3cafea281d0ff1e0de7e21a2c7973fa9800dae365645dfcc2",
+    "duplicates": [],
+    "schema": "intakelet.draft",
+    "sources": [
+      {
+        "bytes": 157,
+        "format": "csv",
+        "id": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+        "name": "contacts.csv",
+        "sha256": "a9f559e8b0d75e88f4050fcebd7202916b56fe5bf8b913742ce9b95c6ed734d5",
+        "text": "Full Name,Email Address,Company\nAda Example,ada@example.test,Morrow Works\nBen Sample,ben@example.test,Morrow Works\nAda Example,ada@example.test,Morrow Works\n"
+      },
+      {
+        "bytes": 420,
+        "format": "markdown",
+        "id": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+        "name": "handbook.md",
+        "sha256": "fd61754160bb2b5670e1a569c9b4c8d573e3cfa041565572686419aa6209826a",
+        "text": "# Morrow Works onboarding\n\nThis is authored fictional company information for the Intakelet playground.\n\n## The first week\n\nNew collaborators review the product guide and meet their named project owner.\nThe project owner confirms scope before any customer work begins.\n\n## Keeping context\n\nKeep source links with project notes. Record a question when information is\nmissing rather than inventing a policy or commitment.\n"
+      },
+      {
+        "bytes": 302,
+        "format": "markdown",
+        "id": "src-0fc46b08954683b29a57dd21ec7b4014fc8af931f2d4c7bd5de89dfa7aea24df",
+        "name": "website/850e010d27425be9a0c9.md",
+        "sha256": "dbf2f358fffc9939208cae0ca839921baab15ef9ff1a571dcc5c96d0a1a7acdc",
+        "text": "# Morrow Works — fictional company\n\nMorrow Works\n\nWe design modular objects for calmer desks. This company, its people, products and policies are authored fiction for the Intakelet demo.\n\nMade for small workspaces\n\nOur sample range contains Loop Stand and Desk Tray. Both use replaceable components.\n",
+        "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/"
+      },
+      {
+        "bytes": 316,
+        "format": "markdown",
+        "id": "src-be63316de724917d7da40f7e30a637609217b130fb625313d8f7952f37f0935d",
+        "name": "website/b462291bbdf2718b0b04.md",
+        "sha256": "53c935ffa06b0458bd5b7b2f8760e015db5d5da757c11b2b6d857fe75ef69ab3",
+        "text": "# Products — Morrow Works fixture\n\nProducts\n\nLoop Stand\n\nLoop Stand is a fictional adjustable stand for small notebooks. Its modular joints can be replaced separately.\n\nDesk Tray\n\nDesk Tray is a fictional shallow organizer with three removable dividers. It belongs to the same authored sample range.\n\nCompany home\n",
+        "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/products.html"
+      },
+      {
+        "bytes": 321,
+        "format": "markdown",
+        "id": "src-30168f56968273073d412299e5d02102a181eb5f9ca6f2e971d1f630c27ef424",
+        "name": "website/d03a73c93ba3d1a8e594.md",
+        "sha256": "3035d5936bb8cca20ec24d946e8e655a6d07d0dba885e603fec429cdcd7a9f8f",
+        "text": "# About — Morrow Works fixture\n\nAbout our studio\n\nMorrow Works is a fictional two-person studio. Ada Example coordinates projects and Ben Sample maintains the product guide.\n\nEvery statement on this website was authored for software checks. It does not describe a real company or employment relationship.\n\nCompany home\n",
+        "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/about.html"
+      },
+      {
+        "bytes": 308,
+        "format": "markdown",
+        "id": "src-c784c873ee38066670ca22222c81162c715281813e31beb899762c52d53ffede",
+        "name": "website/79a40ee19bb68822f046.md",
+        "sha256": "5017ab2b5d15479b345e4c57e0cdea9e4e01a256324620d005417de2714141cd",
+        "text": "# Support — Morrow Works fixture\n\nSupport and source notes\n\nFor this fictional workflow, a project owner responds to product questions within two sample working days.\n\nRecord the product name, the source page and the unresolved question. Do not invent a warranty, promise or contact address.\n\nCompany home\n",
+        "url": "https://intakelet-ajbpylny4-my-team-4f230354.vercel.app/fixtures/company/support.html"
+      }
+    ],
+    "tables": [
+      {
+        "columns": [
+          "Full Name",
+          "Email Address",
+          "Company"
+        ],
+        "rows": [
+          {
+            "index": 0,
+            "span": {
+              "end": 74,
+              "start": 32
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ada@example.test",
+              "Full Name": "Ada Example"
+            }
+          },
+          {
+            "index": 1,
+            "span": {
+              "end": 115,
+              "start": 74
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ben@example.test",
+              "Full Name": "Ben Sample"
+            }
+          },
+          {
+            "index": 2,
+            "span": {
+              "end": 157,
+              "start": 115
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ada@example.test",
+              "Full Name": "Ada Example"
+            }
+          }
+        ],
+        "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+        "suggestion": {
+          "kind": "contact",
+          "mapping": {
+            "company": "Company",
+            "email": "Email Address",
+            "name": "Full Name"
+          },
+          "reason": "Contact fields suggested from the “Email Address” column. Review before importing."
+        }
+      }
+    ],
+    "totals": {
+      "bytes": 1824,
+      "duplicateFiles": 0,
+      "files": 6,
+      "rows": 3
+    },
+    "version": 1,
+    "workspaceId": "playground"
+  },
+  "insights": [
+    {
+      "id": "records",
+      "label": "Reviewed records",
+      "method": "count",
+      "value": 2
+    },
+    {
+      "id": "contacts",
+      "label": "Contact records",
+      "method": "count",
+      "value": 2
+    },
+    {
+      "id": "documents",
+      "label": "Source documents",
+      "method": "count",
+      "value": 5
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge chunks",
+      "method": "count",
+      "value": 6
+    },
+    {
+      "id": "missing_names",
+      "label": "Contacts without a name",
+      "method": "field_coverage",
+      "value": 0
+    },
+    {
+      "id": "duplicates",
+      "label": "Identical rows merged",
+      "method": "exact_comparison",
+      "value": 1
+    },
+    {
+      "id": "excluded",
+      "label": "Explicitly excluded rows",
+      "method": "review_selection",
+      "value": 0
+    },
+    {
+      "id": "invalid",
+      "label": "Invalid/conflicting rows excluded",
+      "method": "validated_exclusion",
+      "value": 0
+    }
+  ],
+  "issues": [],
+  "planId": "sha256:c0cb0753b95959e7af61fe98aa1eaf985256ad6a0acf35e1597e45fcccc0e6f9",
+  "records": [
+    {
+      "data": {
+        "company": "Morrow Works",
+        "email": "ada@example.test",
+        "name": "Ada Example"
+      },
+      "id": "rec-b677573399a3d455c393a9b9678ca1db91a9c67bb9c9bef9213180236ba3a693",
+      "kind": "contact",
+      "provenance": [
+        {
+          "row": 0,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 74,
+            "start": 32
+          }
+        },
+        {
+          "row": 2,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 157,
+            "start": 115
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "company": "Morrow Works",
+        "email": "ben@example.test",
+        "name": "Ben Sample"
+      },
+      "id": "rec-627955756fb32c2381463df41b7ad9c04f45ad8a1e44ab789506e5f94121807a",
+      "kind": "contact",
+      "provenance": [
+        {
+          "row": 1,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 115,
+            "start": 74
+          }
+        }
+      ]
+    }
+  ],
+  "review": {
+    "excludedRows": [],
+    "mappings": {},
+    "skipInvalid": false
+  },
+  "schema": "intakelet.plan",
+  "version": 1,
+  "workspaceId": "playground"
+}
