@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "node",
+    "--test",
+    "tests/unit/core.test.mjs"
+  ],
+  "exit": 0,
+  "stdoutSha256": "b963a54e7c63e79880f1e37bb4b84a086c255381d2457d91d7b6ba8105c0d86c",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

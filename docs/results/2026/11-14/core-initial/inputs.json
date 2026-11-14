@@ -1,0 +1,47 @@
+[
+  {
+    "path": "src/strict-json.mjs",
+    "bytes": 3572,
+    "sha256": "53dfdceeeb5c465e69dd322c8dd353b2799987728de46646f2aa8220900179e3"
+  },
+  {
+    "path": "src/values.mjs",
+    "bytes": 2495,
+    "sha256": "b73108a5e1905cd517cd012c7af5411ab4d744d3767da0acf7e4497fa03384f9"
+  },
+  {
+    "path": "src/csv.mjs",
+    "bytes": 2205,
+    "sha256": "eb7713e38b23bc45d774e37a87c8737046109b22395b8d3eb6aa949aa7a37cc2"
+  },
+  {
+    "path": "src/ingest.mjs",
+    "bytes": 5753,
+    "sha256": "0e58e507ec1436bc5c4e36c5fb5acfd303d7450acd9f714416c2ed75bfb8b533"
+  },
+  {
+    "path": "src/knowledge.mjs",
+    "bytes": 2626,
+    "sha256": "6f52404c6c95d31d4f1ab0ec445141d8a30894b8eacf6faeccc29383c663de38"
+  },
+  {
+    "path": "src/plan.mjs",
+    "bytes": 6573,
+    "sha256": "5ba374b449dbd120755bba89992c5b065c4cf9b5929d6d92caa3f3d2fda92b0b"
+  },
+  {
+    "path": "src/host.mjs",
+    "bytes": 9152,
+    "sha256": "8e7bc7230e17eb816bee18f833305dfb4a9ccb02b86631ddc5102867c711f902"
+  },
+  {
+    "path": "src/index.mjs",
+    "bytes": 349,
+    "sha256": "04913f7ff2dda5b39eb9c19ddc17ff2539cf27f5fe4706102d8349b83da7ca4c"
+  },
+  {
+    "path": "tests/unit/core.test.mjs",
+    "bytes": 11819,
+    "sha256": "e11f21aa4a285ba69c7e12d9669e39bf48582439c45f9210df8adab9da7ad359"
+  }
+]
