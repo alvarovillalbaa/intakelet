@@ -1,0 +1,82 @@
+{
+  "name": "intakelet-offline-consumer",
+  "version": "0.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "intakelet-offline-consumer",
+      "version": "0.0.0",
+      "dependencies": {
+        "@alvarovillalbaa/intakelet": "file:../../../home/runner/work/_temp/intakelet-artifact/alvarovillalbaa-intakelet-0.1.0.tgz"
+      }
+    },
+    "node_modules/@alvarovillalbaa/intakelet": {
+      "version": "0.1.0",
+      "resolved": "file:../../../home/runner/work/_temp/intakelet-artifact/alvarovillalbaa-intakelet-0.1.0.tgz",
+      "integrity": "sha512-tz+zhEZNxWzpd8uMzO358NhJKDlOsvDbR30AQDV+XG8Wu9yRvyZ5rsHWLqTQIlH6ntBQg0QyRFmWzVDIQVhqVg==",
+      "license": "MIT",
+      "dependencies": {
+        "ipaddr.js": "2.5.0",
+        "parse5": "8.1.1",
+        "robots-parser": "3.0.1"
+      },
+      "bin": {
+        "intakelet": "bin/intakelet.mjs"
+      },
+      "engines": {
+        "node": ">=24"
+      },
+      "peerDependencies": {
+        "react": "^18.3.1 || ^19.0.0"
+      },
+      "peerDependenciesMeta": {
+        "react": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/entities": {
+      "version": "9.0.0",
+      "resolved": "https://registry.npmjs.org/entities/-/entities-9.0.0.tgz",
+      "integrity": "sha512-oJFNDJg3kTPwAD1cNn2+WmUq4wFoo09npc3Ydf1D7ED4smRiWrsKnaLxykrTWgyGEcusc87P5dxlAleol9kpkg==",
+      "license": "BSD-2-Clause",
+      "engines": {
+        "node": ">=20.19.0"
+      },
+      "funding": {
+        "url": "https://github.com/fb55/entities?sponsor=1"
+      }
+    },
+    "node_modules/ipaddr.js": {
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.5.0.tgz",
+      "integrity": "sha512-aq+t5NAc+cS6rZQQVWC2x98CPqGtKKTMDd4Gaodv0wShnItdKg/51djkGJ1hqH+Oy0ivDftCbSLCQob8zso01w==",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 10"
+      }
+    },
+    "node_modules/parse5": {
+      "version": "8.1.1",
+      "resolved": "https://registry.npmjs.org/parse5/-/parse5-8.1.1.tgz",
+      "integrity": "sha512-EcR/6WDcU7b2N3vQSxKALCk9lXGtUMQxXio008OEMBE0kavu/7JLfBEeFPzi43nMqVDSbEn3QCK+BMCc9zO//w==",
+      "license": "MIT",
+      "dependencies": {
+        "entities": "^9.0.0"
+      },
+      "funding": {
+        "url": "https://github.com/inikulin/parse5?sponsor=1"
+      }
+    },
+    "node_modules/robots-parser": {
+      "version": "3.0.1",
+      "resolved": "https://registry.npmjs.org/robots-parser/-/robots-parser-3.0.1.tgz",
+      "integrity": "sha512-s+pyvQeIKIZ0dx5iJiQk1tPLJAWln39+MI5jtM8wnyws+G5azk+dMnMX0qfbqNetKKNgcWWOdi0sfm+FbQbgdQ==",
+      "license": "MIT",
+      "engines": {
+        "node": ">=10.0.0"
+      }
+    }
+  }
+}

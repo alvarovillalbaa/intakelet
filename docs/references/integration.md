@@ -2,7 +2,7 @@
 
 Last updated: 2026-11-14
 
-Use the actual release archive when published, or a source checkout. The root
+Use the actual0.1.0 GitHub release archive, or a source checkout. The root
 module contains file analysis/planning/knowledge/reference-host contracts.
 `/element` provides the browser component, IndexedDB host and same-origin demo
 research. `/react` wraps that element. `/node` owns native public HTTPS research.
@@ -69,5 +69,6 @@ CLI: `inspect`, `plan`, `research`, `apply`, `search`; use `intakelet --help`.
 Every output must be a new file. `apply` uses an explicit workspace/revision and
 optional previous snapshot, then writes a new snapshot; it never replaces your
 database. The host API is the integration for actual application persistence.
-Node24+, modern browser/IndexedDB. Installed/React/browser/native checks remain
-pending until their own result receipts exist; source examples are not proof.
+Node24+, modern browser/IndexedDB. Exact installed/React/browser/native check
+receipts live under docs/results/2026/11-14. Read each boundary separately;
+source examples and server rendering alone do not prove browser behavior.

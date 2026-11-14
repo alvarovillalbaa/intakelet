@@ -52,9 +52,31 @@ compiler rejected the optional Article.span declaration. Preserve that failure.
 Clients mode qualifies the corrected discriminated Article declaration and the
 previously unrun React18 SSR, React19 types/SSR and Node-only types. It packs and
 installs a real archive and compares all members/modes with the retained first
-archive: only index.d.mts, this qualification document and README may differ.
+archive: only index.d.mts, this qualification document, integration guide and
+README may differ.
 Every runtime module, stylesheet, manifest, example and other member must remain
 byte-identical. Do not replay the eight closed runtime cases for this type fix.
+
+Browser mode uses pinned Playwright1.56.1 on Ubuntu24.04, the actual packed SDK,
+and React dependency version/integrity identities from the accepted client
+locks. Optional Browserbase skill packages are unavailable locally; use this
+repo-owned Playwright fixture rather than installing more local tooling.
+Rebuild the playground and anonymously GET every deployed static body; retain
+all16 bytes/hashes and require equality before browser acceptance. Use an
+immutable public Intakelet deployment URL, no bypass/authenticated fetch.
+
+Eight concrete scenarios (E01,E02,E03,E04-18,E04-19,E05,E06-390,E06-320) cover:
+native file inputs; explicit mapping/row review and download/import/search;
+invalid-file preservation and literal markup; native IndexedDB reload and
+two-page CAS/retry/workspace isolation; delayed snapshot/research/commit across
+context changes; separate component IDs; installed React18/19 StrictMode with
+current callback and host changes; actual same-origin authored-site research,
+robots/script/offsite refusal and aborted request; native file chooser, touch
+row/import, keyboard focus and persistence at390/320px. Delayed hosts and
+aborted content are labelled application/browser fixtures, not remote storage
+or arbitrary Internet proof. Contexts, Chromium and loopback fixture server
+must close; full streams/requests/downloads/screenshots are retained. No model,
+private data, real account, new database service or public crawling proxy.
 
 Every remote job has one public Ubuntu24.04 runner,20minute cap and17minute
 internal deadline. Use nonce/inode-owned scratch, tracked-file copy only,

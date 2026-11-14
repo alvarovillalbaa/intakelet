@@ -102,7 +102,7 @@ try:
                   "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
                  for p in sorted((work / "dist").rglob("*")) if p.is_file()]
         (output / "build-manifest.json").write_text(json.dumps(files, indent=2))
-    elif receipt["mode"] in ["package", "clients"]:
+    elif receipt["mode"] in ["package", "clients", "browser"]:
         execute("pack", ["npm", "pack", "--json", "--ignore-scripts", "--pack-destination", str(output)], 30)
         tarball = next(output.glob("*.tgz"))
         with tarfile.open(tarball) as archive:
@@ -115,7 +115,7 @@ try:
                 if archive.extractfile(member).read() != (work / member.name.removeprefix("package/")).read_bytes():
                     raise RuntimeError("Archive member differs from its exact source")
         (output / "package-manifest.json").write_text(json.dumps({"file": tarball.name, "bytes": tarball.stat().st_size, "sha256": hashlib.sha256(tarball.read_bytes()).hexdigest(), "members": members}, indent=2))
-        if receipt["mode"] == "clients":
+        if receipt["mode"] in ["clients", "browser"]:
             baseline = work / "docs/results/2026/11-14/package-initial/alvarovillalbaa-intakelet-0.1.0.tgz"
             if hashlib.sha256(baseline.read_bytes()).hexdigest() != "0773ea4f864c3a139dff8eda00746c8c3af0b2d317dfc1971748fddcda2e53f6":
                 raise RuntimeError("The accepted installed-runtime baseline changed")
@@ -125,7 +125,7 @@ try:
                 if set(old_members) != set(new_members):
                     raise RuntimeError("Client-only qualification changed package membership")
                 changed = [name for name in old_members if old_members[name].mode != new_members[name].mode or old.extractfile(old_members[name]).read() != new.extractfile(new_members[name]).read()]
-                allowed = {"package/src/index.d.mts", "package/docs/specs/qualification-v1.md", "package/README.md"}
+                allowed = {"package/src/index.d.mts", "package/docs/specs/qualification-v1.md", "package/docs/references/integration.md", "package/README.md"}
                 if any(name not in allowed for name in changed):
                     raise RuntimeError("Client-only qualification changed accepted runtime payload: " + repr(changed))
                 receipt["runtimeBaseline"] = {"sha256": hashlib.sha256(baseline.read_bytes()).hexdigest(), "changedMembers": changed, "unchangedMembers": len(old_members) - len(changed), "allRuntimeBytesAndModesEqual": True}
@@ -160,6 +160,15 @@ try:
             shutil.copyfile(work / f"tests/fixtures/{edition}/package.json", target / "package.json")
             execute(edition + "-dependencies", ["npm", "install", "--ignore-scripts", "--no-audit", "--no-fund", str(tarball)], 180, cwd=target)
             shutil.copyfile(target / "package-lock.json", output / (edition + "-lock.json"))
+            if receipt["mode"] == "browser":
+                observed = json.loads((work / f"docs/results/2026/11-14/clients/{edition}-lock.json").read_text())
+                actual = json.loads((target / "package-lock.json").read_text())
+                for name, package in observed["packages"].items():
+                    if name and name != "node_modules/@alvarovillalbaa/intakelet":
+                        if any(actual["packages"][name].get(key) != package.get(key) for key in ["version", "resolved", "integrity"]):
+                            raise RuntimeError("Browser consumer dependency drifted from qualified client: " + name)
+                shutil.copyfile(work / "tests/fixtures/browser-entry.mjs", target / "browser-entry.mjs")
+                continue
             shutil.copyfile(work / "tests/fixtures/typed-consumer.tsx", target / "consumer.tsx")
             shutil.copyfile(work / "tests/fixtures/ssr-consumer.mjs", target / "ssr.mjs")
             config = {"compilerOptions": {"target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext", "jsx": "react-jsx", "strict": True, "noEmit": True, "skipLibCheck": False, "lib": ["ES2022", "DOM", "DOM.Iterable"], "types": ["node", "react", "react-dom"]}, "include": ["consumer.tsx"]}
@@ -173,6 +182,18 @@ try:
                 config["include"] = ["node-consumer.mts"]
                 (target / "node-tsconfig.json").write_text(json.dumps(config))
                 execute("node-only-types", ["node", str(target / "node_modules/typescript/bin/tsc"), "-p", "node-tsconfig.json"], 90, cwd=target)
+        if receipt["mode"] == "browser":
+            env["INTAKELET_BROWSER_FIXTURES"] = str(scratch)
+            tools = scratch / "browser-tools"
+            tools.mkdir()
+            env["INTAKELET_BROWSER_TOOLS"] = str(tools)
+            shutil.copyfile(work / "tests/fixtures/browser/package.json", tools / "package.json")
+            execute("browser-dependencies", ["npm", "install", "--ignore-scripts", "--no-audit", "--no-fund"], 180, cwd=tools)
+            shutil.copyfile(tools / "package-lock.json", output / "browser-lock.json")
+            execute("browser-install", ["node", str(tools / "node_modules/playwright/cli.js"), "install", "--with-deps", "chromium"], 240)
+            execute("consumer-bundles", ["node", "tests/scripts/build-consumers.mjs"], 60)
+            execute("playground-build", ["npm", "run", "build"], 60)
+            execute("browser", ["node", "tests/e2e/browser.mjs"], 300)
     else:
         raise RuntimeError("Unknown qualification mode")
     receipt["passed"] = True
