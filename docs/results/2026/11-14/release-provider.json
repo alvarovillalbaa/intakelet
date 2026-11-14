@@ -1,0 +1,34 @@
+{
+  "id": 445287815,
+  "tag_name": "v0.1.0",
+  "target_commitish": "6c7b587f8921d346cb1e7df6f9287c8a4e944ed3",
+  "draft": false,
+  "prerelease": false,
+  "html_url": "https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.1.0",
+  "assets": [
+    {
+      "id": 747457429,
+      "name": "alvarovillalbaa-intakelet-0.1.0.tgz",
+      "size": 39058,
+      "state": "uploaded",
+      "digest": "sha256:1022fe5bae7c585e74c6c9684d7355f88f912e9c58c1cdde301a33c2ef9028f5",
+      "browser_download_url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.1.0/alvarovillalbaa-intakelet-0.1.0.tgz"
+    },
+    {
+      "id": 747459623,
+      "name": "release-provenance.json",
+      "size": 8102,
+      "state": "uploaded",
+      "digest": "sha256:2ca645e4d2329289a9b0d0fa43dbb412f9487711f3064350cea858db497f7042",
+      "browser_download_url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.1.0/release-provenance.json"
+    },
+    {
+      "id": 747458816,
+      "name": "SHA256SUMS.txt",
+      "size": 102,
+      "state": "uploaded",
+      "digest": "sha256:62527dae81d8f7a993fc79f1d099ea229e6e8697f4a0b339d4bc8aa17a6877a1",
+      "browser_download_url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.1.0/SHA256SUMS.txt"
+    }
+  ]
+}

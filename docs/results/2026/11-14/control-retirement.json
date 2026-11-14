@@ -1,0 +1,10 @@
+{
+  "id": 418248641,
+  "path": ".github/workflows/qualification.yml",
+  "state": "deleted",
+  "observedVia": "native gh api GET after acc616a publication",
+  "previousState": "disabled_manually",
+  "allSixRunsTerminal": true,
+  "inertRecipe": "tests/fixtures/qualification.yml.disabled",
+  "noActiveWorkflowSource": true
+}
