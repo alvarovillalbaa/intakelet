@@ -5,8 +5,8 @@ export interface Source extends SourceInput { id: string; format: Format; bytes:
 export interface Span { start: number; end: number; jsonRow?: number }
 export interface Provenance { sourceId: string; row: number; span: Span }
 export interface Contact { email: string; name: string; company: string }
-export interface ImportedRecord { id: string; kind: 'contact' | 'record'; data: Contact | Record<string, Primitive>; provenance: Provenance[] }
-export interface Mapping { kind: 'contact' | 'record'; mapping: { email?: string; name?: string; company?: string } }
+export type ImportedRecord = { id: string; provenance: Provenance[] } & ({ kind: 'contact'; data: Contact } | { kind: 'record'; data: Record<string, Primitive> });
+export type Mapping = { kind: 'contact'; mapping: { email: string; name?: string; company?: string } } | { kind: 'record'; mapping: Record<string, never> };
 export interface Table { sourceId: string; columns: string[]; rows: Array<{ index: number; values: Record<string, Primitive>; span: Span }>; suggestion: Mapping & { reason: string } }
 export interface Draft { schema: 'intakelet.draft'; version: 1; workspaceId: string; draftId: string; sources: Source[]; tables: Table[]; documents: Array<{ sourceId: string; title: string; format: Format }>; duplicates: Array<{ name: string; sameAs: string; url?: string }>; totals: { files: number; rows: number; bytes: number; duplicateFiles: number } }
 export interface Review { mappings?: Record<string, Mapping>; excludedRows?: Array<{ sourceId: string; index: number }>; skipInvalid?: boolean }

@@ -30,6 +30,23 @@ unchanged. Run syntax and the actual browser bundle/static build, retain its
 16-file manifest and lock before Vercel provisioning. Do not repeat the closed
 30 core/15 virtual/five pure-network scopes for this new build boundary.
 
+Package mode freezes the actual tarball and checks every allowlisted member
+against source. A normal archive install warms the owned public runtime cache;
+a fresh consumer then installs that same tarball offline. This does not promise
+a dependency-free/air-gapped install on a fresh customer machine. The eight
+installed M01–M08 identities cover CLI source-to-search, exclusive output,
+symlink/UTF-8 refusal, retry/other-workspace, native verified pinned HTTPS research
+of our own published company fixture through import, rehashed-plan refusal,
+installed private-target/unsafe-option refusal and an actual authenticated
+loopback host with lost response/idempotency/stale and two-workspace isolation.
+All CLI child streams and actual products are retained, including on failure.
+React18.3.1 and19.3.1 consumers install the archive, compile strict TS5.9.3 with
+the named exact18/19 type fixtures (skipLibCheck=false), and actually SSR the
+wrapper without a browser global. A separate Node-only type consumer excludes
+DOM libraries. Keep observed archives/locks/source/cleanup distinct; do not
+substitute source imports for installed package exports or a virtual transport
+for native public HTTPS. Browser/IndexedDB behavior is still a separate gate.
+
 Every remote job has one public Ubuntu24.04 runner,20minute cap and17minute
 internal deadline. Use nonce/inode-owned scratch, tracked-file copy only,
 complete command stdout/stderr and source vectors, process-group closure and

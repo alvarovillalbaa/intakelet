@@ -5,7 +5,13 @@ on:
       mode:
         type: choice
         required: true
-        options: [prepare, build]
+        options: [prepare, build, package]
+      site:
+        type: string
+        required: false
+      cases:
+        type: string
+        required: false
 permissions:
   contents: read
 jobs:
@@ -22,6 +28,8 @@ jobs:
       - name: Owned qualification
         env:
           INTAKELET_MODE: ${{ inputs.mode }}
+          INTAKELET_SITE: ${{ inputs.site }}
+          INTAKELET_CASES: ${{ inputs.cases }}
           INTAKELET_OUTPUT: ${{ runner.temp }}/intakelet-artifact
         run: python3 tests/scripts/qualify.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

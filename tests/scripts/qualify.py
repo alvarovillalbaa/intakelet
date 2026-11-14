@@ -7,6 +7,7 @@ import shutil
 import signal
 import subprocess
 import tempfile
+import tarfile
 import time
 import uuid
 
@@ -101,6 +102,62 @@ try:
                   "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
                  for p in sorted((work / "dist").rglob("*")) if p.is_file()]
         (output / "build-manifest.json").write_text(json.dumps(files, indent=2))
+    elif receipt["mode"] == "package":
+        execute("pack", ["npm", "pack", "--json", "--ignore-scripts", "--pack-destination", str(output)], 30)
+        tarball = next(output.glob("*.tgz"))
+        with tarfile.open(tarball) as archive:
+            members = [{"path": m.name, "bytes": m.size, "mode": m.mode, "regular": m.isfile()} for m in archive.getmembers()]
+            roots = {"package/README.md", "package/LICENSE", "package/package.json"}
+            prefixes = ("package/src/", "package/bin/", "package/examples/", "package/docs/specs/", "package/docs/references/")
+            for member in archive.getmembers():
+                if not member.isfile() or (member.name not in roots and not member.name.startswith(prefixes)) or ".." in Path(member.name).parts:
+                    raise RuntimeError("Unexpected package member")
+                if archive.extractfile(member).read() != (work / member.name.removeprefix("package/")).read_bytes():
+                    raise RuntimeError("Archive member differs from its exact source")
+        (output / "package-manifest.json").write_text(json.dumps({"file": tarball.name, "bytes": tarball.stat().st_size, "sha256": hashlib.sha256(tarball.read_bytes()).hexdigest(), "members": members}, indent=2))
+        def consumer_directory(name):
+            directory = scratch / name
+            directory.mkdir()
+            (directory / "package.json").write_text(json.dumps({"name": "intakelet-" + name, "version": "0.0.0", "private": True, "type": "module"}))
+            return directory
+        # Normal archive install warms only this owned cache; offline proof
+        # explicitly requires these locked public runtime dependencies cached.
+        online = consumer_directory("online-consumer")
+        execute("online-archive-install", ["npm", "install", "--ignore-scripts", "--no-audit", "--no-fund", str(tarball)], 120, cwd=online)
+        consumer = consumer_directory("offline-consumer")
+        execute("offline-archive-install", ["npm", "install", "--offline", "--ignore-scripts", "--no-audit", "--no-fund", str(tarball)], 120, cwd=consumer)
+        shutil.copyfile(consumer / "package-lock.json", output / "installed-lock.json")
+        env["INTAKELET_CONSUMER_ROOT"] = str(consumer)
+        (scratch / "cli-tmp").mkdir()
+        env["INTAKELET_CONSUMER_TMP"] = str(scratch / "cli-tmp")
+        cases = os.environ.get("INTAKELET_CASES", "")
+        command = ["node", "--test"]
+        if cases:
+            names = cases.split(",")
+            if len(set(names)) != len(names) or any(name not in [f"M{i:02}" for i in range(1, 9)] for name in names):
+                raise RuntimeError("Invalid installed case selection")
+            command += ["--test-name-pattern", "^(" + "|".join(names) + ") "]
+        command += ["tests/integration/consumer.test.mjs"]
+        execute("installed-consumer", command, 300)
+        for edition in ["react18", "react19"]:
+            target = scratch / edition
+            target.mkdir()
+            shutil.copyfile(work / f"tests/fixtures/{edition}/package.json", target / "package.json")
+            execute(edition + "-dependencies", ["npm", "install", "--ignore-scripts", "--no-audit", "--no-fund", str(tarball)], 180, cwd=target)
+            shutil.copyfile(target / "package-lock.json", output / (edition + "-lock.json"))
+            shutil.copyfile(work / "tests/fixtures/typed-consumer.tsx", target / "consumer.tsx")
+            shutil.copyfile(work / "tests/fixtures/ssr-consumer.mjs", target / "ssr.mjs")
+            config = {"compilerOptions": {"target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext", "jsx": "react-jsx", "strict": True, "noEmit": True, "skipLibCheck": False, "lib": ["ES2022", "DOM", "DOM.Iterable"], "types": ["node", "react", "react-dom"]}, "include": ["consumer.tsx"]}
+            (target / "tsconfig.json").write_text(json.dumps(config))
+            execute(edition + "-types", ["node", str(target / "node_modules/typescript/bin/tsc"), "-p", "tsconfig.json"], 90, cwd=target)
+            execute(edition + "-ssr", ["node", "ssr.mjs"], 30, cwd=target)
+            if edition == "react19":
+                shutil.copyfile(work / "tests/fixtures/node-consumer.mts", target / "node-consumer.mts")
+                config["compilerOptions"]["lib"] = ["ES2022"]
+                config["compilerOptions"]["types"] = ["node"]
+                config["include"] = ["node-consumer.mts"]
+                (target / "node-tsconfig.json").write_text(json.dumps(config))
+                execute("node-only-types", ["node", str(target / "node_modules/typescript/bin/tsc"), "-p", "node-tsconfig.json"], 90, cwd=target)
     else:
         raise RuntimeError("Unknown qualification mode")
     receipt["passed"] = True
