@@ -5,7 +5,7 @@ on:
       mode:
         type: choice
         required: true
-        options: [prepare]
+        options: [prepare, build]
 permissions:
   contents: read
 jobs:

@@ -6,14 +6,16 @@
   "license": "MIT",
   "engines": { "node": ">=24" },
   "exports": {
-    ".": { "types": "./src/index.d.ts", "default": "./src/index.mjs" },
-    "./element": { "types": "./src/element.d.ts", "default": "./src/element.mjs" },
-    "./react": { "types": "./src/react.d.ts", "default": "./src/react.mjs" },
-    "./node": { "types": "./src/node.d.ts", "default": "./src/node.mjs" }
+    ".": { "types": "./src/index.d.mts", "default": "./src/index.mjs" },
+    "./element": { "types": "./src/element.d.mts", "default": "./src/element.mjs" },
+    "./react": { "types": "./src/react.d.mts", "default": "./src/react.mjs" },
+    "./node": { "types": "./src/node.d.mts", "default": "./src/node.mjs" },
+    "./styles.css": "./src/element.css"
   },
   "bin": { "intakelet": "bin/intakelet.mjs" },
   "files": ["src/", "bin/", "examples/", "docs/specs/", "docs/references/", "README.md", "LICENSE"],
   "dependencies": { "ipaddr.js": "2.5.0", "parse5": "8.1.1", "robots-parser": "3.0.1" },
+  "devDependencies": { "esbuild": "0.28.2" },
   "peerDependencies": { "react": "^18.3.1 || ^19.0.0" },
   "peerDependenciesMeta": { "react": { "optional": true } },
   "scripts": { "test": "node --test tests/unit/*.test.mjs", "check": "node scripts/check.mjs", "build": "node scripts/build.mjs" }

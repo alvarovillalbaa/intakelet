@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#edf2fa"><meta name="description" content="An embeddable onboarding SDK: reviewed file imports, website research and source-backed knowledge."><title>Intakelet — a useful first import</title><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/intakelet.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header><a href="/" class="brand"><span class="brand-mark" aria-hidden="true">i.</span>intakelet<span class="version">SDK / 0.1</span></a><nav aria-label="Project"><a href="#integration">Integration</a><a href="https://github.com/alvarovillalbaa/intakelet" target="_blank" rel="noopener noreferrer">Source ↗</a></nav></header>
+<main><section class="hero"><div><p class="eyebrow">THE FIRST USEFUL IMPORT</p><h1>Start with what<br>customers already have.</h1><p class="lead">Files become reviewed records. Websites become source-backed knowledge. Put both inside your onboarding flow.</p><a href="#playground" class="hero-link">Try the SDK ↓</a></div><aside class="flow-note"><span class="mono">01 / COLLECT</span><p>Drop a file or research a site.</p><span class="flow-arrow">↓</span><span class="mono">02 / REVIEW</span><p>Keep sources. Resolve the exceptions.</p><span class="flow-arrow">↓</span><span class="mono">03 / USE</span><p>Import once. Start with evidence.</p></aside></section>
+<section id="playground" class="playground" aria-labelledby="playground-title"><div class="playground-intro"><div><p class="eyebrow">A REAL COMPONENT, EMBEDDED HERE</p><h2 id="playground-title">Meet your first workspace.</h2><p>Try authored sample files or your own CSV, JSON records, Markdown and text. This demo’s host saves on your device after you approve an import.</p></div><div class="sample-actions"><button id="sample-files">Load sample files</button><button id="sample-website">Use sample website</button></div></div><p class="demo-note">The public demo researches its own fictional company website. To research your customers’ sites, connect the Node SDK through your application server. No file upload, account or model service is used here.</p><p id="app-status" role="status"></p><intakelet-onboarding id="onboarding"></intakelet-onboarding></section>
+<section id="integration" class="integration"><div><p class="eyebrow">BUILT TO LIVE IN YOUR APP</p><h2>Your onboarding.<br>Your host. Your data.</h2><p>Use a web component, React wrapper, Node module or CLI. The same plans, revision checks and replay receipts connect them.</p><p class="muted">Deterministic classification and computed/source-quoted insights. No hidden AI call or fabricated company enrichment.</p><a href="https://github.com/alvarovillalbaa/intakelet/blob/main/docs/references/integration.md" target="_blank" rel="noopener noreferrer">Read the integration guide ↗</a></div><div class="code-card"><p class="mono">YOUR SERVER</p><pre><code>import { researchWebsite } from
+  '@alvarovillalbaa/intakelet/node';
+
+const report = await researchWebsite(url);
+// Authenticate and rate-limit in your app.
+// Keep its sources and coverage visible.</code></pre><p class="mono">YOUR ONBOARDING</p><pre><code>const draft = await analyzeFiles(files, {
+  workspaceId: trustedWorkspaceId
+});
+const plan = await createPlan(draft, review);
+await host.commit(plan, {
+  expectedRevision: workspace.revision
+});</code></pre></div></section>
+</main><footer><span class="brand-footer">intakelet / developer preview</span><p>Rule-based imports. Literal source evidence. Website coverage has explicit limits.</p><a href="/third-party-notices.txt">Licenses</a></footer>
+</body></html>

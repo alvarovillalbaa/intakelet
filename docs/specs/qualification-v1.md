@@ -21,6 +21,15 @@ public Vercel source/asset identity. Add concrete consumer/browser fixtures
 before those phases execute. Do not claim a passing prepare run completes the
 SDK or its research transport. No semantic LLM performance is claimed or tested.
 
+Build mode adds reviewed esbuild0.28.2 only for the public playground. Generate
+the actual updated root lock in owned scratch, preserving version/integrity/
+resolved values for every existing runtime package. That one generated lock is
+an explicitly accepted export change: record sourceUnchanged=false and its
+exact changed path; all original/native source and other copied inputs stay
+unchanged. Run syntax and the actual browser bundle/static build, retain its
+16-file manifest and lock before Vercel provisioning. Do not repeat the closed
+30 core/15 virtual/five pure-network scopes for this new build boundary.
+
 Every remote job has one public Ubuntu24.04 runner,20minute cap and17minute
 internal deadline. Use nonce/inode-owned scratch, tracked-file copy only,
 complete command stdout/stderr and source vectors, process-group closure and

@@ -15,7 +15,7 @@ Primary APIs inspected:
 
 - [Node DNS](https://nodejs.org/docs/latest-v24.x/api/dns.html), per-request
   Resolver cancellation and address records.
-- [Node HTTPS](https://nodejs.org/docs/latest-v24.x/api/https.html), request
+- [Node HTTPS](https://nodejs.org/api/https.html), request
   lookup/family/servername, certificate verification and bounded reads.
 - [parse5 releases](https://github.com/inikulin/parse5/releases),8.1.1 pinned;
   [parser API](https://parse5.js.org/functions/parse5.parse.html).

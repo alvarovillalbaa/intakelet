@@ -79,11 +79,28 @@ def execute(name, args, timeout, cwd=None):
 try:
     execute("node-version", ["node", "--version"], 10)
     execute("npm-version", ["npm", "--version"], 10)
-    execute("dependencies", ["npm", "ci" if (work / "package-lock.json").exists() else "install", "--ignore-scripts", "--no-audit", "--no-fund"], 240)
+    old_lock = json.loads((work / "package-lock.json").read_text()) if (work / "package-lock.json").exists() else None
+    generate = receipt["mode"] == "build"
+    execute("dependencies", ["npm", "install" if generate or not old_lock else "ci", "--ignore-scripts", "--no-audit", "--no-fund"], 240)
     shutil.copyfile(work / "package-lock.json", output / "package-lock.json")
+    if generate and old_lock:
+        new_lock = json.loads((work / "package-lock.json").read_text())
+        for name, package in old_lock["packages"].items():
+            if name:
+                actual = new_lock["packages"][name]
+                if any(actual.get(k) != package.get(k) for k in ["version", "integrity", "resolved"]):
+                    raise RuntimeError("Build tooling changed an existing runtime dependency: " + name)
+        receipt["runtimeDependenciesPreserved"] = True
     if receipt["mode"] == "prepare":
         execute("research", ["node", "--test", "tests/unit/research.test.mjs"], 60)
         execute("network-refusals", ["node", "--test", "tests/adversarial/network.test.mjs"], 60)
+    elif receipt["mode"] == "build":
+        execute("syntax", ["node", "scripts/check.mjs"], 60)
+        execute("build", ["npm", "run", "build"], 60)
+        files = [{"path": p.relative_to(work / "dist").as_posix(), "bytes": p.stat().st_size,
+                  "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+                 for p in sorted((work / "dist").rglob("*")) if p.is_file()]
+        (output / "build-manifest.json").write_text(json.dumps(files, indent=2))
     else:
         raise RuntimeError("Unknown qualification mode")
     receipt["passed"] = True
@@ -95,11 +112,17 @@ finally:
     (output / "source-after.json").write_text(json.dumps(after, indent=2))
     (output / "copied-source-after.json").write_text(json.dumps(copied, indent=2))
     receipt["sourceUnchanged"] = before == after == copied
+    original = {row["path"]: row for row in before}
+    changed = [row["path"] for row in copied if row != original[row["path"]]]
+    receipt["exportChangedPaths"] = changed
+    # Lock generation is an explicit output, never relabelled byte-unchanged.
+    allowed = ["package-lock.json"] if receipt["mode"] == "build" and receipt.get("runtimeDependenciesPreserved") else []
+    receipt["sourceGuardPassed"] = before == after and all(name in allowed for name in changed)
     receipt["scratchBytes"] = sum(p.stat().st_size for p in scratch.rglob("*") if p.is_file() and not p.is_symlink())
     if scratch.stat().st_ino == identity and (scratch / "owner").read_text() == nonce and all(row["groupAbsent"] for row in receipt["commands"]):
         shutil.rmtree(scratch)
         receipt["cleanup"] = not scratch.exists()
-    receipt["passed"] = receipt["passed"] and receipt["sourceUnchanged"] and receipt["cleanup"]
+    receipt["passed"] = receipt["passed"] and receipt["sourceGuardPassed"] and receipt["cleanup"]
     (output / "receipt.json").write_text(json.dumps(receipt, indent=2))
     print(json.dumps(receipt), flush=True)
 if not receipt["passed"]:
