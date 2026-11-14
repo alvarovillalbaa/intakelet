@@ -21,6 +21,8 @@ for (const path of await filesAt(join(root, 'web'))) {
   if (path.endsWith('/app.mjs')) continue; const destination = join(output, relative(join(root, 'web'), path)); await mkdir(resolve(destination, '..'), { recursive: true }); await writeFile(destination, await readFile(path));
 }
 await writeFile(join(output, 'intakelet.css'), await readFile(join(root, 'src/element.css')));
+await mkdir(join(output, 'fixtures'), { recursive: true });
+for (const name of ['contacts.csv', 'handbook.md']) await writeFile(join(output, 'fixtures', name), await readFile(join(root, 'examples', name)));
 await build({ absWorkingDir: root, entryPoints: ['web/app.mjs'], outfile: 'dist/app.js', bundle: true, platform: 'browser', format: 'esm', target: ['es2022'], legalComments: 'eof', logLevel: 'info', sourcemap: false });
 let notices = 'Intakelet original source is MIT licensed. Bundled third-party licenses follow.\n';
 for (const name of ['parse5', 'entities', 'robots-parser']) {

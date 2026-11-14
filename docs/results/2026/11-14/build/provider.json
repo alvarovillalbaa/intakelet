@@ -1,0 +1,23 @@
+{
+  "artifacts": [
+    {
+      "id": 14113201023,
+      "name": "intakelet-build-43592496051",
+      "size_in_bytes": 17587,
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/actions/artifacts/14113201023",
+      "archive_download_url": "https://api.github.com/repos/alvarovillalbaa/intakelet/actions/artifacts/14113201023/zip",
+      "expired": false,
+      "created_at": "2026-11-14T11:58:24Z",
+      "expires_at": "2026-11-21T11:58:23Z",
+      "updated_at": "2026-11-14T11:58:24Z",
+      "digest": "sha256:5ad365f0d0fe7a5ec61c3844b4c393de4229b6bd3785a936e6782275b02100b4",
+      "workflow_run": {
+        "id": 43592496051,
+        "repository_id": 1457687966,
+        "head_repository_id": 1457687966,
+        "head_branch": "main",
+        "head_sha": "4b78b9bab76c4d3523de67db13bed1a5dddd754c"
+      }
+    }
+  ]
+}

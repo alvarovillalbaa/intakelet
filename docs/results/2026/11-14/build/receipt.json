@@ -1,0 +1,103 @@
+{
+  "mode": "build",
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 10,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.003474394000008374,
+      "stdoutBytes": 9,
+      "stderrBytes": 0,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "npm-version",
+      "argv": [
+        "npm",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 10,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0875200939999985,
+      "stdoutBytes": 8,
+      "stderrBytes": 0,
+      "stdoutSha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 240,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.0742905930000006,
+      "stdoutBytes": 24,
+      "stderrBytes": 0,
+      "stdoutSha256": "6b17e44888bc55105a1b0a4fe943c53e6d092d0d0f3002f3f48ba18a759f8faf",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 60,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.4889476390000027,
+      "stdoutBytes": 72,
+      "stderrBytes": 0,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 60,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.1849455619999958,
+      "stdoutBytes": 81,
+      "stderrBytes": 42,
+      "stdoutSha256": "f3246a8d8101cf53e1861d37a1a4e213030c3ffab1dcfeb2ddf47c2745945f49",
+      "stderrSha256": "6af6547831c6be34990a356d96b5d30f9d75f13e3d534de629de9e2fefcc15ea"
+    }
+  ],
+  "passed": true,
+  "cleanup": true,
+  "runtimeDependenciesPreserved": true,
+  "sourceUnchanged": false,
+  "exportChangedPaths": [
+    "package-lock.json"
+  ],
+  "sourceGuardPassed": true,
+  "scratchBytes": 25385536
+}
