@@ -1,0 +1,219 @@
+{
+  "attempts": [
+    {
+      "bodySha256": "289192c195c199b22d731ea5ecbfb8c70b32107977aa535de0b25592ccf36502",
+      "bytes": 55,
+      "kind": "robots",
+      "security": {
+        "bodyBytes": 55,
+        "bodySha256": "289192c195c199b22d731ea5ecbfb8c70b32107977aa535de0b25592ccf36502",
+        "family": 4,
+        "pinnedPeer": true,
+        "resolvedAddressCount": 2,
+        "tlsAuthorized": true,
+        "transport": "pinned_public_tls"
+      },
+      "status": 200,
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/robots.txt"
+    },
+    {
+      "bodySha256": "2dbd8c2bb6cf7727b93fb22c7a4cf27f22bbb849777a3ae664ad08e58e0a96aa",
+      "bytes": 945,
+      "kind": "content",
+      "security": {
+        "bodyBytes": 945,
+        "bodySha256": "2dbd8c2bb6cf7727b93fb22c7a4cf27f22bbb849777a3ae664ad08e58e0a96aa",
+        "family": 4,
+        "pinnedPeer": true,
+        "resolvedAddressCount": 2,
+        "tlsAuthorized": true,
+        "transport": "pinned_public_tls"
+      },
+      "status": 200,
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/"
+    },
+    {
+      "bodySha256": "ff1908ffc677369966876942d87c2ad6d10519d2bbeae05cc1861169bede4afb",
+      "bytes": 490,
+      "kind": "content",
+      "security": {
+        "bodyBytes": 490,
+        "bodySha256": "ff1908ffc677369966876942d87c2ad6d10519d2bbeae05cc1861169bede4afb",
+        "family": 4,
+        "pinnedPeer": true,
+        "resolvedAddressCount": 2,
+        "tlsAuthorized": true,
+        "transport": "pinned_public_tls"
+      },
+      "status": 200,
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/products.html"
+    },
+    {
+      "bodySha256": "3aa483391dba2be5383085d66ad4efe7610170b176835aaaeb6c64a596fbc1fb",
+      "bytes": 481,
+      "kind": "content",
+      "security": {
+        "bodyBytes": 481,
+        "bodySha256": "3aa483391dba2be5383085d66ad4efe7610170b176835aaaeb6c64a596fbc1fb",
+        "family": 4,
+        "pinnedPeer": true,
+        "resolvedAddressCount": 2,
+        "tlsAuthorized": true,
+        "transport": "pinned_public_tls"
+      },
+      "status": 200,
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/about.html"
+    },
+    {
+      "bodySha256": "0f7e12d1ca8a801e9877bad33efd1b12fbf2abc14a0821248284480e6c2941da",
+      "bytes": 468,
+      "kind": "content",
+      "security": {
+        "bodyBytes": 468,
+        "bodySha256": "0f7e12d1ca8a801e9877bad33efd1b12fbf2abc14a0821248284480e6c2941da",
+        "family": 4,
+        "pinnedPeer": true,
+        "resolvedAddressCount": 2,
+        "tlsAuthorized": true,
+        "transport": "pinned_public_tls"
+      },
+      "status": 200,
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/support.html"
+    }
+  ],
+  "coverage": {
+    "attempted": 5,
+    "byCategory": {
+      "legal": 0,
+      "offering": 1,
+      "overview": 1,
+      "people": 1,
+      "pricing": 0,
+      "support": 1
+    },
+    "bytes": 2439,
+    "discovered": 5,
+    "pages": 4,
+    "requests": 5,
+    "scope": "Bounded static pages on the declared website, not exhaustive Internet research.",
+    "seconds": 0.562
+  },
+  "files": [
+    {
+      "format": "markdown",
+      "name": "website/e653b7afce04b7ffd384.md",
+      "text": "# Morrow Works — fictional company\n\nMorrow Works\n\nWe design modular objects for calmer desks. This company, its people, products and policies are authored fiction for the Intakelet demo.\n\nMade for small workspaces\n\nOur sample range contains Loop Stand and Desk Tray. Both use replaceable components.\n",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/"
+    },
+    {
+      "format": "markdown",
+      "name": "website/7ffa780f48e42992a3d0.md",
+      "text": "# Products — Morrow Works fixture\n\nProducts\n\nLoop Stand\n\nLoop Stand is a fictional adjustable stand for small notebooks. Its modular joints can be replaced separately.\n\nDesk Tray\n\nDesk Tray is a fictional shallow organizer with three removable dividers. It belongs to the same authored sample range.\n\nCompany home\n",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/products.html"
+    },
+    {
+      "format": "markdown",
+      "name": "website/006c0e55ca3eb9c13cfc.md",
+      "text": "# About — Morrow Works fixture\n\nAbout our studio\n\nMorrow Works is a fictional two-person studio. Ada Example coordinates projects and Ben Sample maintains the product guide.\n\nEvery statement on this website was authored for software checks. It does not describe a real company or employment relationship.\n\nCompany home\n",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/about.html"
+    },
+    {
+      "format": "markdown",
+      "name": "website/c1855a722c03ff50ce87.md",
+      "text": "# Support — Morrow Works fixture\n\nSupport and source notes\n\nFor this fictional workflow, a project owner responds to product questions within two sample working days.\n\nRecord the product name, the source page and the unresolved question. Do not invent a warranty, promise or contact address.\n\nCompany home\n",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/support.html"
+    }
+  ],
+  "method": "static_text_and_link_extraction",
+  "pages": [
+    {
+      "bytes": 945,
+      "classification": "overview",
+      "description": "An authored company website for SDK qualification.",
+      "file": {
+        "format": "markdown",
+        "name": "website/e653b7afce04b7ffd384.md",
+        "text": "# Morrow Works — fictional company\n\nMorrow Works\n\nWe design modular objects for calmer desks. This company, its people, products and policies are authored fiction for the Intakelet demo.\n\nMade for small workspaces\n\nOur sample range contains Loop Stand and Desk Tray. Both use replaceable components.\n",
+        "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/"
+      },
+      "headings": [
+        "Morrow Works",
+        "Made for small workspaces"
+      ],
+      "rawSha256": "2dbd8c2bb6cf7727b93fb22c7a4cf27f22bbb849777a3ae664ad08e58e0a96aa",
+      "requestedURL": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/",
+      "textSha256": "dbf2f358fffc9939208cae0ca839921baab15ef9ff1a571dcc5c96d0a1a7acdc",
+      "title": "Morrow Works — fictional company",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/"
+    },
+    {
+      "bytes": 490,
+      "classification": "offering",
+      "description": "",
+      "file": {
+        "format": "markdown",
+        "name": "website/7ffa780f48e42992a3d0.md",
+        "text": "# Products — Morrow Works fixture\n\nProducts\n\nLoop Stand\n\nLoop Stand is a fictional adjustable stand for small notebooks. Its modular joints can be replaced separately.\n\nDesk Tray\n\nDesk Tray is a fictional shallow organizer with three removable dividers. It belongs to the same authored sample range.\n\nCompany home\n",
+        "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/products.html"
+      },
+      "headings": [
+        "Products",
+        "Loop Stand",
+        "Desk Tray"
+      ],
+      "rawSha256": "ff1908ffc677369966876942d87c2ad6d10519d2bbeae05cc1861169bede4afb",
+      "requestedURL": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/products.html",
+      "textSha256": "53c935ffa06b0458bd5b7b2f8760e015db5d5da757c11b2b6d857fe75ef69ab3",
+      "title": "Products — Morrow Works fixture",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/products.html"
+    },
+    {
+      "bytes": 481,
+      "classification": "people",
+      "description": "",
+      "file": {
+        "format": "markdown",
+        "name": "website/006c0e55ca3eb9c13cfc.md",
+        "text": "# About — Morrow Works fixture\n\nAbout our studio\n\nMorrow Works is a fictional two-person studio. Ada Example coordinates projects and Ben Sample maintains the product guide.\n\nEvery statement on this website was authored for software checks. It does not describe a real company or employment relationship.\n\nCompany home\n",
+        "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/about.html"
+      },
+      "headings": [
+        "About our studio"
+      ],
+      "rawSha256": "3aa483391dba2be5383085d66ad4efe7610170b176835aaaeb6c64a596fbc1fb",
+      "requestedURL": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/about.html",
+      "textSha256": "3035d5936bb8cca20ec24d946e8e655a6d07d0dba885e603fec429cdcd7a9f8f",
+      "title": "About — Morrow Works fixture",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/about.html"
+    },
+    {
+      "bytes": 468,
+      "classification": "support",
+      "description": "",
+      "file": {
+        "format": "markdown",
+        "name": "website/c1855a722c03ff50ce87.md",
+        "text": "# Support — Morrow Works fixture\n\nSupport and source notes\n\nFor this fictional workflow, a project owner responds to product questions within two sample working days.\n\nRecord the product name, the source page and the unresolved question. Do not invent a warranty, promise or contact address.\n\nCompany home\n",
+        "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/support.html"
+      },
+      "headings": [
+        "Support and source notes"
+      ],
+      "rawSha256": "0f7e12d1ca8a801e9877bad33efd1b12fbf2abc14a0821248284480e6c2941da",
+      "requestedURL": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/support.html",
+      "textSha256": "5017ab2b5d15479b345e4c57e0cdea9e4e01a256324620d005417de2714141cd",
+      "title": "Support — Morrow Works fixture",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/support.html"
+    }
+  ],
+  "rootURL": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/",
+  "schema": "intakelet.research",
+  "skipped": [
+    {
+      "reason": "robots_denied",
+      "url": "https://intakelet-mzc3bx8pm-my-team-4f230354.vercel.app/fixtures/company/private.html"
+    }
+  ],
+  "status": "partial",
+  "version": 1
+}

@@ -1,0 +1,188 @@
+{
+  "mode": "package",
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 10,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.004425396000002024,
+      "stdoutBytes": 9,
+      "stderrBytes": 0,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "npm-version",
+      "argv": [
+        "npm",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 10,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.09371672200001058,
+      "stdoutBytes": 8,
+      "stderrBytes": 0,
+      "stdoutSha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 240,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.9152776869999997,
+      "stdoutBytes": 27,
+      "stderrBytes": 0,
+      "stdoutSha256": "790bbff555b49ee8a75a6aab276987178af6fa1f113052bc0ad58e33178bbd16",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-artifact"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 30,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.3244078879999961,
+      "stdoutBytes": 3510,
+      "stderrBytes": 0,
+      "stdoutSha256": "cea1e34ee3aa84efae5d25dd704ac850fb61bc60dfdc7d197c433515d44f577f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "online-archive-install",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-artifact/alvarovillalbaa-intakelet-0.1.0.tgz"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 120,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.6704144019999916,
+      "stdoutBytes": 27,
+      "stderrBytes": 0,
+      "stdoutSha256": "0ff746a92cf2838b8d79c7ec0cf4e5d3746ffd59a670c9e66669dbfbea6d43a5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "offline-archive-install",
+      "argv": [
+        "npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-artifact/alvarovillalbaa-intakelet-0.1.0.tgz"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 120,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.4526833919999973,
+      "stdoutBytes": 27,
+      "stderrBytes": 0,
+      "stdoutSha256": "7b479aa14e93d15e3dcd3febd4e2b0d6ebb0623c0340b9601c64f02d20b22e84",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-consumer",
+      "argv": [
+        "node",
+        "--test",
+        "tests/integration/consumer.test.mjs"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 300,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.201166489000002,
+      "stdoutBytes": 907,
+      "stderrBytes": 0,
+      "stdoutSha256": "48d4227446fead8f17bc135874f800a6eb20c32a022f4702e8b2fa1bdd709ad1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "react18-dependencies",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-artifact/alvarovillalbaa-intakelet-0.1.0.tgz"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "timeoutSeconds": 180,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.9999149570000014,
+      "stdoutBytes": 25,
+      "stderrBytes": 0,
+      "stdoutSha256": "ee49f9d82e7eb07b1db6995cf7e4d72b1b8ef45d4d58597dc6011f2a535d7ec5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "react18-types",
+      "argv": [
+        "node",
+        "/tmp/intakelet-qualification-y_9_tiw1/react18/node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "exit": 2,
+      "timedOut": false,
+      "timeoutSeconds": 90,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.9958103360000052,
+      "stdoutBytes": 76,
+      "stderrBytes": 0,
+      "stdoutSha256": "75c57fdfe6f4894847c5f45c55e7777c3a8ee1f539b6d0b2b48f659e69d5afb4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "passed": false,
+  "cleanup": true,
+  "error": "RuntimeError('react18-types did not complete successfully')",
+  "sourceUnchanged": true,
+  "exportChangedPaths": [],
+  "sourceGuardPassed": true,
+  "scratchBytes": 116372927
+}

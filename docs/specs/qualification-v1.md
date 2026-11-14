@@ -47,6 +47,15 @@ DOM libraries. Keep observed archives/locks/source/cleanup distinct; do not
 substitute source imports for installed package exports or a virtual transport
 for native public HTTPS. Browser/IndexedDB behavior is still a separate gate.
 
+The first package run passed all eight installed cases, then the React18 strict
+compiler rejected the optional Article.span declaration. Preserve that failure.
+Clients mode qualifies the corrected discriminated Article declaration and the
+previously unrun React18 SSR, React19 types/SSR and Node-only types. It packs and
+installs a real archive and compares all members/modes with the retained first
+archive: only index.d.mts, this qualification document and README may differ.
+Every runtime module, stylesheet, manifest, example and other member must remain
+byte-identical. Do not replay the eight closed runtime cases for this type fix.
+
 Every remote job has one public Ubuntu24.04 runner,20minute cap and17minute
 internal deadline. Use nonce/inode-owned scratch, tracked-file copy only,
 complete command stdout/stderr and source vectors, process-group closure and

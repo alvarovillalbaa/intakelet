@@ -1,0 +1,94 @@
+{
+  "calls": [
+    {
+      "method": "GET",
+      "path": "/snapshot",
+      "owner": null
+    },
+    {
+      "method": "POST",
+      "path": "/commit",
+      "owner": "one"
+    },
+    {
+      "method": "GET",
+      "path": "/snapshot",
+      "owner": "one"
+    },
+    {
+      "method": "POST",
+      "path": "/commit",
+      "owner": "one"
+    },
+    {
+      "method": "POST",
+      "path": "/commit",
+      "owner": "two"
+    },
+    {
+      "method": "POST",
+      "path": "/commit",
+      "owner": "one"
+    }
+  ],
+  "snapshot": {
+    "articles": [
+      {
+        "id": "kb-1b6d27d0fb0b0453e169dbad639ef9ccad0e87c705ddb0a2731176fb6775ee95",
+        "method": "exact_source",
+        "part": 0,
+        "sourceId": "src-9163eca744d530950a5648bd4bda38ab49ce366fa7a2248a8bb5e1aeec93dff7",
+        "span": {
+          "end": 48,
+          "start": 0
+        },
+        "text": "# Host fixture\n\nA source-bound public test note.",
+        "title": "Host fixture"
+      }
+    ],
+    "receipts": [
+      {
+        "added": {
+          "articles": 1,
+          "records": 0,
+          "sources": 1
+        },
+        "deduplicated": {
+          "articles": 0,
+          "records": 0,
+          "sources": 0
+        },
+        "planId": "sha256:ff89a2fcb7c511db913b153ad1a42a68f81bd990876c6a3622fd33265de4283f",
+        "revision": 1,
+        "schema": "intakelet.receipt",
+        "version": 1,
+        "workspaceId": "one"
+      }
+    ],
+    "records": [],
+    "revision": 1,
+    "schema": "intakelet.state",
+    "sources": [
+      {
+        "bytes": 48,
+        "format": "markdown",
+        "id": "src-9163eca744d530950a5648bd4bda38ab49ce366fa7a2248a8bb5e1aeec93dff7",
+        "name": "note.md",
+        "sha256": "8f34f24b1df94909ed8ed11ddc82214161708963b8c2448baf2b6c6da2e06e5f",
+        "text": "# Host fixture\n\nA source-bound public test note."
+      }
+    ],
+    "version": 1,
+    "workspaceId": "one"
+  },
+  "otherSnapshot": {
+    "articles": [],
+    "receipts": [],
+    "records": [],
+    "revision": 0,
+    "schema": "intakelet.state",
+    "sources": [],
+    "version": 1,
+    "workspaceId": "two"
+  }
+}

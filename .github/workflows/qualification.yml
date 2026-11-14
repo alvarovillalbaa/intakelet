@@ -5,7 +5,7 @@ on:
       mode:
         type: choice
         required: true
-        options: [prepare, build, package]
+        options: [prepare, build, package, clients]
       site:
         type: string
         required: false

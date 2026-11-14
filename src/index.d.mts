@@ -11,7 +11,7 @@ export interface Table { sourceId: string; columns: string[]; rows: Array<{ inde
 export interface Draft { schema: 'intakelet.draft'; version: 1; workspaceId: string; draftId: string; sources: Source[]; tables: Table[]; documents: Array<{ sourceId: string; title: string; format: Format }>; duplicates: Array<{ name: string; sameAs: string; url?: string }>; totals: { files: number; rows: number; bytes: number; duplicateFiles: number } }
 export interface Review { mappings?: Record<string, Mapping>; excludedRows?: Array<{ sourceId: string; index: number }>; skipInvalid?: boolean }
 export interface Issue { sourceId: string; row: number; code: string; message: string }
-export interface Article { id: string; sourceId: string; title: string; part: number; text: string; method: 'exact_source' | 'structured_records'; url?: string; span?: Span; recordIds?: string[]; provenance?: Provenance[] }
+export type Article = { id: string; sourceId: string; title: string; part: number; text: string; url?: string } & ({ method: 'exact_source'; span: Span } | { method: 'structured_records'; recordIds: string[]; provenance: Provenance[] });
 export interface Insight { id: string; label: string; value: number; method: 'count' | 'field_coverage' | 'exact_comparison' | 'review_selection' | 'validated_exclusion' }
 export interface Plan { schema: 'intakelet.plan'; version: 1; workspaceId: string; planId: string; draft: Draft; review: Required<Review>; records: ImportedRecord[]; articles: Article[]; insights: Insight[]; issues: Issue[] }
 export interface Counts { sources: number; records: number; articles: number }

@@ -102,7 +102,7 @@ try:
                   "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
                  for p in sorted((work / "dist").rglob("*")) if p.is_file()]
         (output / "build-manifest.json").write_text(json.dumps(files, indent=2))
-    elif receipt["mode"] == "package":
+    elif receipt["mode"] in ["package", "clients"]:
         execute("pack", ["npm", "pack", "--json", "--ignore-scripts", "--pack-destination", str(output)], 30)
         tarball = next(output.glob("*.tgz"))
         with tarfile.open(tarball) as archive:
@@ -115,6 +115,20 @@ try:
                 if archive.extractfile(member).read() != (work / member.name.removeprefix("package/")).read_bytes():
                     raise RuntimeError("Archive member differs from its exact source")
         (output / "package-manifest.json").write_text(json.dumps({"file": tarball.name, "bytes": tarball.stat().st_size, "sha256": hashlib.sha256(tarball.read_bytes()).hexdigest(), "members": members}, indent=2))
+        if receipt["mode"] == "clients":
+            baseline = work / "docs/results/2026/11-14/package-initial/alvarovillalbaa-intakelet-0.1.0.tgz"
+            if hashlib.sha256(baseline.read_bytes()).hexdigest() != "0773ea4f864c3a139dff8eda00746c8c3af0b2d317dfc1971748fddcda2e53f6":
+                raise RuntimeError("The accepted installed-runtime baseline changed")
+            with tarfile.open(baseline) as old, tarfile.open(tarball) as new:
+                old_members = {m.name: m for m in old.getmembers()}
+                new_members = {m.name: m for m in new.getmembers()}
+                if set(old_members) != set(new_members):
+                    raise RuntimeError("Client-only qualification changed package membership")
+                changed = [name for name in old_members if old_members[name].mode != new_members[name].mode or old.extractfile(old_members[name]).read() != new.extractfile(new_members[name]).read()]
+                allowed = {"package/src/index.d.mts", "package/docs/specs/qualification-v1.md", "package/README.md"}
+                if any(name not in allowed for name in changed):
+                    raise RuntimeError("Client-only qualification changed accepted runtime payload: " + repr(changed))
+                receipt["runtimeBaseline"] = {"sha256": hashlib.sha256(baseline.read_bytes()).hexdigest(), "changedMembers": changed, "unchangedMembers": len(old_members) - len(changed), "allRuntimeBytesAndModesEqual": True}
         def consumer_directory(name):
             directory = scratch / name
             directory.mkdir()
@@ -130,15 +144,16 @@ try:
         env["INTAKELET_CONSUMER_ROOT"] = str(consumer)
         (scratch / "cli-tmp").mkdir()
         env["INTAKELET_CONSUMER_TMP"] = str(scratch / "cli-tmp")
-        cases = os.environ.get("INTAKELET_CASES", "")
-        command = ["node", "--test"]
-        if cases:
-            names = cases.split(",")
-            if len(set(names)) != len(names) or any(name not in [f"M{i:02}" for i in range(1, 9)] for name in names):
-                raise RuntimeError("Invalid installed case selection")
-            command += ["--test-name-pattern", "^(" + "|".join(names) + ") "]
-        command += ["tests/integration/consumer.test.mjs"]
-        execute("installed-consumer", command, 300)
+        if receipt["mode"] == "package":
+            cases = os.environ.get("INTAKELET_CASES", "")
+            command = ["node", "--test"]
+            if cases:
+                names = cases.split(",")
+                if len(set(names)) != len(names) or any(name not in [f"M{i:02}" for i in range(1, 9)] for name in names):
+                    raise RuntimeError("Invalid installed case selection")
+                command += ["--test-name-pattern", "^(" + "|".join(names) + ") "]
+            command += ["tests/integration/consumer.test.mjs"]
+            execute("installed-consumer", command, 300)
         for edition in ["react18", "react19"]:
             target = scratch / edition
             target.mkdir()
