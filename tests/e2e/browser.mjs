@@ -159,7 +159,7 @@ try {
     assert.equal(await page.locator('#onboarding').evaluate(el => el.reviewPlan.planId), before);
     researchRequests.length = 0; await page.getByRole('button', { name: 'Research website', exact: true }).click(); await enabled(page);
     const plan = await page.locator('#onboarding').evaluate(el => el.reviewPlan); assert.equal(plan.draft.sources.length, 6); assert.equal(plan.draft.sources.filter(s => s.url).length, 4);
-    const coverage = page.getByText('Website coverage · partial', { exact: true }); await coverage.click(); assert.match(await page.locator('#onboarding').innerText(), /robots_disallowed/);
+    const coverage = page.getByText('Website coverage · partial', { exact: true }); await coverage.click(); assert.match(await page.locator('#onboarding').innerText(), /robots_denied/);
     assert.ok(researchRequests.some(url => url.endsWith('/robots.txt'))); assert.equal(researchRequests.filter(url => /marker\.js|private\.html/.test(url)).length, 0); assert.equal(await page.evaluate(() => window.__intakeletResearchExecuted), undefined);
     await page.locator(control).click(); await page.waitForFunction(() => document.querySelector('[data-intakelet=status]').textContent.includes('Import acknowledged'));
     const state = await snapshot(page); assert.equal(state.sources.length, 6); assert.equal(state.records.length, 2); const cited = state.articles.filter(a => a.url); assert.equal(cited.length, 4); assert.ok(cited.every(a => !a.text.includes('AUTHORED_ROBOTS_DENIED_MARKER')));

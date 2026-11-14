@@ -1,0 +1,87 @@
+{
+  "articles": [
+    {
+      "id": "kb-fd3a59e257f9b0ae3692c34e49c5f1d5eb1464e62aac9a5db36a57fac6593402",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-29376302ca3c9f9d3714c657b95c048d62f597e9e42ca7867741942f9dc67e05",
+      "span": {
+        "end": 35,
+        "start": 0
+      },
+      "text": "# First\nAuthored concurrent source.",
+      "title": "First"
+    },
+    {
+      "id": "kb-2a7c1a91f5a05677b85c84a8a6053de438ec2600d098c1d49273a0a23e6ac020",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-d4eb3b7612268563e0cf6130ebe8983ed9add360f345a88b491cb7353e961923",
+      "span": {
+        "end": 36,
+        "start": 0
+      },
+      "text": "# Second\nAuthored concurrent source.",
+      "title": "Second"
+    }
+  ],
+  "receipts": [
+    {
+      "added": {
+        "articles": 1,
+        "records": 0,
+        "sources": 1
+      },
+      "deduplicated": {
+        "articles": 0,
+        "records": 0,
+        "sources": 0
+      },
+      "planId": "sha256:2ef4eec96e7c766e5edd4cc0612e43d93c1300e8d560783aeb90a85e2e4029d7",
+      "revision": 1,
+      "schema": "intakelet.receipt",
+      "version": 1,
+      "workspaceId": "shared"
+    },
+    {
+      "added": {
+        "articles": 1,
+        "records": 0,
+        "sources": 1
+      },
+      "deduplicated": {
+        "articles": 0,
+        "records": 0,
+        "sources": 0
+      },
+      "planId": "sha256:f3756ec8a5a0b4cff5d0d5e3e06c416f9b00b1c62d1972b2a9663830d325ebb7",
+      "revision": 2,
+      "schema": "intakelet.receipt",
+      "version": 1,
+      "workspaceId": "shared"
+    }
+  ],
+  "records": [],
+  "revision": 2,
+  "schema": "intakelet.state",
+  "sources": [
+    {
+      "bytes": 35,
+      "format": "markdown",
+      "id": "src-29376302ca3c9f9d3714c657b95c048d62f597e9e42ca7867741942f9dc67e05",
+      "name": "First.md",
+      "sha256": "cb2517dfa6c1b9189f8ab513d22dce6b2df5bea5ddc0bc65d413b77966aea7b6",
+      "text": "# First\nAuthored concurrent source."
+    },
+    {
+      "bytes": 36,
+      "format": "markdown",
+      "id": "src-d4eb3b7612268563e0cf6130ebe8983ed9add360f345a88b491cb7353e961923",
+      "name": "Second.md",
+      "sha256": "274520b71263c8416afbd897500477c649a45c7b3a38ae487485f56e8b0b23d8",
+      "text": "# Second\nAuthored concurrent source."
+    }
+  ],
+  "version": 1,
+  "workspaceId": "shared"
+}

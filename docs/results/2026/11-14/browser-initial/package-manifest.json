@@ -1,0 +1,199 @@
+{
+  "file": "alvarovillalbaa-intakelet-0.1.0.tgz",
+  "bytes": 39058,
+  "sha256": "1022fe5bae7c585e74c6c9684d7355f88f912e9c58c1cdde301a33c2ef9028f5",
+  "members": [
+    {
+      "path": "package/LICENSE",
+      "bytes": 1078,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/element.css",
+      "bytes": 5134,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/examples/contacts.csv",
+      "bytes": 157,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/package.json",
+      "bytes": 1146,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/examples/react.jsx",
+      "bytes": 841,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/examples/handbook.md",
+      "bytes": 420,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/docs/references/integration.md",
+      "bytes": 4094,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/docs/specs/qualification-v1.md",
+      "bytes": 5861,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/README.md",
+      "bytes": 3996,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/docs/specs/sdk-v1.md",
+      "bytes": 4286,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/docs/references/sources.md",
+      "bytes": 1830,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/browser-research.mjs",
+      "bytes": 1885,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/csv.mjs",
+      "bytes": 2205,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/element.mjs",
+      "bytes": 22433,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/host.mjs",
+      "bytes": 9152,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/index.mjs",
+      "bytes": 349,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/indexeddb.mjs",
+      "bytes": 4297,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/ingest.mjs",
+      "bytes": 5753,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/bin/intakelet.mjs",
+      "bytes": 6447,
+      "mode": 493,
+      "regular": true
+    },
+    {
+      "path": "package/src/knowledge.mjs",
+      "bytes": 2626,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/examples/node.mjs",
+      "bytes": 807,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/node.mjs",
+      "bytes": 329,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/plan.mjs",
+      "bytes": 6573,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/react.mjs",
+      "bytes": 722,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/research.mjs",
+      "bytes": 13746,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/strict-json.mjs",
+      "bytes": 3572,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/transport.mjs",
+      "bytes": 5580,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/values.mjs",
+      "bytes": 2495,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/element.d.mts",
+      "bytes": 812,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/index.d.mts",
+      "bytes": 5638,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/node.d.mts",
+      "bytes": 174,
+      "mode": 420,
+      "regular": true
+    },
+    {
+      "path": "package/src/react.d.mts",
+      "bytes": 350,
+      "mode": 420,
+      "regular": true
+    }
+  ]
+}

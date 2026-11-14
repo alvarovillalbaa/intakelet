@@ -1,0 +1,282 @@
+{
+  "articles": [
+    {
+      "id": "kb-a0496999683d82f4d08ab48353cc229ca5a3aa22375ca3bb60f1437238bb7709",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+      "span": {
+        "end": 420,
+        "start": 0
+      },
+      "text": "# Morrow Works onboarding\n\nThis is authored fictional company information for the Intakelet playground.\n\n## The first week\n\nNew collaborators review the product guide and meet their named project owner.\nThe project owner confirms scope before any customer work begins.\n\n## Keeping context\n\nKeep source links with project notes. Record a question when information is\nmissing rather than inventing a policy or commitment.\n",
+      "title": "Morrow Works onboarding"
+    },
+    {
+      "id": "kb-75f6ef15b09a9329c46d036fd2ef96991912c73bda36a931b2e130937e191c1b",
+      "method": "exact_source",
+      "part": 0,
+      "sourceId": "src-412c79a7da61eeca6c2bf1253083c6ecfc2598d2f1282f7834f97790d92cd4ea",
+      "span": {
+        "end": 110,
+        "start": 0
+      },
+      "text": "# Literal\n<script>window.__intakeletInjected=true</script>\n<img src=x onerror=window.__intakeletInjected=true>",
+      "title": "Literal"
+    },
+    {
+      "id": "kb-b3c7bc1a924b23b8c01ace183026d9b22cd0e5d333471f940de44b7db084a209",
+      "method": "structured_records",
+      "part": 0,
+      "provenance": [
+        {
+          "row": 0,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 74,
+            "start": 32
+          }
+        },
+        {
+          "row": 2,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 157,
+            "start": 115
+          }
+        },
+        {
+          "row": 1,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 115,
+            "start": 74
+          }
+        }
+      ],
+      "recordIds": [
+        "rec-b677573399a3d455c393a9b9678ca1db91a9c67bb9c9bef9213180236ba3a693",
+        "rec-627955756fb32c2381463df41b7ad9c04f45ad8a1e44ab789506e5f94121807a"
+      ],
+      "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+      "text": "[{\"company\":\"Morrow Works\",\"email\":\"ada@example.test\",\"name\":\"Ada Example\"},{\"company\":\"Morrow Works\",\"email\":\"ben@example.test\",\"name\":\"Ben Sample\"}]",
+      "title": "Imported records"
+    }
+  ],
+  "draft": {
+    "documents": [
+      {
+        "format": "markdown",
+        "sourceId": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+        "title": "Morrow Works onboarding"
+      },
+      {
+        "format": "markdown",
+        "sourceId": "src-412c79a7da61eeca6c2bf1253083c6ecfc2598d2f1282f7834f97790d92cd4ea",
+        "title": "Literal"
+      }
+    ],
+    "draftId": "sha256:9226147e418652b45302209d302d9835b699e7921a6d44cbb9f5a7edd2c875e2",
+    "duplicates": [],
+    "schema": "intakelet.draft",
+    "sources": [
+      {
+        "bytes": 157,
+        "format": "csv",
+        "id": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+        "name": "contacts.csv",
+        "sha256": "a9f559e8b0d75e88f4050fcebd7202916b56fe5bf8b913742ce9b95c6ed734d5",
+        "text": "Full Name,Email Address,Company\nAda Example,ada@example.test,Morrow Works\nBen Sample,ben@example.test,Morrow Works\nAda Example,ada@example.test,Morrow Works\n"
+      },
+      {
+        "bytes": 420,
+        "format": "markdown",
+        "id": "src-a7e0142bc6ab63d531e7062aae1afaf9470e51db9266044f269ac9bed5118118",
+        "name": "handbook.md",
+        "sha256": "fd61754160bb2b5670e1a569c9b4c8d573e3cfa041565572686419aa6209826a",
+        "text": "# Morrow Works onboarding\n\nThis is authored fictional company information for the Intakelet playground.\n\n## The first week\n\nNew collaborators review the product guide and meet their named project owner.\nThe project owner confirms scope before any customer work begins.\n\n## Keeping context\n\nKeep source links with project notes. Record a question when information is\nmissing rather than inventing a policy or commitment.\n"
+      },
+      {
+        "bytes": 110,
+        "format": "markdown",
+        "id": "src-412c79a7da61eeca6c2bf1253083c6ecfc2598d2f1282f7834f97790d92cd4ea",
+        "name": "literal.md",
+        "sha256": "c2adc66fd65bf35fdd4dd81501ea3e4b16af03b3484b4587d7e04c7031f98a81",
+        "text": "# Literal\n<script>window.__intakeletInjected=true</script>\n<img src=x onerror=window.__intakeletInjected=true>"
+      }
+    ],
+    "tables": [
+      {
+        "columns": [
+          "Full Name",
+          "Email Address",
+          "Company"
+        ],
+        "rows": [
+          {
+            "index": 0,
+            "span": {
+              "end": 74,
+              "start": 32
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ada@example.test",
+              "Full Name": "Ada Example"
+            }
+          },
+          {
+            "index": 1,
+            "span": {
+              "end": 115,
+              "start": 74
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ben@example.test",
+              "Full Name": "Ben Sample"
+            }
+          },
+          {
+            "index": 2,
+            "span": {
+              "end": 157,
+              "start": 115
+            },
+            "values": {
+              "Company": "Morrow Works",
+              "Email Address": "ada@example.test",
+              "Full Name": "Ada Example"
+            }
+          }
+        ],
+        "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+        "suggestion": {
+          "kind": "contact",
+          "mapping": {
+            "company": "Company",
+            "email": "Email Address",
+            "name": "Full Name"
+          },
+          "reason": "Contact fields suggested from the “Email Address” column. Review before importing."
+        }
+      }
+    ],
+    "totals": {
+      "bytes": 687,
+      "duplicateFiles": 0,
+      "files": 3,
+      "rows": 3
+    },
+    "version": 1,
+    "workspaceId": "playground"
+  },
+  "insights": [
+    {
+      "id": "records",
+      "label": "Reviewed records",
+      "method": "count",
+      "value": 2
+    },
+    {
+      "id": "contacts",
+      "label": "Contact records",
+      "method": "count",
+      "value": 2
+    },
+    {
+      "id": "documents",
+      "label": "Source documents",
+      "method": "count",
+      "value": 2
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge chunks",
+      "method": "count",
+      "value": 3
+    },
+    {
+      "id": "missing_names",
+      "label": "Contacts without a name",
+      "method": "field_coverage",
+      "value": 0
+    },
+    {
+      "id": "duplicates",
+      "label": "Identical rows merged",
+      "method": "exact_comparison",
+      "value": 1
+    },
+    {
+      "id": "excluded",
+      "label": "Explicitly excluded rows",
+      "method": "review_selection",
+      "value": 0
+    },
+    {
+      "id": "invalid",
+      "label": "Invalid/conflicting rows excluded",
+      "method": "validated_exclusion",
+      "value": 0
+    }
+  ],
+  "issues": [],
+  "records": [
+    {
+      "data": {
+        "company": "Morrow Works",
+        "email": "ada@example.test",
+        "name": "Ada Example"
+      },
+      "id": "rec-b677573399a3d455c393a9b9678ca1db91a9c67bb9c9bef9213180236ba3a693",
+      "kind": "contact",
+      "provenance": [
+        {
+          "row": 0,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 74,
+            "start": 32
+          }
+        },
+        {
+          "row": 2,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 157,
+            "start": 115
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "company": "Morrow Works",
+        "email": "ben@example.test",
+        "name": "Ben Sample"
+      },
+      "id": "rec-627955756fb32c2381463df41b7ad9c04f45ad8a1e44ab789506e5f94121807a",
+      "kind": "contact",
+      "provenance": [
+        {
+          "row": 1,
+          "sourceId": "src-3662b2e775606488d5f2338d13c9460d20b1c6077c232a669d9c1c058e2a9dd4",
+          "span": {
+            "end": 115,
+            "start": 74
+          }
+        }
+      ]
+    }
+  ],
+  "review": {
+    "excludedRows": [],
+    "mappings": {},
+    "skipInvalid": false
+  },
+  "schema": "intakelet.plan",
+  "version": 1,
+  "workspaceId": "playground",
+  "planId": "sha256:da28d96187e795b156fe694f0cb67dec3c467e8532b5ce2524ba1f421c356181"
+}
