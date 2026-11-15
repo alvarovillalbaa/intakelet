@@ -1,0 +1,59 @@
+{
+  "release": {
+    "id": 446011637,
+    "tag": "v0.2.0",
+    "target": "0ffde072df73287ae94ca2b35c335a89bc5b973a",
+    "draft": false,
+    "assets": [
+      {
+        "id": 750795173,
+        "name": "alvarovillalbaa-intakelet-0.2.0.tgz",
+        "bytes": 87878,
+        "digest": "sha256:84a3fc59b83ae3182396bffa2e6bb7b61bda2b126c144b08309c236b5a41e4be",
+        "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.2.0/alvarovillalbaa-intakelet-0.2.0.tgz"
+      },
+      {
+        "id": 750795242,
+        "name": "release-provenance.json",
+        "bytes": 854,
+        "digest": "sha256:02c175777edc36e883e401ee9de3ed78d7be7b43b2eeec9945a0693470bed01a",
+        "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.2.0/release-provenance.json"
+      },
+      {
+        "id": 750795224,
+        "name": "SHA256SUMS.txt",
+        "bytes": 102,
+        "digest": "sha256:8ebbd51cf94a6d6fb57705c2b7a8122a3bacf7a0cf7bec739b238446d421ee2f",
+        "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.2.0/SHA256SUMS.txt"
+      }
+    ]
+  },
+  "deployment": {
+    "id": "dpl_ctabwvLTqRMHobtMwtyb4dzEkxCW",
+    "url": "intakelet-kx1ef23wq-my-team-4f230354.vercel.app",
+    "state": "READY",
+    "source": "0ffde072df73287ae94ca2b35c335a89bc5b973a",
+    "aliases": [
+      "intakelet.vercel.app",
+      "intakelet-my-team-4f230354.vercel.app",
+      "intakelet-git-main-my-team-4f230354.vercel.app"
+    ]
+  },
+  "qa": {
+    "branch": "qa/intakelet-onboarding-20261115",
+    "refAbsent": true,
+    "deploymentCount": 0,
+    "workflowRemovedCommit": "84c0eed6d0793710fe57c5748b4e47164f375940"
+  },
+  "ci": {
+    "totalSeconds": 250,
+    "capSeconds": 1200
+  },
+  "log": {
+    "bytes": 832717,
+    "sha256": "42b7095e26add0cb7b13d203898a4809ef74e06e7a485152d5da9ecc75caae0d",
+    "gzipBytes": 592096,
+    "gzipSha256": "261eba9918bc23d962552156f47833008cb70677dc6f55fdf7e5eafc75720b64"
+  },
+  "limits": "Snapshot readback, not a further browser execution. Subsequent documentation-only main is bridged by exact runtime/build/archive member identities."
+}

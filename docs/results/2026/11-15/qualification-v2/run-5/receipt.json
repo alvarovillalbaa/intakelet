@@ -1,0 +1,251 @@
+{
+  "passed": true,
+  "cleanup": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0038340450000049486,
+      "stdoutBytes": 9,
+      "stderrBytes": 0,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "npm-version",
+      "argv": [
+        "npm",
+        "--version"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.07851141500000125,
+      "stdoutBytes": 8,
+      "stderrBytes": 0,
+      "stdoutSha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "lock-metadata",
+      "argv": [
+        "npm",
+        "install",
+        "--package-lock-only",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.5382313260000018,
+      "stdoutBytes": 21,
+      "stderrBytes": 0,
+      "stdoutSha256": "97f4286aa429fdb1d90abf3ad78f8be01a7d25f702c3162451066eaff9482a90",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.47598708799999656,
+      "stdoutBytes": 27,
+      "stderrBytes": 0,
+      "stdoutSha256": "674a7a8de5a65126d2925484f42d6fd4daa8654d743aa2b26ea77837e2b3da21",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.7138245450000014,
+      "stdoutBytes": 72,
+      "stderrBytes": 0,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.16939012299999945,
+      "stdoutBytes": 81,
+      "stderrBytes": 42,
+      "stdoutSha256": "1a5016d8bfbc752fc674be167c926dca7431f2ab5f05d655c905af945a2e0af1",
+      "stderrSha256": "1abebebdccbc34624792cccfe4b8ef5c98a678ffdb3b7c22a7f6ae35234929e1"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-v2-artifact"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.2684317730000032,
+      "stdoutBytes": 5729,
+      "stderrBytes": 0,
+      "stdoutSha256": "cd5bbc78585140c2f135a962d4e6bac05884b590b4363d4d727bc571b242299a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "react18-install",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-v2-artifact/alvarovillalbaa-intakelet-0.2.0.tgz"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.003421631000002,
+      "stdoutBytes": 25,
+      "stderrBytes": 0,
+      "stdoutSha256": "ee49f9d82e7eb07b1db6995cf7e4d72b1b8ef45d4d58597dc6011f2a535d7ec5",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "react19-install",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-v2-artifact/alvarovillalbaa-intakelet-0.2.0.tgz"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.9276178229999985,
+      "stdoutBytes": 28,
+      "stderrBytes": 0,
+      "stdoutSha256": "f8e175046e0b4cf191ddc402280fc8682672c5e1235f592c4510fe1e1a98753b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "browser-dependencies",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.433674750999998,
+      "stdoutBytes": 24,
+      "stderrBytes": 0,
+      "stdoutSha256": "4aaef3acc3c4b16766abf61c4f4aa2d3bd413e2fe822d3edd6cfa9d7e7334efa",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "browser-install",
+      "argv": [
+        "node",
+        "/tmp/intakelet-v2-jwepc4pb/browser-tools/node_modules/playwright/cli.js",
+        "install",
+        "--with-deps",
+        "chromium"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 21.403816024,
+      "stdoutBytes": 16041,
+      "stderrBytes": 237,
+      "stdoutSha256": "0245bfc760f7780b1287bafbfe200a18fbcfdf051234b0f3abadd8be6d6ceaa5",
+      "stderrSha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+    },
+    {
+      "name": "consumer-bundles",
+      "argv": [
+        "node",
+        "tests/scripts/build-consumers.mjs"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.2593008380000015,
+      "stdoutBytes": 0,
+      "stderrBytes": 116,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "ffec3e51eae3ac8ebb45afc4495b9de692687d1054a18146abd0c1e94d78da54"
+    },
+    {
+      "name": "native",
+      "argv": [
+        "node",
+        "tests/e2e/onboarding-migration.mjs"
+      ],
+      "exit": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 8.745627466000002,
+      "stdoutBytes": 33043,
+      "stderrBytes": 0,
+      "stdoutSha256": "adaf4e507289fcf3ce0d28a6a7c6b963e75a933b3ce824138f38b476b424c989",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "phase": "hosted",
+  "storage": {
+    "freeBytes": 91501555712,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "dependencyIdentitiesUnchanged": true,
+  "sourceUnchanged": true,
+  "exportChangedPaths": [],
+  "sourceGuardPassed": true,
+  "scratchBytes": 1174639754
+}

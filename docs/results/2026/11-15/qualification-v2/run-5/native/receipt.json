@@ -1,0 +1,2239 @@
+{
+  "tier": "T2",
+  "cases": [
+    {
+      "id": "N01",
+      "passed": true,
+      "person": {
+        "busy": false,
+        "complete": true,
+        "completed": [
+          "profile",
+          "purpose"
+        ],
+        "index": 2,
+        "receipts": [
+          {
+            "receiptId": "demo-96286dad69ea78de",
+            "requestId": "sha256:96286dad69ea78deb089de158a48141d0f0438af25ea0cac21ebb5839548b474",
+            "stepId": "profile"
+          },
+          {
+            "receiptId": "demo-c4fcc4e07801285b",
+            "requestId": "sha256:c4fcc4e07801285bed45105ee80e39a199ce62ee9b9f66d155d105049b1c38a9",
+            "stepId": "purpose"
+          }
+        ],
+        "skipped": [],
+        "stepId": null,
+        "values": {}
+      },
+      "company": {
+        "busy": false,
+        "complete": true,
+        "completed": [
+          "company"
+        ],
+        "index": 2,
+        "receipts": [
+          {
+            "receiptId": "demo-7c10368faa551d93",
+            "requestId": "sha256:7c10368faa551d939ff4573bd9719a078a5744e427a4f0317327e1df54f5e059",
+            "stepId": "company"
+          }
+        ],
+        "skipped": [
+          "preferences"
+        ],
+        "stepId": null,
+        "values": {}
+      },
+      "quickstart": {
+        "busy": false,
+        "complete": false,
+        "completed": [
+          "profile"
+        ],
+        "index": 1,
+        "receipts": [
+          {
+            "receiptId": "demo-quickstart-profile",
+            "requestId": "sha256:d65718aa97c57838486d20c991acafd893cd307974dd2468a01cdbaf763a78f6",
+            "stepId": "profile"
+          }
+        ],
+        "skipped": [],
+        "stepId": "source",
+        "values": {}
+      },
+      "errors": []
+    },
+    {
+      "id": "N02",
+      "passed": true,
+      "realTargetAdvanced": true,
+      "escapeReturnedFocus": true,
+      "missingTargetCompleted": false,
+      "disconnectedOverlayRemoved": true,
+      "errors": []
+    },
+    {
+      "id": "N03",
+      "passed": true,
+      "plans": [
+        {
+          "baseline": {
+            "cursor": null,
+            "revision": 0,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1"
+          },
+          "batchId": "sha256:d04d6edff24dea85432cc03b96301bdc7277b941fabd9d1f15dd09f4c6dca450",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 4
+            },
+            "cursorBefore": null,
+            "done": false,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:0",
+                  "mediaType": "application/octet-stream",
+                  "name": "authored-0.opaque",
+                  "sha256": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+                },
+                "id": "file-0",
+                "operation": "upsert",
+                "revision": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:1",
+                  "mediaType": "text/plain",
+                  "name": "authored-1.txt",
+                  "sha256": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+                },
+                "id": "file-1",
+                "operation": "upsert",
+                "revision": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:2",
+                  "mediaType": "text/plain",
+                  "name": "authored-2.txt",
+                  "sha256": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c"
+                },
+                "id": "file-2",
+                "operation": "upsert",
+                "revision": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:3",
+                  "mediaType": "text/plain",
+                  "name": "authored-3.txt",
+                  "sha256": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136"
+                },
+                "id": "file-3",
+                "operation": "upsert",
+                "revision": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "name": "authored-0.opaque"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:0"
+                }
+              },
+              "dataHash": "sha256:1fb3f697b98441a49bba237550fede873850c76584727f59765681b5a96210f5",
+              "expected": null,
+              "id": "row-d5160a7940dbb594ed10a50ea33a19b09002f4fc285c4543419bb6081d9bfbf6",
+              "sourceKey": "file-0"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "name": "authored-1.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:1"
+                }
+              },
+              "dataHash": "sha256:864adcbd091724b0082120deb1896994c580362992afb2818f21322c38032cf0",
+              "expected": null,
+              "id": "row-fe11591cfc554110d27c6f672a072031b48348b4fdddcd3234187fd4ecec08a5",
+              "sourceKey": "file-1"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c",
+                  "bytes": 15,
+                  "name": "authored-2.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:2"
+                }
+              },
+              "dataHash": "sha256:56413aec7d4babc023abe7331213bf53b8d936f9478d3cce2ad3344a76d29486",
+              "expected": null,
+              "id": "row-7c9f6f2a3dd7587a9cbf7d79004dd74d3e1e7f3467dc5691ceeee2db07275692",
+              "sourceKey": "file-2"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136",
+                  "bytes": 15,
+                  "name": "authored-3.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:3"
+                }
+              },
+              "dataHash": "sha256:464115630ba43871ff8e66608ec484a9c870f1f51173ff376960dbcf6a16302e",
+              "expected": null,
+              "id": "row-08698ac7401bf658f1395890c91c308e793cf968fc33359bb0a9612e1e2d401b",
+              "sourceKey": "file-3"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 13,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a5b3fdebefb162d8bf0cd26d6c427562e1b723739d3c3e8506ffc12ca697c3a6"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1
+        },
+        {
+          "baseline": {
+            "cursor": null,
+            "revision": 0,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1"
+          },
+          "batchId": "sha256:2f61432c67ee7690598eb9b79391682bbff9de736eb9b6d8f5c93b60b7fd0ae4",
+          "issues": [
+            {
+              "code": "excluded",
+              "details": null,
+              "excluded": true,
+              "message": "Explicitly excluded by the reviewer",
+              "sourceKey": "file-0"
+            }
+          ],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 4
+            },
+            "cursorBefore": null,
+            "done": false,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:0",
+                  "mediaType": "application/octet-stream",
+                  "name": "authored-0.opaque",
+                  "sha256": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+                },
+                "id": "file-0",
+                "operation": "upsert",
+                "revision": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:1",
+                  "mediaType": "text/plain",
+                  "name": "authored-1.txt",
+                  "sha256": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+                },
+                "id": "file-1",
+                "operation": "upsert",
+                "revision": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:2",
+                  "mediaType": "text/plain",
+                  "name": "authored-2.txt",
+                  "sha256": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c"
+                },
+                "id": "file-2",
+                "operation": "upsert",
+                "revision": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:3",
+                  "mediaType": "text/plain",
+                  "name": "authored-3.txt",
+                  "sha256": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136"
+                },
+                "id": "file-3",
+                "operation": "upsert",
+                "revision": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": [
+              "file-0"
+            ]
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "name": "authored-1.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:1"
+                }
+              },
+              "dataHash": "sha256:864adcbd091724b0082120deb1896994c580362992afb2818f21322c38032cf0",
+              "expected": null,
+              "id": "row-fe11591cfc554110d27c6f672a072031b48348b4fdddcd3234187fd4ecec08a5",
+              "sourceKey": "file-1"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:cf597f4db2d62297b682f8c39735cb2ccbf24a30e78a5adeb07d5f631ad4323c",
+                  "bytes": 15,
+                  "name": "authored-2.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:2"
+                }
+              },
+              "dataHash": "sha256:56413aec7d4babc023abe7331213bf53b8d936f9478d3cce2ad3344a76d29486",
+              "expected": null,
+              "id": "row-7c9f6f2a3dd7587a9cbf7d79004dd74d3e1e7f3467dc5691ceeee2db07275692",
+              "sourceKey": "file-2"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:921aeea2538263d9144a13d6084d84d5a6268ffa4ea8aa26a2d5b4bceca98136",
+                  "bytes": 15,
+                  "name": "authored-3.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:3"
+                }
+              },
+              "dataHash": "sha256:464115630ba43871ff8e66608ec484a9c870f1f51173ff376960dbcf6a16302e",
+              "expected": null,
+              "id": "row-08698ac7401bf658f1395890c91c308e793cf968fc33359bb0a9612e1e2d401b",
+              "sourceKey": "file-3"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 13,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a5b3fdebefb162d8bf0cd26d6c427562e1b723739d3c3e8506ffc12ca697c3a6"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1
+        },
+        {
+          "baseline": {
+            "cursor": {
+              "kind": "file-collection-v1",
+              "next": 4
+            },
+            "revision": 1,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1"
+          },
+          "batchId": "sha256:f98a44c4f36cd46c219b65d1876e28170cbc34be3b42c620697a1238d1450196",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 8
+            },
+            "cursorBefore": {
+              "kind": "file-collection-v1",
+              "next": 4
+            },
+            "done": false,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:d6c08f3ad10b39764744693623fa605841d0bb7f654b970abee4310a33c51186",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:4",
+                  "mediaType": "text/plain",
+                  "name": "authored-4.txt",
+                  "sha256": "sha256:d6c08f3ad10b39764744693623fa605841d0bb7f654b970abee4310a33c51186"
+                },
+                "id": "file-4",
+                "operation": "upsert",
+                "revision": "sha256:d6c08f3ad10b39764744693623fa605841d0bb7f654b970abee4310a33c51186"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:33587134376b8687958ed40a5068c2718b662aa9c30a968b00629f45ac9b341a",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:5",
+                  "mediaType": "text/plain",
+                  "name": "authored-5.txt",
+                  "sha256": "sha256:33587134376b8687958ed40a5068c2718b662aa9c30a968b00629f45ac9b341a"
+                },
+                "id": "file-5",
+                "operation": "upsert",
+                "revision": "sha256:33587134376b8687958ed40a5068c2718b662aa9c30a968b00629f45ac9b341a"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:56e518ff344dee477e97e998426c3ed36d15edf76972a20e3a9bae89b58c43b0",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:6",
+                  "mediaType": "text/plain",
+                  "name": "authored-6.txt",
+                  "sha256": "sha256:56e518ff344dee477e97e998426c3ed36d15edf76972a20e3a9bae89b58c43b0"
+                },
+                "id": "file-6",
+                "operation": "upsert",
+                "revision": "sha256:56e518ff344dee477e97e998426c3ed36d15edf76972a20e3a9bae89b58c43b0"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:a5f68fef058c6e1897cba56bba9632b7332a40c81c41fe4eb6b6b72b226838ce",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:7",
+                  "mediaType": "text/plain",
+                  "name": "authored-7.txt",
+                  "sha256": "sha256:a5f68fef058c6e1897cba56bba9632b7332a40c81c41fe4eb6b6b72b226838ce"
+                },
+                "id": "file-7",
+                "operation": "upsert",
+                "revision": "sha256:a5f68fef058c6e1897cba56bba9632b7332a40c81c41fe4eb6b6b72b226838ce"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:d6c08f3ad10b39764744693623fa605841d0bb7f654b970abee4310a33c51186",
+                  "bytes": 15,
+                  "name": "authored-4.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:4"
+                }
+              },
+              "dataHash": "sha256:0b5de24f79535c307069b1da0baa7c4215afc040addaad343e6b9484d5e2a9cf",
+              "expected": null,
+              "id": "row-38793c56b8b6d98e549e00f7b030700f1aa7e5f3511d52d04ec240ad99921a78",
+              "sourceKey": "file-4"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:33587134376b8687958ed40a5068c2718b662aa9c30a968b00629f45ac9b341a",
+                  "bytes": 15,
+                  "name": "authored-5.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:5"
+                }
+              },
+              "dataHash": "sha256:7b93684cab1de26fecbc242969b9aaccaa934f6ff332fcad0f0a6b5d648f0999",
+              "expected": null,
+              "id": "row-41180278827f0dab02403522f0c022b51f2850a38dbe2aeea2e747f23ec44d36",
+              "sourceKey": "file-5"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:56e518ff344dee477e97e998426c3ed36d15edf76972a20e3a9bae89b58c43b0",
+                  "bytes": 15,
+                  "name": "authored-6.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:6"
+                }
+              },
+              "dataHash": "sha256:f68668a3bff40e5c51f22096a1aed4824763a6e79b78467f31d2c2575fd1ae97",
+              "expected": null,
+              "id": "row-ad2b8097c285c87a593e818203578590fa5426d94971b2e1721f1d1aa63a3036",
+              "sourceKey": "file-6"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:a5f68fef058c6e1897cba56bba9632b7332a40c81c41fe4eb6b6b72b226838ce",
+                  "bytes": 15,
+                  "name": "authored-7.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:7"
+                }
+              },
+              "dataHash": "sha256:2a56e3dce1e931ee4266347a9fee3e5a8f3e4d6b0f48d43a83c6765c54ca3036",
+              "expected": null,
+              "id": "row-0d656ef284e0e3f9184f96e1f936d711d050670ca4c715ab63eaef89e24f8cec",
+              "sourceKey": "file-7"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 13,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a5b3fdebefb162d8bf0cd26d6c427562e1b723739d3c3e8506ffc12ca697c3a6"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1
+        },
+        {
+          "baseline": {
+            "cursor": {
+              "kind": "file-collection-v1",
+              "next": 8
+            },
+            "revision": 2,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1"
+          },
+          "batchId": "sha256:59465a736638130c268f7689db33c5a18b5251305ca466b753d1154a868c7a1b",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 12
+            },
+            "cursorBefore": {
+              "kind": "file-collection-v1",
+              "next": 8
+            },
+            "done": false,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:a191be5e4066019228ea85fa604e27124ebafed1bcd382fef27bae5d7f5365e5",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:8",
+                  "mediaType": "text/plain",
+                  "name": "authored-8.txt",
+                  "sha256": "sha256:a191be5e4066019228ea85fa604e27124ebafed1bcd382fef27bae5d7f5365e5"
+                },
+                "id": "file-8",
+                "operation": "upsert",
+                "revision": "sha256:a191be5e4066019228ea85fa604e27124ebafed1bcd382fef27bae5d7f5365e5"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:d07a6631938a1817d55dede3c4904852d5a0aa8b3b5a1a8a3052b7554a9ebb4d",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:9",
+                  "mediaType": "text/plain",
+                  "name": "authored-9.txt",
+                  "sha256": "sha256:d07a6631938a1817d55dede3c4904852d5a0aa8b3b5a1a8a3052b7554a9ebb4d"
+                },
+                "id": "file-9",
+                "operation": "upsert",
+                "revision": "sha256:d07a6631938a1817d55dede3c4904852d5a0aa8b3b5a1a8a3052b7554a9ebb4d"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:5aea6d700f5a6c4e0da40ff47c9928fb1113bd58b6b8987887741438ce971fdc",
+                  "bytes": 16,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:10",
+                  "mediaType": "text/plain",
+                  "name": "authored-10.txt",
+                  "sha256": "sha256:5aea6d700f5a6c4e0da40ff47c9928fb1113bd58b6b8987887741438ce971fdc"
+                },
+                "id": "file-10",
+                "operation": "upsert",
+                "revision": "sha256:5aea6d700f5a6c4e0da40ff47c9928fb1113bd58b6b8987887741438ce971fdc"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:c25b591d815dbf86ccc351a49c35d61265992731e9f6d75c00cb069f3bb3b632",
+                  "bytes": 16,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:11",
+                  "mediaType": "text/plain",
+                  "name": "authored-11.txt",
+                  "sha256": "sha256:c25b591d815dbf86ccc351a49c35d61265992731e9f6d75c00cb069f3bb3b632"
+                },
+                "id": "file-11",
+                "operation": "upsert",
+                "revision": "sha256:c25b591d815dbf86ccc351a49c35d61265992731e9f6d75c00cb069f3bb3b632"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:a191be5e4066019228ea85fa604e27124ebafed1bcd382fef27bae5d7f5365e5",
+                  "bytes": 15,
+                  "name": "authored-8.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:8"
+                }
+              },
+              "dataHash": "sha256:0c8aa18c64d432b110c709b105b67d5847a0ad75eb683f78be2f1066b7b95bf8",
+              "expected": null,
+              "id": "row-c1ec239abaa2e73b3a8f7b2885d70b53ffd1ff9618455ecf7c6775fb207ba2fb",
+              "sourceKey": "file-8"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:d07a6631938a1817d55dede3c4904852d5a0aa8b3b5a1a8a3052b7554a9ebb4d",
+                  "bytes": 15,
+                  "name": "authored-9.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:9"
+                }
+              },
+              "dataHash": "sha256:8ed978e619d2fa09fbd29eaf921b5437bfa6e8e3786ee2f154b933a0deee0a13",
+              "expected": null,
+              "id": "row-6009adf46540969d4bc3c750b424b156e29142b8d536fab2a3c550cb16a67547",
+              "sourceKey": "file-9"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:5aea6d700f5a6c4e0da40ff47c9928fb1113bd58b6b8987887741438ce971fdc",
+                  "bytes": 16,
+                  "name": "authored-10.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:10"
+                }
+              },
+              "dataHash": "sha256:665bac282697626d0655f940d69c117a6d0e47f9db62b72df83e5bf0847676b6",
+              "expected": null,
+              "id": "row-81e58238d9ed58308fcd548c722bf0e7b43781ad64ab395f3bc6ff95f5c4ecc9",
+              "sourceKey": "file-10"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:c25b591d815dbf86ccc351a49c35d61265992731e9f6d75c00cb069f3bb3b632",
+                  "bytes": 16,
+                  "name": "authored-11.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:11"
+                }
+              },
+              "dataHash": "sha256:86179f1336e0b05e633c3c3480a24c8da5161e5c011b93553e182147267af2a7",
+              "expected": null,
+              "id": "row-e001a48f47ac9c20995eea1d33faa80597d258a8fcac143365293209d203f298",
+              "sourceKey": "file-11"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 13,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a5b3fdebefb162d8bf0cd26d6c427562e1b723739d3c3e8506ffc12ca697c3a6"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1
+        },
+        {
+          "baseline": {
+            "cursor": {
+              "kind": "file-collection-v1",
+              "next": 12
+            },
+            "revision": 3,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1"
+          },
+          "batchId": "sha256:e1bf36937783f0612eeedbb0542f49a9a89bae2a0568d88d4846ab1802b552b5",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 13
+            },
+            "cursorBefore": {
+              "kind": "file-collection-v1",
+              "next": 12
+            },
+            "done": true,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:275b994312e02bf80cf9933095f1b4561439dfa3667b2f1900fcae51c6884b7d",
+                  "bytes": 16,
+                  "extracted": null,
+                  "fileId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:12",
+                  "mediaType": "text/plain",
+                  "name": "authored-12.txt",
+                  "sha256": "sha256:275b994312e02bf80cf9933095f1b4561439dfa3667b2f1900fcae51c6884b7d"
+                },
+                "id": "file-12",
+                "operation": "upsert",
+                "revision": "sha256:275b994312e02bf80cf9933095f1b4561439dfa3667b2f1900fcae51c6884b7d"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:275b994312e02bf80cf9933095f1b4561439dfa3667b2f1900fcae51c6884b7d",
+                  "bytes": 16,
+                  "name": "authored-12.txt"
+                },
+                "migration": {
+                  "id": "selection-6016b71b-4d67-49ce-a13c-595d6e274162:12"
+                }
+              },
+              "dataHash": "sha256:efee90f6e52443245f415cdfcf1b4954222369d7baf500a34831e3fc8938fcf1",
+              "expected": null,
+              "id": "row-46cb93cd7909239a83b14f5188ed58155812ab9271810fecdfded9277fdf230a",
+              "sourceKey": "file-12"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 13,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a5b3fdebefb162d8bf0cd26d6c427562e1b723739d3c3e8506ffc12ca697c3a6"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1
+        }
+      ],
+      "acknowledgements": [
+        {
+          "receipt": {
+            "batchId": "sha256:2f61432c67ee7690598eb9b79391682bbff9de736eb9b6d8f5c93b60b7fd0ae4",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 4
+            },
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "counts": {
+              "created": 3,
+              "deleted": 0,
+              "excluded": 1,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [
+              "file-0"
+            ],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": false,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        },
+        {
+          "receipt": {
+            "batchId": "sha256:f98a44c4f36cd46c219b65d1876e28170cbc34be3b42c620697a1238d1450196",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 8
+            },
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "counts": {
+              "created": 4,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 2,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": false,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        },
+        {
+          "receipt": {
+            "batchId": "sha256:59465a736638130c268f7689db33c5a18b5251305ca466b753d1154a868c7a1b",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 12
+            },
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "counts": {
+              "created": 4,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 3,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": false,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        },
+        {
+          "receipt": {
+            "batchId": "sha256:e1bf36937783f0612eeedbb0542f49a9a89bae2a0568d88d4846ab1802b552b5",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 13
+            },
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "counts": {
+              "created": 1,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 4,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        }
+      ],
+      "progress": {
+        "busy": false,
+        "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+        "lastReceipt": {
+          "batchId": "sha256:e1bf36937783f0612eeedbb0542f49a9a89bae2a0568d88d4846ab1802b552b5",
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 13
+          },
+          "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+          "counts": {
+            "created": 1,
+            "deleted": 0,
+            "excluded": 0,
+            "unchanged": 0,
+            "updated": 0
+          },
+          "excludedIds": [],
+          "revision": 4,
+          "schema": "intakelet.migration-receipt",
+          "sourceDone": true,
+          "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+          "version": 1,
+          "workspaceId": "migration-demo"
+        },
+        "phase": "complete",
+        "result": {
+          "batches": 4,
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 13
+          },
+          "items": 13,
+          "lastReceipt": {
+            "batchId": "sha256:e1bf36937783f0612eeedbb0542f49a9a89bae2a0568d88d4846ab1802b552b5",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 13
+            },
+            "connectionId": "selection-6016b71b-4d67-49ce-a13c-595d6e274162",
+            "counts": {
+              "created": 1,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 4,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:8e164b683bd857c942f3727a288a8e8e006edea1c167eace8ecd8707f3e2ccc1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "status": "complete"
+        }
+      },
+      "errors": []
+    },
+    {
+      "id": "N05-320",
+      "passed": true,
+      "plans": [
+        {
+          "baseline": {
+            "cursor": null,
+            "revision": 0,
+            "specId": "sha256:09957ba51a8846f59804fbd96fb15b4012c55472f2ae0ea9153537b0b912b8a9"
+          },
+          "batchId": "sha256:9a4ab39b3ddea6a5164cad640e6d089ff4a73b379d356b7e78ed29fcfa6637c3",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "cursorBefore": null,
+            "done": true,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "extracted": null,
+                  "fileId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b:0",
+                  "mediaType": "application/octet-stream",
+                  "name": "authored-0.opaque",
+                  "sha256": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+                },
+                "id": "file-0",
+                "operation": "upsert",
+                "revision": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b:1",
+                  "mediaType": "text/plain",
+                  "name": "authored-1.txt",
+                  "sha256": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+                },
+                "id": "file-1",
+                "operation": "upsert",
+                "revision": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "name": "authored-0.opaque"
+                },
+                "migration": {
+                  "id": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b:0"
+                }
+              },
+              "dataHash": "sha256:51687e23367c33a4e716304d9e231eea13584c8b4ea3d7f1cd9aa56af11f18ac",
+              "expected": null,
+              "id": "row-26a4c490b45a9727f4ecab54a6000d4e99034c38999b77d8de602eb6eba2667d",
+              "sourceKey": "file-0"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "name": "authored-1.txt"
+                },
+                "migration": {
+                  "id": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b:1"
+                }
+              },
+              "dataHash": "sha256:d8af4b11f10998740298f676bfeab467e9d8a9875321f34681d09b9a895ca4d5",
+              "expected": null,
+              "id": "row-215922f599d9c34b8e532edd9493642f8e61b0ca9187d55623be571b2d59900d",
+              "sourceKey": "file-1"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 2,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:b60bee9ae2ce43a6bb13a5576cdf432b3bfb63044609f1283151c62a8bb3c575"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:09957ba51a8846f59804fbd96fb15b4012c55472f2ae0ea9153537b0b912b8a9",
+          "version": 1
+        }
+      ],
+      "acknowledgements": [
+        {
+          "receipt": {
+            "batchId": "sha256:9a4ab39b3ddea6a5164cad640e6d089ff4a73b379d356b7e78ed29fcfa6637c3",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:09957ba51a8846f59804fbd96fb15b4012c55472f2ae0ea9153537b0b912b8a9",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        }
+      ],
+      "progress": {
+        "busy": false,
+        "connectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+        "lastReceipt": {
+          "batchId": "sha256:9a4ab39b3ddea6a5164cad640e6d089ff4a73b379d356b7e78ed29fcfa6637c3",
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "connectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+          "counts": {
+            "created": 2,
+            "deleted": 0,
+            "excluded": 0,
+            "unchanged": 0,
+            "updated": 0
+          },
+          "excludedIds": [],
+          "revision": 1,
+          "schema": "intakelet.migration-receipt",
+          "sourceDone": true,
+          "specId": "sha256:09957ba51a8846f59804fbd96fb15b4012c55472f2ae0ea9153537b0b912b8a9",
+          "version": 1,
+          "workspaceId": "migration-demo"
+        },
+        "phase": "complete",
+        "result": {
+          "batches": 1,
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "items": 2,
+          "lastReceipt": {
+            "batchId": "sha256:9a4ab39b3ddea6a5164cad640e6d089ff4a73b379d356b7e78ed29fcfa6637c3",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-2cb44cb6-56ee-4171-9662-bf888a10f94b",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:09957ba51a8846f59804fbd96fb15b4012c55472f2ae0ea9153537b0b912b8a9",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "status": "complete"
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "documentWidth": 320
+      },
+      "initialTourBox": {
+        "x": 16,
+        "y": 465.796875,
+        "width": 288,
+        "height": 408.421875
+      },
+      "settledTourBox": {
+        "x": 16,
+        "y": 419.578125,
+        "width": 288,
+        "height": 408.421875
+      },
+      "touchMigration": true,
+      "errors": []
+    }
+  ],
+  "contexts": [
+    {
+      "id": "N01",
+      "closed": true
+    },
+    {
+      "id": "N02",
+      "closed": true
+    },
+    {
+      "id": "N03",
+      "closed": true
+    },
+    {
+      "id": "N05-320",
+      "closed": true
+    }
+  ],
+  "hosted": [
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 499536,
+      "sha256": "4360da4a60fab62df24e6a2c6e31941c77bb802cee90762a19f4f8cf418a7dd4",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"app.js\"",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:49 GMT",
+        "etag": "W/\"1cd5f75e7c05b76c9ebd8fb7e89dcbf7\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:49 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742609477-f973f984c54b"
+      }
+    },
+    {
+      "path": "fixtures/company/about.html",
+      "status": 200,
+      "bytes": 481,
+      "sha256": "3aa483391dba2be5383085d66ad4efe7610170b176835aaaeb6c64a596fbc1fb",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"about.html\"",
+        "content-length": "481",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:49 GMT",
+        "etag": "\"886638ec5a1459ce85909fb50bab5208\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:49 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::l4rng-1794742609869-8e20fa8dccae"
+      }
+    },
+    {
+      "path": "fixtures/company/index.html",
+      "status": 200,
+      "bytes": 945,
+      "sha256": "2dbd8c2bb6cf7727b93fb22c7a4cf27f22bbb849777a3ae664ad08e58e0a96aa",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"index.html\"",
+        "content-length": "945",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"f6eda8b9f5f4f49532441b0b0c5db3b7\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::l4rng-1794742609995-a7bd311e38af"
+      }
+    },
+    {
+      "path": "fixtures/company/marker.js",
+      "status": 200,
+      "bytes": 121,
+      "sha256": "63c168bd87e2c514627573e37e5e46de0fc7c05071d14d3b9d4567eaa3c4f4c7",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"marker.js\"",
+        "content-length": "121",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "application/javascript; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"cd5e39173638b8fe2492f46d5b8a033b\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::l4rng-1794742610119-9504f3a66b79"
+      }
+    },
+    {
+      "path": "fixtures/company/private.html",
+      "status": 200,
+      "bytes": 303,
+      "sha256": "2f04abc55d18d259e57025a8ae978e54f3f2da4a133e87f98cde43d8de96d6b8",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"private.html\"",
+        "content-length": "303",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"22e54160a489399acb1df4f061e2d471\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::j2lh9-1794742610240-7a689871e458"
+      }
+    },
+    {
+      "path": "fixtures/company/products.html",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "ff1908ffc677369966876942d87c2ad6d10519d2bbeae05cc1861169bede4afb",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"products.html\"",
+        "content-length": "490",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"315e689695d46b65e9e979442aba8152\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::j2lh9-1794742610460-2d7f8605e3d2"
+      }
+    },
+    {
+      "path": "fixtures/company/support.html",
+      "status": 200,
+      "bytes": 468,
+      "sha256": "0f7e12d1ca8a801e9877bad33efd1b12fbf2abc14a0821248284480e6c2941da",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"support.html\"",
+        "content-length": "468",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"61d1d1a2a43750dca4b3b4917b55bba9\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742610586-f5a7376da142"
+      }
+    },
+    {
+      "path": "fixtures/contacts.csv",
+      "status": 200,
+      "bytes": 157,
+      "sha256": "a9f559e8b0d75e88f4050fcebd7202916b56fe5bf8b913742ce9b95c6ed734d5",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"contacts.csv\"",
+        "content-length": "157",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/csv; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"d971cdad131ad54554b87408ed9c0413\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742610715-f3feb264197c"
+      }
+    },
+    {
+      "path": "fixtures/handbook.md",
+      "status": 200,
+      "bytes": 420,
+      "sha256": "fd61754160bb2b5670e1a569c9b4c8d573e3cfa041565572686419aa6209826a",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"handbook.md\"",
+        "content-length": "420",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/markdown; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "etag": "\"4a45e44071322b62a66312c68bdf8369\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:50 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742610833-ae555c5e63c0"
+      }
+    },
+    {
+      "path": "icon.svg",
+      "status": 200,
+      "bytes": 252,
+      "sha256": "af8c9ae9dacea26f5b6c8e6a0c8a6df74fd0f2ac4b0e8a60304bc6edd285828c",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"icon.svg\"",
+        "content-length": "252",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "image/svg+xml",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "\"425f1d0d767bae89218ea91ed4f2fa8b\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742610949-1ab02b9b1d43"
+      }
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 8675,
+      "sha256": "70d62cfa349e5aa5dd8cd125939f02717cc260d6a326d42ea14a9e434de9edf2",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "W/\"4cea53ad6bc0a2395df58e0efce53976\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742611069-a02c8b5dd243"
+      }
+    },
+    {
+      "path": "intakelet.css",
+      "status": 200,
+      "bytes": 10372,
+      "sha256": "9650aca8a18e6b129417d4c9a7f543f9e378d96f8fcb0afa39a37835503347f7",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"intakelet.css\"",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/css; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "W/\"ec373d4aa325e98b44c98fc2f462c791\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::6vgds-1794742611193-ae0b51f6cdcd"
+      }
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 55,
+      "sha256": "289192c195c199b22d731ea5ecbfb8c70b32107977aa535de0b25592ccf36502",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"robots.txt\"",
+        "content-length": "55",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "\"04d20b00a98206ab7df73bb1acdf4ac2\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::j2lh9-1794742611477-1b6dd382652b"
+      }
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 7067,
+      "sha256": "06577455f593e9659c277c982798b5980308b486d7597b3e389857a3e8388eb1",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"style.css\"",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/css; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "W/\"d1a230158a8dcddb1246a2c157defe9d\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::j2lh9-1794742611590-486a031c76a7"
+      }
+    },
+    {
+      "path": "third-party-notices.txt",
+      "status": 200,
+      "bytes": 3613,
+      "sha256": "92eb269daab933bc5339b738523cb204657f08667c32a3efde3e71b7eabe2f11",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"third-party-notices.txt\"",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "W/\"0b04e23bb7639ceb6833bc77c095373e\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::j2lh9-1794742611709-53a1414759ed"
+      }
+    },
+    {
+      "path": "build.json",
+      "status": 200,
+      "bytes": 2153,
+      "sha256": "2d69668cdcb8db977691b15dcd8547270f4e6b033cfb147e0bbcf18ffc43b670",
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"build.json\"",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "etag": "W/\"e33fd9eb59303c10d54a26b64f02d851\"",
+        "last-modified": "Sun, 15 Nov 2026 11:36:51 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "no-referrer",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "pdx1::q62mj-1794742611834-4196ba1c0201"
+      }
+    }
+  ],
+  "browserClosed": true,
+  "serverClosed": true,
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

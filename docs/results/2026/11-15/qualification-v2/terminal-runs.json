@@ -1,0 +1,51 @@
+{
+  "capSeconds": 1200,
+  "totalSeconds": 250,
+  "runs": [
+    {
+      "id": 43708443934,
+      "jobId": 132794552670,
+      "source": "8fb669f39817095c9ad6dca23ebcde0d372cbbdb",
+      "seconds": 72,
+      "conclusion": "failure"
+    },
+    {
+      "id": 43708699066,
+      "jobId": 132795339105,
+      "source": "71e610375691ea94999926bdf7ff4ffd94f81933",
+      "seconds": 35,
+      "conclusion": "failure"
+    },
+    {
+      "id": 43708888948,
+      "jobId": 132795929854,
+      "source": "04db66f9fbbccbed1a64153d5e268499da804a12",
+      "seconds": 34,
+      "conclusion": "success"
+    },
+    {
+      "id": 43709262034,
+      "jobId": 132797067296,
+      "source": "96ff7f905df4123cd31829057e1dec9eb9b4cbec",
+      "seconds": 47,
+      "conclusion": "success"
+    },
+    {
+      "id": 43709720422,
+      "jobId": 132798425988,
+      "source": "c0306a07e398542c64ece7cdf0859551716453b7",
+      "seconds": 52,
+      "conclusion": "success"
+    },
+    {
+      "id": 43709970615,
+      "jobId": 132799194121,
+      "source": "a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a",
+      "seconds": 10,
+      "conclusion": "success"
+    }
+  ],
+  "publicationReceiptOrigin": "parsed exact INTAKELET_PUBLICATION stdout JSON; full job log retained",
+  "retirementReceiptOrigin": "parsed exact INTAKELET_RETIREMENT stdout JSON",
+  "binaryZipCopy": "Connector supplied ZIP reference; local copy failed DNS before data; canonical outputs are verified individual packets, not a claimed stored ZIP."
+}

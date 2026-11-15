@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://intakelet.vercel.app/",
+    "method": "GET",
+    "type": "document"
+  },
+  {
+    "url": "https://intakelet.vercel.app/style.css",
+    "method": "GET",
+    "type": "stylesheet"
+  },
+  {
+    "url": "https://intakelet.vercel.app/intakelet.css",
+    "method": "GET",
+    "type": "stylesheet"
+  },
+  {
+    "url": "https://intakelet.vercel.app/app.js",
+    "method": "GET",
+    "type": "script"
+  }
+]

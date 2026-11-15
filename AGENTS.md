@@ -14,7 +14,7 @@ Last updated: 2026-11-15
   New migration component, visual destination editor, React wrapper and exact
   receipt validation are recorded in docs/results/2026/11-15/migration-ui.md.
   These APIs belong to the0.2.0 edition; never claim the old0.1.0 archive has them.
-  Installed/typed/native acceptance and remaining publication gates are recorded
+  Installed/typed/native/public acceptance and publication identities are recorded
   in docs/results/2026/11-15/qualification-v2/result.md. Preserve original failed
   scopes and the distinction between accepted identities across runs.
 - Register migration UI lazily. Full proposals, issues, explicit exclusions and
@@ -26,8 +26,9 @@ Last updated: 2026-11-15
   batch, revision, checkpoint and counts before reporting acknowledgement.
   Playground records/assets are tab-only with explicit budgets; text decoding
   is strict/bounded, and binary attachment preservation is still not extraction.
-  Existing parse5 is absent locally; full /element import and native browser
-  proof remain pending. Do not install dependencies to mask that limitation.
+  Existing parse5 is absent locally; do not install dependencies to mask that
+  limitation. The0.2.0 owned remote consumers provide actual installed/native
+  acceptance; local source imports are not a substitute for that evidence.
 - Migration outputs/rows and accepted checkpoints commit atomically per page;
   earlier acknowledged pages survive later failure/cancel. Full derivation,
   revision/ownership checks and fenced claims remain required. Continuous sync
@@ -73,6 +74,10 @@ Last updated: 2026-11-15
   vectors/nonce-inode cleanup, retained failures; retire controls after use.
 - Manual edits use apply_patch. Do not alter other repositories or closed
   accepted scopes. Preserve dirty work. git diff --check after edits.
+- The shared local HEAD remains77d6fc626c4b6386767a4bc19af69d85f7b0dff0;
+  remote0.2.0 publication advanced main independently. Read current remote
+  truth before any later publication. Do not pull/reset or push this stale
+  dirty baseline over the published source and evidence.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.

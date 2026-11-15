@@ -1,0 +1,67 @@
+{
+  "main": "0ffde072df73287ae94ca2b35c335a89bc5b973a",
+  "qaBefore": "a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a",
+  "passed": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/main",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/qa/intakelet-onboarding-20261115",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/contents/.github/workflows/qualification-v2.yml?ref=main",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/contents/.github/workflows/qualification-v2.yml?ref=qa%2Fintakelet-onboarding-20261115",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/contents/.github/workflows/qualification-v2.yml",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/qa/intakelet-onboarding-20261115",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/contents/.github/workflows/qualification-v2.yml?ref=qa%2Fintakelet-onboarding-20261115",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/qa/intakelet-onboarding-20261115",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/git/refs/heads/qa/intakelet-onboarding-20261115",
+      "status": 204
+    },
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/qa/intakelet-onboarding-20261115",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/git/ref/heads/main",
+      "status": 200
+    }
+  ],
+  "retiredCommit": "84c0eed6d0793710fe57c5748b4e47164f375940",
+  "workflowAbsent": true,
+  "qaDeleted": true,
+  "mainUnchanged": true,
+  "deleteSemantics": "serialized exact owner read; GitHub DELETE ref is not atomic CAS"
+}

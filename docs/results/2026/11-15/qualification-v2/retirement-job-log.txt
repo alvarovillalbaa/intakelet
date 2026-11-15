@@ -1,0 +1,195 @@
+﻿2026-11-15T11:39:28.2586353Z Current runner version: '2.338.2'
+2026-11-15T11:39:28.2614017Z ##[group]Runner Image Provisioner
+2026-11-15T11:39:28.2615154Z Hosted Compute Agent
+2026-11-15T11:39:28.2616124Z Version: 20261103.629
+2026-11-15T11:39:28.2616951Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-15T11:39:28.2617830Z Build Date: 2026-11-03T17:26:59Z
+2026-11-15T11:39:28.2618714Z Worker ID: {f8753eea-437d-4559-ab0a-e46ddc546d9a}
+2026-11-15T11:39:28.2619676Z Region: centralus
+2026-11-15T11:39:28.2620534Z Cloud: Azure
+2026-11-15T11:39:28.2621193Z ##[endgroup]
+2026-11-15T11:39:28.2622872Z ##[group]Operating System
+2026-11-15T11:39:28.2623655Z Ubuntu
+2026-11-15T11:39:28.2624353Z 24.04.5
+2026-11-15T11:39:28.2625065Z LTS
+2026-11-15T11:39:28.2625932Z ##[endgroup]
+2026-11-15T11:39:28.2626712Z ##[group]Runner Image
+2026-11-15T11:39:28.2627497Z Image: ubuntu-24.04
+2026-11-15T11:39:28.2628306Z Version: 20261111.370.1
+2026-11-15T11:39:28.2629901Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.370/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-15T11:39:28.2632388Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.370
+2026-11-15T11:39:28.2633697Z ##[endgroup]
+2026-11-15T11:39:28.2635236Z ##[group]GITHUB_TOKEN Permissions
+2026-11-15T11:39:28.2637716Z Contents: write
+2026-11-15T11:39:28.2638478Z Metadata: read
+2026-11-15T11:39:28.2639214Z ##[endgroup]
+2026-11-15T11:39:28.2641738Z Secret source: Actions
+2026-11-15T11:39:28.2642959Z Cache mode: write
+2026-11-15T11:39:28.2644055Z Prepare workflow directory
+2026-11-15T11:39:28.2930708Z Prepare all required actions
+2026-11-15T11:39:28.2973764Z Getting action download info
+2026-11-15T11:39:28.5392237Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-11-15T11:39:28.6727141Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-15T11:39:28.8797468Z Complete job name: retirement
+2026-11-15T11:39:28.9467641Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-11-15T11:39:28.9468454Z with:
+2026-11-15T11:39:28.9468822Z   persist-credentials: false
+2026-11-15T11:39:28.9469266Z   repository: alvarovillalbaa/intakelet
+2026-11-15T11:39:28.9472576Z   token: ***
+2026-11-15T11:39:28.9472949Z   ssh-strict: true
+2026-11-15T11:39:28.9473311Z   ssh-user: git
+2026-11-15T11:39:28.9473664Z   clean: true
+2026-11-15T11:39:28.9474034Z   sparse-checkout-cone-mode: true
+2026-11-15T11:39:28.9474463Z   fetch-depth: 1
+2026-11-15T11:39:28.9474818Z   fetch-tags: false
+2026-11-15T11:39:28.9475190Z   show-progress: true
+2026-11-15T11:39:28.9475701Z   lfs: false
+2026-11-15T11:39:28.9476054Z   submodules: false
+2026-11-15T11:39:28.9476435Z   set-safe-directory: true
+2026-11-15T11:39:28.9476849Z   allow-unsafe-pr-checkout: false
+2026-11-15T11:39:28.9477421Z ##[endgroup]
+2026-11-15T11:39:29.1490458Z Syncing repository: alvarovillalbaa/intakelet
+2026-11-15T11:39:29.1492943Z ##[group]Getting Git version info
+2026-11-15T11:39:29.1493928Z Working directory is '/home/runner/work/intakelet/intakelet'
+2026-11-15T11:39:29.1495503Z [command]/usr/bin/git version
+2026-11-15T11:39:29.1543242Z git version 2.56.1
+2026-11-15T11:39:29.1561058Z ##[endgroup]
+2026-11-15T11:39:29.1573104Z Temporarily overriding HOME='/home/runner/work/_temp/7e9d8145-5af4-44ed-b4f7-644e5b0c055f' before making global git config changes
+2026-11-15T11:39:29.1575100Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T11:39:29.1577389Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/intakelet/intakelet
+2026-11-15T11:39:29.1619721Z Deleting the contents of '/home/runner/work/intakelet/intakelet'
+2026-11-15T11:39:29.1632950Z ##[group]Determining repository object format
+2026-11-15T11:39:29.1634196Z ##[endgroup]
+2026-11-15T11:39:29.1635170Z ##[group]Initializing the repository
+2026-11-15T11:39:29.1636322Z [command]/usr/bin/git init /home/runner/work/intakelet/intakelet
+2026-11-15T11:39:29.1709977Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-15T11:39:29.1710996Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-15T11:39:29.1711806Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-15T11:39:29.1712448Z hint: call:
+2026-11-15T11:39:29.1712811Z hint:
+2026-11-15T11:39:29.1713284Z hint: 	git config --global init.defaultBranch <name>
+2026-11-15T11:39:29.1713829Z hint:
+2026-11-15T11:39:29.1714341Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-15T11:39:29.1715130Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-15T11:39:29.1715969Z hint:
+2026-11-15T11:39:29.1716346Z hint: 	git branch -m <name>
+2026-11-15T11:39:29.1716828Z hint:
+2026-11-15T11:39:29.1717376Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-15T11:39:29.1722892Z Initialized empty Git repository in /home/runner/work/intakelet/intakelet/.git/
+2026-11-15T11:39:29.1732688Z [command]/usr/bin/git remote add origin https://github.com/alvarovillalbaa/intakelet
+2026-11-15T11:39:29.1809249Z ##[endgroup]
+2026-11-15T11:39:29.1809996Z ##[group]Disabling automatic garbage collection
+2026-11-15T11:39:29.1811470Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-15T11:39:29.1843275Z ##[endgroup]
+2026-11-15T11:39:29.1844547Z ##[group]Setting up auth
+2026-11-15T11:39:29.1845507Z Removing SSH command configuration
+2026-11-15T11:39:29.1849984Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T11:39:29.1883486Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-15T11:39:29.2192597Z Removing HTTP extra header
+2026-11-15T11:39:29.2198741Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T11:39:29.2239202Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-15T11:39:29.2450360Z Removing includeIf entries pointing to credentials config files
+2026-11-15T11:39:29.2456039Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T11:39:29.2494750Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-15T11:39:29.2699842Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-15T11:39:29.2741579Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/intakelet/intakelet/.git.path /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:29.2779092Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/intakelet/intakelet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:29.2817708Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:29.2859235Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:29.2891730Z ##[endgroup]
+2026-11-15T11:39:29.2892845Z ##[group]Fetching the repository
+2026-11-15T11:39:29.2898990Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a:refs/remotes/origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.2081746Z From https://github.com/alvarovillalbaa/intakelet
+2026-11-15T11:39:30.2083881Z  * [new ref]         a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a -> origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.2089577Z [command]/usr/bin/git branch --list --remote origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.2126472Z   origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.2133674Z [command]/usr/bin/git rev-parse refs/remotes/origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.2162201Z a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a
+2026-11-15T11:39:30.2167418Z ##[endgroup]
+2026-11-15T11:39:30.2168784Z ##[group]Determining the checkout info
+2026-11-15T11:39:30.2170409Z ##[endgroup]
+2026-11-15T11:39:30.2171379Z [command]/usr/bin/git sparse-checkout disable
+2026-11-15T11:39:30.2679794Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-15T11:39:30.2716849Z ##[group]Checking out the ref
+2026-11-15T11:39:30.2719849Z [command]/usr/bin/git checkout --progress --force -B qa/intakelet-onboarding-20261115 refs/remotes/origin/qa/intakelet-onboarding-20261115
+2026-11-15T11:39:30.3079739Z Switched to a new branch 'qa/intakelet-onboarding-20261115'
+2026-11-15T11:39:30.3084708Z branch 'qa/intakelet-onboarding-20261115' set up to track 'origin/qa/intakelet-onboarding-20261115'.
+2026-11-15T11:39:30.3092083Z ##[endgroup]
+2026-11-15T11:39:30.3135177Z [command]/usr/bin/git log -1 --format=%H
+2026-11-15T11:39:30.3164749Z a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a
+2026-11-15T11:39:30.3174299Z ##[group]Removing auth
+2026-11-15T11:39:30.3176002Z Removing SSH command configuration
+2026-11-15T11:39:30.3177979Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T11:39:30.3217375Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-15T11:39:30.3423323Z Removing HTTP extra header
+2026-11-15T11:39:30.3427578Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T11:39:30.3463022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-15T11:39:30.3668474Z Removing includeIf entries pointing to credentials config files
+2026-11-15T11:39:30.3671647Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T11:39:30.3705266Z includeif.gitdir:/home/runner/work/intakelet/intakelet/.git.path
+2026-11-15T11:39:30.3708090Z includeif.gitdir:/home/runner/work/intakelet/intakelet/.git/worktrees/*.path
+2026-11-15T11:39:30.3710296Z includeif.gitdir:/github/workspace/.git.path
+2026-11-15T11:39:30.3711964Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-15T11:39:30.3716234Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/intakelet/intakelet/.git.path
+2026-11-15T11:39:30.3741742Z /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.3751429Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/intakelet/intakelet/.git.path /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.4104485Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/intakelet/intakelet/.git/worktrees/*.path
+2026-11-15T11:39:30.4131338Z /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.4142843Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/intakelet/intakelet/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.4723841Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-15T11:39:30.4760746Z /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.4768028Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.5340634Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-15T11:39:30.5370378Z /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.5378006Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config
+2026-11-15T11:39:30.5555900Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-15T11:39:30.5757659Z Removing credentials config '/home/runner/work/_temp/git-credentials-4362b8b0-75d1-4802-a7ca-56d2a2c96f4a.config'
+2026-11-15T11:39:30.5765831Z ##[endgroup]
+2026-11-15T11:39:30.5999142Z ##[group]Run python3 tests/scripts/retire-v2.py
+2026-11-15T11:39:30.6000389Z [36;1mpython3 tests/scripts/retire-v2.py[0m
+2026-11-15T11:39:30.6022577Z shell: /usr/bin/bash -e {0}
+2026-11-15T11:39:30.6023464Z env:
+2026-11-15T11:39:30.6024472Z   INTAKELET_RELEASE_SOURCE: 0ffde072df73287ae94ca2b35c335a89bc5b973a
+2026-11-15T11:39:30.6033814Z   INTAKELET_RETIRE_TOKEN: ***
+2026-11-15T11:39:30.6035101Z   INTAKELET_RETIRE_OUTPUT: /home/runner/work/_temp/intakelet-v2-retirement
+2026-11-15T11:39:30.6036560Z ##[endgroup]
+2026-11-15T11:39:34.7202025Z INTAKELET_RETIREMENT {"main": "0ffde072df73287ae94ca2b35c335a89bc5b973a", "qaBefore": "a0e771aedf8c7efbbe9a8e5ef0187a05bc65400a", "passed": true, "requests": [{"method": "GET", "path": "/git/ref/heads/main", "status": 200}, {"method": "GET", "path": "/git/ref/heads/qa/intakelet-onboarding-20261115", "status": 200}, {"method": "GET", "path": "/contents/.github/workflows/qualification-v2.yml?ref=main", "status": 404}, {"method": "GET", "path": "/contents/.github/workflows/qualification-v2.yml?ref=qa%2Fintakelet-onboarding-20261115", "status": 200}, {"method": "DELETE", "path": "/contents/.github/workflows/qualification-v2.yml", "status": 200}, {"method": "GET", "path": "/git/ref/heads/qa/intakelet-onboarding-20261115", "status": 200}, {"method": "GET", "path": "/contents/.github/workflows/qualification-v2.yml?ref=qa%2Fintakelet-onboarding-20261115", "status": 404}, {"method": "GET", "path": "/git/ref/heads/qa/intakelet-onboarding-20261115", "status": 200}, {"method": "DELETE", "path": "/git/refs/heads/qa/intakelet-onboarding-20261115", "status": 204}, {"method": "GET", "path": "/git/ref/heads/qa/intakelet-onboarding-20261115", "status": 404}, {"method": "GET", "path": "/git/ref/heads/main", "status": 200}], "retiredCommit": "84c0eed6d0793710fe57c5748b4e47164f375940", "workflowAbsent": true, "qaDeleted": true, "mainUnchanged": true, "deleteSemantics": "serialized exact owner read; GitHub DELETE ref is not atomic CAS"}
+2026-11-15T11:39:34.7411276Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+2026-11-15T11:39:34.7411595Z with:
+2026-11-15T11:39:34.7411779Z   name: intakelet-v2-retirement-43709970615
+2026-11-15T11:39:34.7412053Z   path: /home/runner/work/_temp/intakelet-v2-retirement
+2026-11-15T11:39:34.7412314Z   if-no-files-found: error
+2026-11-15T11:39:34.7412500Z   retention-days: 7
+2026-11-15T11:39:34.7412675Z   compression-level: 6
+2026-11-15T11:39:34.7412856Z   overwrite: false
+2026-11-15T11:39:34.7413034Z   include-hidden-files: false
+2026-11-15T11:39:34.7413227Z   archive: true
+2026-11-15T11:39:34.7413393Z ##[endgroup]
+2026-11-15T11:39:34.8598678Z With the provided path, there will be 1 file uploaded
+2026-11-15T11:39:34.8603579Z Artifact name is valid!
+2026-11-15T11:39:34.8620019Z Root directory input is valid!
+2026-11-15T11:39:35.1478076Z Uploading artifact: intakelet-v2-retirement-43709970615.zip
+2026-11-15T11:39:35.1508717Z Beginning upload of artifact content to blob storage
+2026-11-15T11:39:35.3201504Z Uploaded bytes 575
+2026-11-15T11:39:35.3615215Z Finished uploading artifact content to blob storage!
+2026-11-15T11:39:35.3616126Z SHA256 digest of uploaded artifact is c45b1d6ac6cf3584bf89342f081aad9a28cdcde65e1c4e24b09a7c63a048e1f5
+2026-11-15T11:39:35.3617049Z Finalizing artifact upload
+2026-11-15T11:39:35.7806211Z Artifact intakelet-v2-retirement-43709970615 successfully finalized. Artifact ID 14159962776
+2026-11-15T11:39:35.7807457Z Artifact intakelet-v2-retirement-43709970615 has been successfully uploaded! Final size is 575 bytes. Artifact ID is 14159962776
+2026-11-15T11:39:35.7809193Z Artifact download URL: https://github.com/alvarovillalbaa/intakelet/actions/runs/43709970615/artifacts/14159962776
+2026-11-15T11:39:35.7994465Z Post job cleanup.
+2026-11-15T11:39:35.8693052Z [command]/usr/bin/git version
+2026-11-15T11:39:35.8760461Z git version 2.56.1
+2026-11-15T11:39:35.8792137Z Temporarily overriding HOME='/home/runner/work/_temp/1b303903-10ec-4040-8064-791b29dc6b07' before making global git config changes
+2026-11-15T11:39:35.8793275Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-15T11:39:35.8796107Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/intakelet/intakelet
+2026-11-15T11:39:35.8848274Z Removing SSH command configuration
+2026-11-15T11:39:35.8848856Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-15T11:39:35.8871013Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-15T11:39:35.9083146Z Removing HTTP extra header
+2026-11-15T11:39:35.9088473Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-15T11:39:35.9120137Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-15T11:39:35.9345986Z Removing includeIf entries pointing to credentials config files
+2026-11-15T11:39:35.9351812Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-15T11:39:35.9394078Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-15T11:39:35.9746772Z Cleaning up orphan processes

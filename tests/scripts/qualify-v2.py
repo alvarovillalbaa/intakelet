@@ -117,6 +117,8 @@ try:
                 raise RuntimeError("Archive bytes/mode differ: " + name)
             members.append({"path": name, "bytes": len(content), "sha256": digest(content), "mode": member.mode})
     (output / "package-manifest.json").write_text(json.dumps({"file": tarball.name, "bytes": tarball.stat().st_size, "sha256": digest(tarball.read_bytes()), "members": members}, indent=2))
+    if receipt["phase"] == "hosted" and digest(tarball.read_bytes()) != "84a3fc59b83ae3182396bffa2e6bb7b61bda2b126c144b08309c236b5a41e4be":
+        raise RuntimeError("Hosted check changed the qualified final archive")
     if receipt["phase"] == "final-native":
         baseline_path = repo / "docs/results/2026/11-15/qualification-v2/run-1/package-manifest.json"
         baseline_bytes = baseline_path.read_bytes()
