@@ -49,12 +49,20 @@ scratch teardown; all command groups were absent, including failed scopes.
 
 Qualified first archive:87,870bytes, SHA256
 7052c8a744bbc931a15989c5f3f9e0951167a60e88872356b0b39d4ce1dcea8b.
-Final publication copy changes only README and the two component/migration
-guides; its controller must compare every runtime member/mode before acceptance.
-Final archive, matching public deployment, anonymous asset/native acceptance
-and temporary-control retirement are still pending at this checkpoint.
+The [final documentation edition](https://github.com/alvarovillalbaa/intakelet/actions/runs/43709262034)
+used96ff7f905df4123cd31829057e1dec9eb9b4cbec and47seconds. It passed its source
+and cleanup guards, exact53-member packing and N01/N03/N05-320 on the updated
+website. Its [archive comparison](run-4/archive-comparison.json) shows only
+README and the two component/migration guides changed; all50 other members,
+including every runtime byte and executable mode, match the installed and
+typed archive. The final archive is87,878bytes, SHA256
+84a3fc59b83ae3182396bffa2e6bb7b61bda2b126c144b08309c236b5a41e4be.
+The build contains16 static bodies. All47 original files are retained under
+[run-4](run-4/receipt.json). Package/runtime and final local-served native
+qualification are accepted; public release, matching deployment, anonymous
+hosted acceptance and temporary-control retirement remain pending here.
 
-CI spent141/1200seconds so far. Local Guard8.1/34GiB refused heavy execution;
+CI spent188/1200seconds so far. Local Guard8.1/34GiB refused heavy execution;
 there was no local install/build/browser/database. Only small syntax/diff
 checks and byte-exact evidence copies ran on the Mac. The generated root lock
 changed only its two package version fields; every dependency JSON identity

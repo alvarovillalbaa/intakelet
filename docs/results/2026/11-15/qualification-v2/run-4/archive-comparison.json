@@ -1,0 +1,11 @@
+{
+  "baselineManifestSha256": "465d02b61f77f793cdb959512929b6950bfb07294d07af22d382335c99fac7e0",
+  "baselineArchiveSha256": "7052c8a744bbc931a15989c5f3f9e0951167a60e88872356b0b39d4ce1dcea8b",
+  "changedMembers": [
+    "README.md",
+    "docs/references/migration-integration.md",
+    "docs/references/onboarding-components.md"
+  ],
+  "unchangedMembers": 50,
+  "allRuntimeBytesAndModesEqual": true
+}
