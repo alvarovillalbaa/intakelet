@@ -1,0 +1,26 @@
+{
+  "schema": "intakelet.document-extraction",
+  "version": 1,
+  "status": "extracted",
+  "format": "png",
+  "method": "ocr",
+  "text": "MIGRATION 42\n",
+  "sourceSha256": "sha256:3daf1feb2ced1750707ee8717313b2a38ce945c16d2b33be941add45564b858b",
+  "segments": [
+    {
+      "text": "MIGRATION 42\n",
+      "location": {
+        "kind": "image",
+        "confidence": 96
+      }
+    }
+  ],
+  "engine": {
+    "name": "tesseract.js",
+    "version": "7.0.0",
+    "languageSha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+  },
+  "reason": null,
+  "complete": true,
+  "warnings": []
+}

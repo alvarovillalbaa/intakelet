@@ -1,0 +1,32 @@
+{
+  "schema": "intakelet.document-extraction",
+  "version": 1,
+  "status": "extracted",
+  "format": "docx",
+  "method": "docx-text",
+  "text": "Fictional onboarding 42\n<script>literal source</script>",
+  "sourceSha256": "sha256:f4067565ecd37e76ffea4dfa90d6e4f78e9e9879acc1bc659724792435f0dba6",
+  "segments": [
+    {
+      "text": "Fictional onboarding 42",
+      "location": {
+        "kind": "paragraph",
+        "paragraph": 1
+      }
+    },
+    {
+      "text": "<script>literal source</script>",
+      "location": {
+        "kind": "paragraph",
+        "paragraph": 2
+      }
+    }
+  ],
+  "engine": {
+    "name": "mammoth",
+    "version": "1.12.2"
+  },
+  "reason": null,
+  "complete": true,
+  "warnings": []
+}

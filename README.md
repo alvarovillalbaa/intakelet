@@ -27,9 +27,12 @@ The playground also has file selection, a visual destination-field
 editor and a reusable migration review component, with a React wrapper and
 correctly scoped acknowledgements. [UI evidence](docs/results/2026/11-15/migration-ui.md)
 records the original source checks. The [0.2.0 qualification](docs/results/2026/11-15/qualification-v2/result.md)
-binds installed/native evidence and publication identities. Semantic extraction
-of arbitrary formats, OAuth connection and production-host/API qualification
-remain pending under GEN-3659. The existing
+binds installed/native evidence and publication identities. The0.3.0 edition
+adds an explicit Node decoder for PDF/DOCX/XLSX/UTF-8 and locally configured
+PNG/JPEG OCR with source locations and honest incomplete states. Read the
+[document extraction guide](docs/references/document-extraction.md).
+Unsupported/legacy formats, semantic understanding, OAuth connection and
+production-host/API qualification remain pending under GEN-3659. The existing
 component/CLI v1 limits below apply.
 
 The SDK supports UTF-8 CSV, JSON records, Markdown and text. It proposes fields,
@@ -45,12 +48,12 @@ Browser demonstration is restricted to its own authored sample website;
 production integrations use a server endpoint owned by the application.
 
 Try the [public playground](https://intakelet.vercel.app), or install the archive
-from [release0.2.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.2.0)
+from [release0.3.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.3.0)
 into your Node24+ application. The release archive is a normal npm package;
 there is no npm-registry publication or SDK account requirement.
 
 ```sh
-npm install ./alvarovillalbaa-intakelet-0.2.0.tgz
+npm install ./alvarovillalbaa-intakelet-0.3.0.tgz
 ```
 
 ```js

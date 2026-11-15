@@ -1,0 +1,299 @@
+{
+  "phase": "qualify",
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0030060440000028166,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.070620923,
+      "stdoutBytes": 26,
+      "stdoutSha256": "8e3d23f02d60c3439895bb689178d8ee16982591f7eb140134d146030e32a9a7",
+      "stderrBytes": 1017,
+      "stderrSha256": "818fcbca0c242372d74e0360157aa76602470ef4cd57ae5244e4557a9bd23421"
+    },
+    {
+      "name": "runtime-dependency-audit",
+      "argv": [
+        "npm",
+        "audit",
+        "--omit=dev",
+        "--audit-level=high",
+        "--json"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.378173873999998,
+      "stdoutBytes": 1635,
+      "stdoutSha256": "3b4c3443bc3920a72c007d904abd7c7313294262a10482660255ee6ac7af03ac",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.6009382639999998,
+      "stdoutBytes": 72,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "document-guards",
+      "argv": [
+        "node",
+        "--test",
+        "tests/unit/document-node.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.3823891980000056,
+      "stdoutBytes": 779,
+      "stdoutSha256": "90104a6b247e158bd13696c0b880d5e3adec11c25984098c7921b6ec0acbf458",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-document-qualified"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.2465410440000042,
+      "stdoutBytes": 6373,
+      "stdoutSha256": "59985bba774b206aa19e5d42560ebffe355d7836e1045d88bba2aca542905826",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "online-installed-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-document-qualified/alvarovillalbaa-intakelet-0.3.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.085608646000004,
+      "stdoutBytes": 26,
+      "stdoutSha256": "77697c2b5cb9b5d64217f1fb55029941ab6d255cff59e7a16d2a5c7269a744aa",
+      "stderrBytes": 1017,
+      "stderrSha256": "dfb442c2bed25264d8715eef8aba3cd720d12ebf8fbd53cb1b5b3afd0c3140dc"
+    },
+    {
+      "name": "installed-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-document-qualified/alvarovillalbaa-intakelet-0.3.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.1705515889999987,
+      "stdoutBytes": 26,
+      "stdoutSha256": "305b174726f7b47194ddec29cfb4f02813752c41296b7dade441affb6a484f26",
+      "stderrBytes": 1017,
+      "stderrSha256": "dfb442c2bed25264d8715eef8aba3cd720d12ebf8fbd53cb1b5b3afd0c3140dc"
+    },
+    {
+      "name": "locate-local-ocr-data",
+      "argv": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import{createRequire}from'node:module';import{readdir,stat}from'node:fs/promises';import{dirname,join}from'node:path';const r=createRequire(import.meta.url),root=dirname(r.resolve('@tesseract.js-data/eng/package.json'));async function walk(p){for(const n of await readdir(p)){const f=join(p,n),s=await stat(f);if(s.isDirectory()){const found=await walk(f);if(found)return found;}else if(n==='eng.traineddata.gz')return f;}}console.log(await walk(root));"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.024889298000005056,
+      "stdoutBytes": 102,
+      "stdoutSha256": "499987b29124e226aa6576c9cccdc809cf52a458b161e2fc56d93464584f41cc",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "actual-installed-documents",
+      "argv": [
+        "node",
+        "--test",
+        "tests/integration/documents-installed.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.694709262999993,
+      "stdoutBytes": 1127,
+      "stdoutSha256": "e3c5de0f6ba123bb4e63d3781ae749720088e17960f72f774efb94c460db187f",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-node-types",
+      "argv": [
+        "/tmp/intakelet-documents-0kk61ka6/source/node_modules/.bin/tsc",
+        "--noEmit",
+        "--strict",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--target",
+        "ES2022",
+        "--lib",
+        "ES2022",
+        "--types",
+        "node",
+        "--typeRoots",
+        "/tmp/intakelet-documents-0kk61ka6/source/node_modules/@types",
+        "documents-types.mts"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.9875089229999929,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.14491628700000092,
+      "stdoutBytes": 81,
+      "stdoutSha256": "46e26a0f2df5c7f16d19659b66b382959ae5bac34adacabe70e7a7f9b6577bd1",
+      "stderrBytes": 42,
+      "stderrSha256": "f805c1ee14b7b9951ca6b6a6ec8b608571a3e087fbded225d16aa97b50bcbe5a"
+    },
+    {
+      "name": "browser-dependencies",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.1500690539999994,
+      "stdoutBytes": 24,
+      "stdoutSha256": "4aaef3acc3c4b16766abf61c4f4aa2d3bd413e2fe822d3edd6cfa9d7e7334efa",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "browser-install",
+      "argv": [
+        "node",
+        "/tmp/intakelet-documents-0kk61ka6/browser/node_modules/playwright/cli.js",
+        "install",
+        "--with-deps",
+        "chromium"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 28.418593105,
+      "stdoutBytes": 16179,
+      "stdoutSha256": "e7338233c8ec660c83087f272244164551510f4bae3f1190589a7c3d1bafab49",
+      "stderrBytes": 237,
+      "stderrSha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+    },
+    {
+      "name": "document-guide-native",
+      "argv": [
+        "node",
+        "tests/e2e/document-guide.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.7178096239999974,
+      "stdoutBytes": 175,
+      "stdoutSha256": "35a40a7611a4e87142bafae3ef68c31e37d46e14c973e8b25792b0ea4eb95e20",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 94946648064,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}

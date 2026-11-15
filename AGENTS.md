@@ -81,3 +81,23 @@ Last updated: 2026-11-15
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.
+- Version0.3.0 adds /documents/node with exact staged-byte verification,
+  source locations, bounded owned subprocess parsing and local-only OCR data.
+  It does not change the older import/migration UI contracts or authenticate a
+  caller. Read docs/specs/document-extraction-v1.md and
+  docs/references/document-extraction.md. Unsupported/failed/empty/limit states
+  stay visible; literal UTF-8 preserves blank lines/CRLF/final newline.
+- Source508adadcd736aea5c92ee4e31f79dd2312027839 / run43722488899 passed
+  seven Node24 guards, ten actual installed parsing/OCR/migration/isolation
+  identities, installed Node-only types and the390px guide. Archive59 members,
+  97,205bytes, SHA25676cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84.
+  Current receipt: docs/results/2026/11-15/document-extraction-v1/result.md.
+  Preserve both failures and the earlier accepted pre-line-preservation archive.
+  Network denial must use the inherited CommonJS preload; the original ESM
+  preload failed a real secondary-worker check and must not be restored.
+- Runtime audit has zero high/critical and two retained moderate transitive
+  uuid findings; do not call the audit clean. No ignored audit/vendor patch or
+  automatic downgrade. General OCR accuracy and OS sandboxing are unproven.
+  OAuth app connections, other app adapters and durable authenticated sync
+  hosts/schedulers remain required separately. Publication/hosted retirement
+  for the new edition is the next phase; do not rerun unchanged closed flows.

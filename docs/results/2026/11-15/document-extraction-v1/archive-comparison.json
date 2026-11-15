@@ -1,0 +1,19 @@
+{
+  "previousSha256": "84a3fc59b83ae3182396bffa2e6bb7b61bda2b126c144b08309c236b5a41e4be",
+  "currentSha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84",
+  "previousMembers": 53,
+  "currentMembers": 59,
+  "changedMembers": [
+    "package.json",
+    "README.md"
+  ],
+  "addedMembers": [
+    "src/document-network-deny.cjs",
+    "docs/specs/document-extraction-v1.md",
+    "docs/references/document-extraction.md",
+    "src/document-node.mjs",
+    "src/document-worker.mjs",
+    "src/document-node.d.mts"
+  ],
+  "unchangedPreviousMembers": 51
+}

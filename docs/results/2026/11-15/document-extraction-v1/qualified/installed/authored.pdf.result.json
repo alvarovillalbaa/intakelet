@@ -1,0 +1,32 @@
+{
+  "schema": "intakelet.document-extraction",
+  "version": 1,
+  "status": "extracted",
+  "format": "pdf",
+  "method": "pdf-text",
+  "text": "Fictional handbook 42\nAuthored second page",
+  "sourceSha256": "sha256:791931525888b752a1be5b19606bd179dbfa7050b33e1004d2c81235d998977f",
+  "segments": [
+    {
+      "text": "Fictional handbook 42",
+      "location": {
+        "kind": "page",
+        "page": 1
+      }
+    },
+    {
+      "text": "Authored second page",
+      "location": {
+        "kind": "page",
+        "page": 2
+      }
+    }
+  ],
+  "engine": {
+    "name": "pdfjs-dist",
+    "version": "6.5.438"
+  },
+  "reason": null,
+  "complete": true,
+  "warnings": []
+}

@@ -1,0 +1,15 @@
+✔ D01 actual UTF8 subprocess returns literal lines and the staged digest (67.264496ms)
+✔ D02 malformed UTF8, empty text and unsupported bytes remain explicit (82.238115ms)
+✔ D03 changed/truncated/extra staged bytes reject before a parser result (1.713114ms)
+✔ D04 input/text/segment ceilings expose limits without a complete prefix (76.097551ms)
+✔ D05 budgets, parser identities and OCR digests bind decoder identity, never a private path (1.052327ms)
+✔ D06 abort interrupts stalled input and leaves a late iterator unaccepted (0.544422ms)
+✔ D07 stalled input has a deadline and malformed ZIP/encryption markers cannot appear extracted (101.105388ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 388.173733
