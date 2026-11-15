@@ -9,7 +9,7 @@ phase = os.environ.get('INTAKELET_SQLITE_PHASE', 'qualify')
 receipt = {'phase': phase, 'passed': False, 'commands': [], 'cleanup': False}
 scratch = None
 sha = lambda value: hashlib.sha256(value).hexdigest()
-roots = ['src', 'bin', 'scripts', 'examples', 'docs/specs', 'docs/references', 'README.md', 'LICENSE', 'package.json', 'package-lock.json', 'tests/integration/sqlite-installed.test.mjs', 'tests/fixtures/sqlite-contract.mjs', 'tests/fixtures/sqlite-host-child.mjs', 'tests/fixtures/sqlite-node-consumer.mts', 'tests/scripts/qualify-sqlite.py']
+roots = ['src', 'web', 'bin', 'scripts', 'examples', 'docs/specs', 'docs/references', 'README.md', 'LICENSE', 'package.json', 'package-lock.json', 'tests/integration/sqlite-installed.test.mjs', 'tests/fixtures/sqlite-contract.mjs', 'tests/fixtures/sqlite-host-child.mjs', 'tests/fixtures/sqlite-node-consumer.mts', 'tests/scripts/qualify-sqlite.py']
 names = sorted(os.fsdecode(name) for name in subprocess.check_output(['git', 'ls-files', '-z', '--', *roots], cwd=repo).split(b'\0') if name)
 def vector(root):
     return [{'path': name, 'bytes': (root / name).stat().st_size, 'sha256': sha((root / name).read_bytes())} for name in names]
