@@ -165,7 +165,10 @@ try {
     await page.locator('#user-setup').getByRole('button', { name: 'Skip this step', exact: true }).tap(); await migrate(page, 2, row, true);
     row.viewport = await page.evaluate(() => ({ width: innerWidth, documentWidth: document.documentElement.scrollWidth })); assert.ok(row.viewport.documentWidth <= width + 1, 'No horizontal page overflow');
     await page.locator('#start-tour').tap(); await page.waitForFunction(() => !document.querySelector('.il-tour-card .il-primary').disabled);
-    const box = await page.getByRole('dialog').boundingBox(); assert.ok(box.x >= 0 && box.y >= 0 && box.x + box.width <= width + 1 && box.y + box.height <= 845);
+    row.initialTourBox = await page.getByRole('dialog').boundingBox();
+    await page.waitForFunction(() => { const box = document.querySelector('.il-tour-card').getBoundingClientRect(); return box.x >= 0 && box.y >= 0 && box.right <= innerWidth + 1 && box.bottom <= innerHeight + 1; });
+    const box = await page.getByRole('dialog').boundingBox(); row.settledTourBox = box; assert.ok(box.x >= 0 && box.y >= 0 && box.x + box.width <= width + 1 && box.y + box.height <= 845);
+    await page.screenshot({ path: join(output, 'N05-' + width + '-tour.png'), animations: 'disabled' });
     await page.getByRole('dialog').getByRole('button', { name: 'Close tour', exact: true }).tap(); assert.equal(await page.getByRole('dialog').count(), 0);
     await page.locator('#bulk-migration').scrollIntoViewIfNeeded(); row.touchMigration = true;
   });
