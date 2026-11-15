@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0033866469999992432,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "github-controls",
+      "argv": [
+        "node",
+        "--test",
+        "tests/unit/github-migration.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.3088735179999986,
+      "stdoutBytes": 1439,
+      "stdoutSha256": "d50c23a3ec98afac45cb03d9b4a18b59a7e779a46014389b43b4dbabb5d7dfd7",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack-candidate",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-github-candidate"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.4611350489999992,
+      "stdoutBytes": 6482,
+      "stdoutSha256": "5c5fa5324fb401427e245de408823040d57f0dd3ecd085b71090ea6ebbfa06f0",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-candidate-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-github-candidate/alvarovillalbaa-intakelet-0.4.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 6.377248433999995,
+      "stdoutBytes": 26,
+      "stdoutSha256": "7dad7f8d3dda1485fc7ec28a179f2d3180894253c0198c8f077e925e76b652fb",
+      "stderrBytes": 1017,
+      "stderrSha256": "fa2adf60f86c83eb1b2581796af4456fec6e7795629680fd44e06224bcfbf1f5"
+    },
+    {
+      "name": "actual-public-api",
+      "argv": [
+        "node",
+        "/tmp/intakelet-github-live-7cl5brrh/source/tests/integration/github-public-live.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 3.6363831569999974,
+      "stdoutBytes": 92,
+      "stdoutSha256": "3e8f7a066d0c888006695916ccb3025f15b89e55606bd58c2f19b1b9ced3be56",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91495038976,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "archive": {
+    "file": "alvarovillalbaa-intakelet-0.4.0.tgz",
+    "bytes": 98506,
+    "sha256": "64902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35"
+  },
+  "sourceUnchanged": true,
+  "sourceGuardPassed": true
+}

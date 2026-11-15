@@ -1,0 +1,20 @@
+✔ G01 requests one fixed read-only endpoint, pins API version and omits credentials by default (83.742838ms)
+✔ G02 follows reviewed pages, excludes PRs, preserves stable source IDs and retains end-of-scan boundary (34.508074ms)
+✔ G03 subsequent accepted sync scans detect updates and never infer deletions from absence (28.163468ms)
+✔ G04 arbitrary/malformed/looping pagination URLs are refused before another request or checkpoint (2.069387ms)
+✔ G05 rate/permission failures stop without retry, leaking response text or advancing checkpoints (11.392845ms)
+✔ G06 source identity is isolated from caller mutation and app-owned tokens stay outside persisted payloads (1.438691ms)
+✔ G07 malformed UTF-8/JSON, response budgets and unsupported issue shapes fail visibly (11.358115ms)
+✔ G08 invalid repository names, cursors and undersized read budgets never make requests (0.320166ms)
+✔ G09 numeric repository pagination links only select the next page on the original endpoint (0.731219ms)
+✔ G10 cancellation releases a stalled HTTP body even when its underlying cancel hook never settles (0.842888ms)
+✔ G11 real-style opaque after cursors survive encoding, checkpoints and the original endpoint (0.86893ms)
+✔ G12 malformed/duplicate cursor query values and legacy checkpoints are refused (0.903421ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 255.796381

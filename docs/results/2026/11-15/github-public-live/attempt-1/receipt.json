@@ -1,0 +1,72 @@
+{
+  "passed": false,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.004004468999998068,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-published-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/tmp/intakelet-github-live-ifbocloe/intakelet.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 6.157293992000003,
+      "stdoutBytes": 26,
+      "stdoutSha256": "7dad7f8d3dda1485fc7ec28a179f2d3180894253c0198c8f077e925e76b652fb",
+      "stderrBytes": 1226,
+      "stderrSha256": "211e18c0566418a54f5cda93a5f1e0a8c867ae55ac9011c343fd22f1d06a9f8d"
+    },
+    {
+      "name": "actual-public-api",
+      "argv": [
+        "node",
+        "/tmp/intakelet-github-live-ifbocloe/source/tests/integration/github-public-live.mjs"
+      ],
+      "code": 1,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.6581209789999996,
+      "stdoutBytes": 69,
+      "stdoutSha256": "d40393413099abcf44ccaf7858d61a2a8928d808a2dbb46d7e49e728c092532d",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91500265472,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "archive": {
+    "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/alvarovillalbaa-intakelet-0.3.0.tgz",
+    "status": 200,
+    "bytes": 97205,
+    "sha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84"
+  },
+  "error": "actual-public-api did not close successfully",
+  "sourceUnchanged": true,
+  "sourceGuardPassed": true
+}

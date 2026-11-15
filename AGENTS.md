@@ -37,8 +37,9 @@ Last updated: 2026-11-15
 - Arbitrary binary attachments are byte preservation, not semantic extraction.
   Node assets are explicitly staged before review; retain shared durable assets
   on cancel and remove only owned temporary files. Hosts own retention/quotas.
-  GitHub scan completion is not a snapshot or proof of deletion. Live reads
-  failed DNS; do not treat authored HTTP cases as API acceptance.
+  GitHub scan completion is not a snapshot or proof of deletion. Earlier local
+  DNS failures remain historical; actual public V2 acceptance is recorded below.
+  Do not treat authored HTTP cases as API acceptance.
 - Canonical Clous frontend/backend source references and dirty-worktree limits
   are in docs/references/clous-onboarding-inspiration.md. No Clous source was
   modified. Guide presentation remains separate from application authority.
@@ -78,6 +79,22 @@ Last updated: 2026-11-15
   remote0.2.0 publication advanced main independently. Read current remote
   truth before any later publication. Do not pull/reset or push this stale
   dirty baseline over the published source and evidence.
+- Version0.4.0 corrects actual GitHub Link pagination with bounded opaque after
+  cursors. Source identity/checkpoints are V2; require a fresh reviewed
+  connection/destination policy, never silently reset V1 state. Read
+  docs/specs/github-source-v2.md and
+  docs/results/2026/11-15/github-public-live/result.md before further work.
+  Preserve the actual0.3.0 failed live run43724957199 and its original evidence.
+  Candidate71a786bb176585d395f6e7e6aa137ec5464c0523 / run43726211283 passed12
+  authored adapter controls and six real public cases: nine unauthenticated
+  GETs, eight issues across three pages and two accepted sample polls. No issue
+  text/profiles were retained. The destination/route authority is T2 in memory,
+  not OAuth/private access, full repository or durable production sync proof.
+  Archive60 members/98,506bytes, SHA256
+  64902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35.
+  Only two root lock version fields changed; all265 dependency entries match.
+  Publication/hosted/retirement remain next. CI533/1200seconds cumulative;
+  use only qa/intakelet-github-public-20261115 / github-public-live.yml.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.

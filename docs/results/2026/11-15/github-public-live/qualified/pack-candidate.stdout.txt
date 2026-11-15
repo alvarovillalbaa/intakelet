@@ -1,0 +1,316 @@
+[
+  {
+    "id": "@alvarovillalbaa/intakelet@0.4.0",
+    "name": "@alvarovillalbaa/intakelet",
+    "version": "0.4.0",
+    "size": 98506,
+    "unpackedSize": 333496,
+    "shasum": "3774f2f003a653c3bae4f2a541910391d18c5e34",
+    "integrity": "sha512-UHefxlXXNEzr5cvlztVXggBuWr65dstwqdTe10vu+SXu/0G/iVxPTWRMsZhhU8bxmkD5MbG3l9e7mGMGuVi2Gg==",
+    "filename": "alvarovillalbaa-intakelet-0.4.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1078,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 5704,
+        "mode": 420
+      },
+      {
+        "path": "bin/intakelet.mjs",
+        "size": 6447,
+        "mode": 493
+      },
+      {
+        "path": "docs/references/clous-onboarding-inspiration.md",
+        "size": 3179,
+        "mode": 420
+      },
+      {
+        "path": "docs/references/document-extraction.md",
+        "size": 4434,
+        "mode": 420
+      },
+      {
+        "path": "docs/references/integration.md",
+        "size": 4094,
+        "mode": 420
+      },
+      {
+        "path": "docs/references/migration-integration.md",
+        "size": 9423,
+        "mode": 420
+      },
+      {
+        "path": "docs/references/onboarding-components.md",
+        "size": 7808,
+        "mode": 420
+      },
+      {
+        "path": "docs/references/sources.md",
+        "size": 1830,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/document-extraction-v1.md",
+        "size": 3075,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/github-source-v2.md",
+        "size": 2582,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/migration-v1.md",
+        "size": 10016,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/qualification-v1.md",
+        "size": 5861,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/qualification-v2.md",
+        "size": 3071,
+        "mode": 420
+      },
+      {
+        "path": "docs/specs/sdk-v1.md",
+        "size": 4286,
+        "mode": 420
+      },
+      {
+        "path": "examples/contacts.csv",
+        "size": 157,
+        "mode": 420
+      },
+      {
+        "path": "examples/handbook.md",
+        "size": 420,
+        "mode": 420
+      },
+      {
+        "path": "examples/migration-playground.mjs",
+        "size": 7557,
+        "mode": 420
+      },
+      {
+        "path": "examples/node.mjs",
+        "size": 807,
+        "mode": 420
+      },
+      {
+        "path": "examples/react.jsx",
+        "size": 841,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1742,
+        "mode": 420
+      },
+      {
+        "path": "src/browser-research.mjs",
+        "size": 1885,
+        "mode": 420
+      },
+      {
+        "path": "src/csv.mjs",
+        "size": 2205,
+        "mode": 420
+      },
+      {
+        "path": "src/document-network-deny.cjs",
+        "size": 606,
+        "mode": 420
+      },
+      {
+        "path": "src/document-node.d.mts",
+        "size": 1237,
+        "mode": 420
+      },
+      {
+        "path": "src/document-node.mjs",
+        "size": 13036,
+        "mode": 420
+      },
+      {
+        "path": "src/document-worker.mjs",
+        "size": 5437,
+        "mode": 420
+      },
+      {
+        "path": "src/element.css",
+        "size": 10372,
+        "mode": 420
+      },
+      {
+        "path": "src/element.d.mts",
+        "size": 1025,
+        "mode": 420
+      },
+      {
+        "path": "src/element.mjs",
+        "size": 22555,
+        "mode": 420
+      },
+      {
+        "path": "src/file-migration.mjs",
+        "size": 4885,
+        "mode": 420
+      },
+      {
+        "path": "src/file-output.mjs",
+        "size": 2778,
+        "mode": 420
+      },
+      {
+        "path": "src/github-migration.mjs",
+        "size": 9074,
+        "mode": 420
+      },
+      {
+        "path": "src/host.mjs",
+        "size": 9152,
+        "mode": 420
+      },
+      {
+        "path": "src/index.d.mts",
+        "size": 5709,
+        "mode": 420
+      },
+      {
+        "path": "src/index.mjs",
+        "size": 515,
+        "mode": 420
+      },
+      {
+        "path": "src/indexeddb.mjs",
+        "size": 4297,
+        "mode": 420
+      },
+      {
+        "path": "src/ingest.mjs",
+        "size": 5753,
+        "mode": 420
+      },
+      {
+        "path": "src/knowledge.mjs",
+        "size": 2626,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-api.d.mts",
+        "size": 11103,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-api.mjs",
+        "size": 786,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-elements.mjs",
+        "size": 10372,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-host.mjs",
+        "size": 9966,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-node.d.mts",
+        "size": 532,
+        "mode": 420
+      },
+      {
+        "path": "src/migration-node.mjs",
+        "size": 5877,
+        "mode": 420
+      },
+      {
+        "path": "src/migration.mjs",
+        "size": 18944,
+        "mode": 420
+      },
+      {
+        "path": "src/node.d.mts",
+        "size": 174,
+        "mode": 420
+      },
+      {
+        "path": "src/node.mjs",
+        "size": 329,
+        "mode": 420
+      },
+      {
+        "path": "src/onboarding-elements.d.mts",
+        "size": 1359,
+        "mode": 420
+      },
+      {
+        "path": "src/onboarding-elements.mjs",
+        "size": 20396,
+        "mode": 420
+      },
+      {
+        "path": "src/onboarding.d.mts",
+        "size": 2636,
+        "mode": 420
+      },
+      {
+        "path": "src/onboarding.mjs",
+        "size": 11497,
+        "mode": 420
+      },
+      {
+        "path": "src/output-schema.mjs",
+        "size": 13142,
+        "mode": 420
+      },
+      {
+        "path": "src/plan.mjs",
+        "size": 6573,
+        "mode": 420
+      },
+      {
+        "path": "src/react.d.mts",
+        "size": 1773,
+        "mode": 420
+      },
+      {
+        "path": "src/react.mjs",
+        "size": 5085,
+        "mode": 420
+      },
+      {
+        "path": "src/research.mjs",
+        "size": 13746,
+        "mode": 420
+      },
+      {
+        "path": "src/strict-json.mjs",
+        "size": 3572,
+        "mode": 420
+      },
+      {
+        "path": "src/transport.mjs",
+        "size": 5580,
+        "mode": 420
+      },
+      {
+        "path": "src/values.mjs",
+        "size": 2495,
+        "mode": 420
+      }
+    ],
+    "entryCount": 60,
+    "bundled": []
+  }
+]

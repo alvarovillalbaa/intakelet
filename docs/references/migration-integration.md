@@ -71,6 +71,13 @@ shows up to 20 fields; the core recipe limit remains 200.
 
 ## Review a third-party migration
 
+Version0.4.0 uses [GitHub source V2](../specs/github-source-v2.md), which retains
+GitHub's opaque `after` continuation in its checkpoint. Source identity/cursor
+are version2; use a new reviewed connection rather than resuming a V1 cursor.
+Review destination ownership and duplicate handling before moving an existing
+integration. The old0.3.0 archive is preserved, including its live pagination
+failure. Public read acceptance does not provide OAuth/private authorization.
+
 ```js
 import {
   createGitHubIssuesSource, githubIssuesMigration,

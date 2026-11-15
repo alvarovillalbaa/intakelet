@@ -1,0 +1,17 @@
+[
+  {
+    "path": "tests/integration/github-public-live.mjs",
+    "bytes": 10314,
+    "sha256": "9835ea922cfaf14603f558c04fff42f6fe0cab3171b523c2268b83cb6c200432"
+  },
+  {
+    "path": "tests/scripts/qualify-github-live.py",
+    "bytes": 7214,
+    "sha256": "d3554e2adf7cf5fa169628b32ec9f5f178bcbed8b70dce12de40d248a9c91d4a"
+  },
+  {
+    "path": "docs/results/2026/11-15/github-public-live/protocol-v1.md",
+    "bytes": 3136,
+    "sha256": "64405eeccadc61c19c76df865190f1076c4bd42f4fcf613dcf35360e340baa73"
+  }
+]
