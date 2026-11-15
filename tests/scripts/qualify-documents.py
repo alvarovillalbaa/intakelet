@@ -87,6 +87,7 @@ try:
         receipt['generatedLockSha256'] = sha(generated)
     elif phase in ['qualify', 'hosted']:
         execute('dependencies', ['npm', 'ci', '--ignore-scripts', '--no-audit', '--no-fund'], 150)
+        execute('runtime-dependency-audit', ['npm', 'audit', '--omit=dev', '--audit-level=high', '--json'], 30)
         execute('syntax', ['node', 'scripts/check.mjs'], 30)
         if phase == 'qualify':
             execute('document-guards', ['node', '--test', 'tests/unit/document-node.test.mjs'], 30)
@@ -109,6 +110,11 @@ try:
         if phase == 'hosted' and sha(archive.read_bytes()) != os.environ['INTAKELET_DOCUMENT_ARCHIVE_SHA256']:
             raise RuntimeError('Hosted source changed the qualified archive')
         if phase == 'qualify':
+            online = scratch / 'online'
+            online.mkdir()
+            (online / 'package.json').write_text('{"name":"intakelet-document-online","version":"0.0.0","private":true,"type":"module"}')
+            execute('online-installed-archive', ['npm', 'install', '--ignore-scripts', '--no-audit', '--no-fund', str(archive)], 60, online)
+            shutil.copyfile(online / 'package-lock.json', output / 'online-lock.json')
             consumer = scratch / 'consumer'
             consumer.mkdir()
             (consumer / 'package.json').write_text('{"name":"intakelet-document-consumer","version":"0.0.0","private":true,"type":"module"}')
