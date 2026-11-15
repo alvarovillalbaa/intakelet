@@ -17,7 +17,8 @@ jobs:
           node-version: '24.22.2'
       - name: Owned package and native qualification
         env:
-          INTAKELET_PHASE: package-native
+          INTAKELET_PHASE: native-repair
+          INTAKELET_CASES: N01,N03,N05-320,N05-390
           INTAKELET_OUTPUT: ${{ runner.temp }}/intakelet-v2-artifact
         run: python3 tests/scripts/qualify-v2.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

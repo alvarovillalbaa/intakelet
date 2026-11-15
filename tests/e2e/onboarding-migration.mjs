@@ -69,8 +69,8 @@ try {
   await run('N01', {}, async (page, row) => {
     await ready(page);
     await page.locator('#quickstart').getByRole('button', { name: 'Check setup', exact: true }).click();
-    await page.waitForFunction(() => document.querySelector('#quickstart [role=alert]'));
-    assert.equal(await page.locator('#quickstart progress').inputValue().catch(() => page.locator('#quickstart progress').getAttribute('value')), '0');
+    await page.waitForFunction(() => document.querySelector('#quickstart [role=status]')?.textContent.includes('Complete the first user setup step'));
+    assert.equal(await page.locator('#quickstart progress').evaluate(el => el.value), 0);
     await page.locator('#user-setup input').fill('Authored person'); await page.locator('#user-setup button[type=submit]').click();
     await page.waitForSelector('#user-setup textarea'); await page.locator('#user-setup textarea').fill('Learn a useful first step');
     await page.locator('#user-setup button[type=submit]').click(); await page.waitForFunction(() => document.querySelector('#user-setup').progress.complete);
@@ -103,6 +103,7 @@ try {
     await page.locator('#bulk-files').setInputFiles(files);
     for (const [index, target] of ['migration.id', 'document.name', 'document.asset', 'document.bytes'].entries()) await page.locator('#output-fields input').nth(index).fill(target);
     await click(page.locator('#bulk-configure')); await page.waitForFunction(() => !document.querySelector('#bulk-migration').hidden);
+    await click(page.getByText('Generated output recipe for your integration', { exact: true }));
     assert.match(await page.locator('#output-preview').innerText(), /document/);
     await page.locator('#bulk-migration').evaluate(el => { window.nativeAcks = []; el.addEventListener('intakelet-migration-acknowledged', e => window.nativeAcks.push(e.detail)); });
     await click(page.locator('#bulk-migration').getByRole('button', { name: 'Review next batch', exact: true }));
