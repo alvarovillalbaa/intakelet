@@ -5,35 +5,23 @@ on:
 permissions:
   contents: write
 jobs:
-  qualification:
+  retirement:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
           persist-credentials: false
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
-        with:
-          node-version: '24.22.2'
-      - name: Publish only the qualified public archive
+      - name: Retire only the accepted owned control
         env:
           INTAKELET_RELEASE_SOURCE: 0ffde072df73287ae94ca2b35c335a89bc5b973a
-          INTAKELET_RELEASE_TOKEN: ${{ github.token }}
-          INTAKELET_PUBLICATION_OUTPUT: ${{ runner.temp }}/intakelet-v2-publication
-        run: python3 tests/scripts/publish-v2.py
-      - name: Anonymous hosted qualification
-        env:
-          INTAKELET_PHASE: hosted
-          INTAKELET_CASES: N01,N02,N03,N05-320
-          INTAKELET_SITE: https://intakelet.vercel.app
-          INTAKELET_OUTPUT: ${{ runner.temp }}/intakelet-v2-artifact
-        run: python3 tests/scripts/qualify-v2.py
+          INTAKELET_RETIRE_TOKEN: ${{ github.token }}
+          INTAKELET_RETIRE_OUTPUT: ${{ runner.temp }}/intakelet-v2-retirement
+        run: python3 tests/scripts/retire-v2.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: intakelet-v2-${{ github.run_id }}
-          path: |
-            ${{ runner.temp }}/intakelet-v2-artifact
-            ${{ runner.temp }}/intakelet-v2-publication
+          name: intakelet-v2-retirement-${{ github.run_id }}
+          path: ${{ runner.temp }}/intakelet-v2-retirement
           if-no-files-found: error
           retention-days: 7
