@@ -23,6 +23,10 @@ custom nested output recipes, fenced accepted sync routes, a GitHub Issues
 source, arbitrary binary attachments and a streaming Node asset store. See the
 [migration integration guide](docs/references/migration-integration.md) and
 [actual evidence/remaining work](docs/results/2026/11-15/migration-core.md).
+Version0.5.0 adds an explicit Node SQLite migration host: reviewed output rows,
+accepted routes, worker claims, checkpoints and exact receipts share a durable
+transactional store. See the [SQLite integration guide](docs/references/durable-sqlite.md).
+The application still owns authentication, provider connections and scheduling.
 The playground also has file selection, a visual destination-field
 editor and a reusable migration review component, with a React wrapper and
 correctly scoped acknowledgements. [UI evidence](docs/results/2026/11-15/migration-ui.md)
@@ -48,12 +52,12 @@ Browser demonstration is restricted to its own authored sample website;
 production integrations use a server endpoint owned by the application.
 
 Try the [public playground](https://intakelet.vercel.app), or install the archive
-from [release0.4.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.4.0)
+from [release0.5.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.5.0)
 into your Node24+ application. The release archive is a normal npm package;
 there is no npm-registry publication or SDK account requirement.
 
 ```sh
-npm install ./alvarovillalbaa-intakelet-0.4.0.tgz
+npm install ./alvarovillalbaa-intakelet-0.5.0.tgz
 ```
 
 ```js

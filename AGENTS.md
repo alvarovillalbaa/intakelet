@@ -100,6 +100,13 @@ Last updated: 2026-11-15
   Preserve source/build identity when adding evidence; do not recreate these
   controls or rerun unchanged accepted flows. Remaining Auth/durable-host
   gates are not supplied by these bounded public reads.
+- The owner explicitly approved all pending technical proposals with “Autorizo
+  todo” after the blocked audit. SQLite host/schema/isolated acceptance is now
+  authorized under docs/proposals/sqlite-migration-host-v1.md. Existing
+  CI582/1200seconds leaves618seconds; no extension or local storage exception.
+  Its new source is not part of published0.4.0 and supplies no OAuth/Auth service.
+  The earlier inactive gate remains historical in sqlite-host-gate.md. Keep all
+  real provider/customer database boundaries and the named proposal limits.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.

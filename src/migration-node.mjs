@@ -4,6 +4,7 @@ import { isAbsolute, join } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
 import { requireValue, aborted } from './values.mjs';
 export { createFileMigrationSource, fileAttachmentsOutput, fileMigration } from './file-migration.mjs';
+export { SQLiteMigrationHost } from './sqlite-migration-host.mjs';
 
 function nextChunk(iterator, signal) {
   aborted(signal);
