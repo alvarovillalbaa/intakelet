@@ -1,15 +1,13 @@
-name: Temporary Intakelet public GitHub acceptance
+name: Temporary Intakelet 0.4.0 metadata lock
 on:
   push:
     branches: ['qa/intakelet-github-public-20261115']
 permissions:
   contents: read
 jobs:
-  actual-public-source:
+  lock:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
@@ -17,22 +15,16 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24.22.2'
-      - name: Install the published archive and read public GitHub with no credentials
+      - name: Generate the explicit dependency lock in owned scratch
         env:
-          INTAKELET_GITHUB_ARTIFACT: ${{ runner.temp }}/intakelet-github-public
-        run: python3 tests/scripts/qualify-github-live.py
-      - name: Retire only this owned workflow and branch
-        env:
-          INTAKELET_RELEASE_SOURCE: ff4797afa66a5ee61ae9d3d3456c9ae804f45e89
-          INTAKELET_RETIRE_TOKEN: ${{ github.token }}
-          INTAKELET_RETIRE_OUTPUT: ${{ runner.temp }}/intakelet-github-retirement
-        run: python3 tests/scripts/retire-github-live.py
+          INTAKELET_DOCUMENT_PHASE: lock
+          INTAKELET_DOCUMENT_SECONDS: '160'
+          INTAKELET_DOCUMENT_ARTIFACT: ${{ runner.temp }}/intakelet-github-lock
+        run: python3 tests/scripts/qualify-documents.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: intakelet-github-public-${{ github.run_id }}
-          path: |
-            ${{ runner.temp }}/intakelet-github-public
-            ${{ runner.temp }}/intakelet-github-retirement
+          name: intakelet-github-lock-${{ github.run_id }}
+          path: ${{ runner.temp }}/intakelet-github-lock
           if-no-files-found: error
           retention-days: 7

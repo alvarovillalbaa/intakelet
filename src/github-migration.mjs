@@ -3,9 +3,11 @@ import { MIGRATION_LIMITS, validateSourcePage, validateMigrationSpec } from './m
 
 const API_VERSION = '2026-03-10';
 function repositoryPart(value) { requireValue(typeof value === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,99}$/.test(value) && !['.', '..'].includes(value), 'github_repository', 'Provide an explicit GitHub owner/repository'); return value; }
+function opaqueAfter(value, code) { requireValue(typeof value === 'string' && value.length > 0 && value.length <= 4096 && !/[\s\u0000-\u001f\u007f]/u.test(value), code, 'Invalid opaque GitHub continuation'); return value; }
 function cursorValue(cursor) {
-  if (cursor === null) return { cycle: 0, page: 1 };
-  exact(cursor, ['kind', 'cycle', 'page']); requireValue(cursor.kind === 'github-issues-v1' && Number.isSafeInteger(cursor.cycle) && cursor.cycle >= 0 && Number.isSafeInteger(cursor.page) && cursor.page > 0, 'github_cursor', 'Invalid GitHub scan checkpoint'); return cursor;
+  if (cursor === null) return { cycle: 0, page: 1, after: null };
+  exact(cursor, ['kind', 'cycle', 'page', 'after']); requireValue(cursor.kind === 'github-issues-v2' && Number.isSafeInteger(cursor.cycle) && cursor.cycle >= 0 && Number.isSafeInteger(cursor.page) && cursor.page > 0 && (cursor.after === null || cursor.page > 1), 'github_cursor', 'Invalid GitHub scan checkpoint');
+  if (cursor.after !== null) opaqueAfter(cursor.after, 'github_cursor'); return cursor;
 }
 async function bodyJSON(response, signal) {
   requireValue(response.body && /^(?:application\/json|application\/[^;\s]+\+json)(?:;|$)/i.test(response.headers.get('content-type') ?? ''), 'github_response', 'GitHub must return JSON');
@@ -18,15 +20,16 @@ async function bodyJSON(response, signal) {
   return parseJSON(new TextDecoder('utf-8', { fatal: true }).decode(bytes), MIGRATION_LIMITS.pageBytes);
 }
 function nextPage(header, current, endpoint, perPage) {
-  if (!header) return false;
+  if (!header) return { more: false, after: null };
   requireValue(header.length <= 16384, 'github_pagination', 'GitHub pagination header exceeds its budget');
   const next = header.split(',').filter(part => /;\s*rel="next"\s*(?:;|$)/.test(part)); requireValue(next.length <= 1, 'github_pagination', 'Multiple next-page links');
-  if (!next.length) { requireValue(!/rel="[^"\n]*\bnext\b/.test(header), 'github_pagination', 'Unrecognized next-page link'); return false; }
+  if (!next.length) { requireValue(!/rel="[^"\n]*\bnext\b/.test(header), 'github_pagination', 'Unrecognized next-page link'); return { more: false, after: null }; }
   const match = next[0].match(/^\s*<([^>]+)>;/); let url; try { url = new URL(match?.[1]); } catch {}
   // Validate the link; construct the next request ourselves. Never forward a
   // token to a Link target, redirect, arbitrary origin or unexpected resource.
-  requireValue(url && url.origin === 'https://api.github.com' && !url.username && !url.password && !url.hash && (url.pathname === endpoint || /^\/repositories\/[1-9]\d*\/issues$/.test(url.pathname)) && url.searchParams.get('page') === String(current + 1) && url.searchParams.get('per_page') === String(perPage) && url.searchParams.get('state') === 'all' && url.searchParams.get('sort') === 'created' && url.searchParams.get('direction') === 'asc' && [...url.searchParams.keys()].length === 5, 'github_pagination', 'Unexpected GitHub continuation; no checkpoint was advanced');
-  return true;
+  const hasAfter = url?.searchParams.has('after');
+  requireValue(url && url.origin === 'https://api.github.com' && !url.username && !url.password && !url.hash && (url.pathname === endpoint || /^\/repositories\/[1-9]\d*\/issues$/.test(url.pathname)) && url.searchParams.get('page') === String(current + 1) && url.searchParams.get('per_page') === String(perPage) && url.searchParams.get('state') === 'all' && url.searchParams.get('sort') === 'created' && url.searchParams.get('direction') === 'asc' && [...url.searchParams.keys()].length === (hasAfter ? 6 : 5), 'github_pagination', 'Unexpected GitHub continuation; no checkpoint was advanced');
+  return { more: true, after: hasAfter ? opaqueAfter(url.searchParams.get('after'), 'github_pagination') : null };
 }
 function normalizedIssue(issue) {
   requireValue(issue && typeof issue === 'object' && Number.isSafeInteger(issue.id) && issue.id > 0 && Number.isSafeInteger(issue.number) && issue.number > 0 && ['open', 'closed'].includes(issue.state) && typeof issue.title === 'string' && (issue.body === null || typeof issue.body === 'string') && Array.isArray(issue.labels), 'github_issue', 'GitHub issue shape is not supported');
@@ -39,20 +42,21 @@ function normalizedIssue(issue) {
 export function createGitHubIssuesSource({ owner, repo, perPage = 10, token, fetch: request = globalThis.fetch } = {}) {
   repositoryPart(owner); repositoryPart(repo); requireValue(Number.isSafeInteger(perPage) && perPage >= 1 && perPage <= 100 && typeof request === 'function', 'github_source', 'Provide a fetch transport and page size 1–100');
   requireValue(token === undefined || typeof token === 'string' && token.length > 0 && token.length <= 4096 && !/\s/.test(token), 'github_token', 'Invalid application-supplied token');
-  const identity = { id: 'github-issues', version: '1', configuration: { owner, repo, perPage, apiVersion: API_VERSION, scan: 'created-ascending-all-states' } }, endpoint = `/repos/${owner}/${repo}/issues`;
+  const identity = { id: 'github-issues', version: '2', configuration: { owner, repo, perPage, apiVersion: API_VERSION, scan: 'created-ascending-all-states-opaque-after' } }, endpoint = `/repos/${owner}/${repo}/issues`;
   return {
     get identity() { return clone(identity); },
     async readPage({ cursor = null, limit = 500, signal } = {}) {
       const position = cursorValue(cursor); requireValue(Number.isSafeInteger(limit) && limit >= perPage, 'github_source', 'The runner item budget is below this source page size'); aborted(signal);
       const url = new URL('https://api.github.com' + endpoint); for (const [key, value] of Object.entries({ state: 'all', sort: 'created', direction: 'asc', per_page: perPage, page: position.page })) url.searchParams.set(key, String(value));
+      if (position.after !== null) url.searchParams.set('after', position.after);
       const headers = { Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': API_VERSION, 'User-Agent': 'Intakelet-GitHub-Migration' }; if (token) headers.Authorization = 'Bearer ' + token;
       const response = await request(url.href, { method: 'GET', headers, signal, credentials: 'omit', redirect: 'error', cache: 'no-store' }); aborted(signal);
       if (response.status !== 200) { void response.body?.cancel().catch(() => {}); throw new IntakeletError('github_http', 'GitHub request did not succeed; the checkpoint is unchanged', { status: response.status, retryAfter: response.headers.get('retry-after') }); }
       try {
-        const more = nextPage(response.headers.get('link'), position.page, endpoint, perPage), values = await bodyJSON(response, signal); requireValue(Array.isArray(values) && values.length <= perPage, 'github_response', 'Expected a bounded GitHub issue array');
+        const continuation = nextPage(response.headers.get('link'), position.page, endpoint, perPage), values = await bodyJSON(response, signal); requireValue(Array.isArray(values) && values.length <= perPage, 'github_response', 'Expected a bounded GitHub issue array');
         const items = values.filter(value => !Object.hasOwn(value, 'pull_request')).map(normalizedIssue);
-        const after = { kind: 'github-issues-v1', cycle: position.cycle + (more ? 0 : 1), page: more ? position.page + 1 : 1 }; requireValue(Number.isSafeInteger(after.cycle) && Number.isSafeInteger(after.page), 'github_cursor', 'GitHub checkpoint counter exhausted');
-        return validateSourcePage({ items, cursorBefore: clone(cursor), cursorAfter: after, done: !more });
+        const after = { kind: 'github-issues-v2', cycle: position.cycle + (continuation.more ? 0 : 1), page: continuation.more ? position.page + 1 : 1, after: continuation.after }; requireValue(Number.isSafeInteger(after.cycle) && Number.isSafeInteger(after.page), 'github_cursor', 'GitHub checkpoint counter exhausted');
+        return validateSourcePage({ items, cursorBefore: clone(cursor), cursorAfter: after, done: !continuation.more });
       } finally { void response.body?.cancel().catch(() => {}); }
     }
   };

@@ -48,12 +48,12 @@ Browser demonstration is restricted to its own authored sample website;
 production integrations use a server endpoint owned by the application.
 
 Try the [public playground](https://intakelet.vercel.app), or install the archive
-from [release0.3.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.3.0)
+from [release0.4.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.4.0)
 into your Node24+ application. The release archive is a normal npm package;
 there is no npm-registry publication or SDK account requirement.
 
 ```sh
-npm install ./alvarovillalbaa-intakelet-0.3.0.tgz
+npm install ./alvarovillalbaa-intakelet-0.4.0.tgz
 ```
 
 ```js

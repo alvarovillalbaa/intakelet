@@ -16,7 +16,7 @@ test('G01 requests one fixed read-only endpoint, pins API version and omits cred
 test('G02 follows reviewed pages, excludes PRs, preserves stable source IDs and retains end-of-scan boundary', async () => {
   const seen = [], source = adapter(url => { seen.push(new URL(url).searchParams.get('page')); return seen.length === 1 ? response([issue(1), issue(2, { pull_request: {} })], { link: `<${link(2)}>; rel="next", <${link(4)}>; rel="last"` }) : response([issue(3)]); });
   const h = new MemoryMigrationHost({ workspaceId: 'workspace' }), spec = githubIssuesMigration({ workspaceId: 'workspace', connectionId: 'github', source });
-  const result = await runMigration({ spec, source, host: h, review: approve }); assert.equal(result.batches, 2); assert.equal(result.items, 2); assert.equal(result.status, 'complete'); assert.deepEqual(seen, ['1', '2']); assert.deepEqual(result.checkpoint, { kind: 'github-issues-v1', cycle: 1, page: 1 });
+  const result = await runMigration({ spec, source, host: h, review: approve }); assert.equal(result.batches, 2); assert.equal(result.items, 2); assert.equal(result.status, 'complete'); assert.deepEqual(seen, ['1', '2']); assert.deepEqual(result.checkpoint, { kind: 'github-issues-v2', cycle: 1, page: 1, after: null });
 });
 test('G03 subsequent accepted sync scans detect updates and never infer deletions from absence', async () => {
   let turn = 0; const source = adapter(() => response([issue(1, { title: ++turn === 1 ? 'Before' : 'After', updated_at: turn === 1 ? '2026-11-01T00:00:00Z' : '2026-11-02T00:00:00Z' })]));
@@ -49,4 +49,19 @@ test('G10 cancellation releases a stalled HTTP body even when its underlying can
   let started, cancelled = false; const ready = new Promise(resolve => { started = resolve; }), controller = new AbortController();
   const source = adapter(() => new Response(new ReadableStream({ pull() { started(); return new Promise(() => {}); }, cancel() { cancelled = true; return new Promise(() => {}); } }), { headers: { 'content-type': 'application/json' } }));
   const pending = source.readPage({ signal: controller.signal }); await ready; controller.abort(); await assert.rejects(pending, error => error.code === 'aborted'); assert.equal(cancelled, true);
+});
+test('G11 real-style opaque after cursors survive encoding, checkpoints and the original endpoint', async () => {
+  const after = 'Y3Vyc29y+opaque/value==', requests = [];
+  const source = adapter(url => { requests.push(new URL(url)); return requests.length === 1 ? response([issue(1)], { link: `<${link(2).replace('/repos/authored/repo/', '/repositories/27193779/')}&after=${encodeURIComponent(after)}>; rel="next"` }) : response([issue(2)]); });
+  assert.equal(source.identity.version, '2'); const first = await source.readPage(); assert.deepEqual(first.cursorAfter, { kind: 'github-issues-v2', cycle: 0, page: 2, after });
+  const second = await source.readPage({ cursor: first.cursorAfter }); assert.equal(requests[1].pathname, '/repos/authored/repo/issues'); assert.equal(requests[1].searchParams.get('after'), after); assert.deepEqual(second.cursorAfter, { kind: 'github-issues-v2', cycle: 1, page: 1, after: null });
+});
+test('G12 malformed/duplicate cursor query values and legacy checkpoints are refused', async () => {
+  for (const tail of ['&after=', '&after=a&after=b', '&after=%0A', '&after=' + 'a'.repeat(4097), '&before=opaque', '&page=3&after=opaque']) {
+    let calls = 0; const source = adapter(() => { calls++; return response([issue(1)], { link: `<${link(2)}${tail}>; rel="next"` }); });
+    await assert.rejects(source.readPage(), error => error.code === 'github_pagination'); assert.equal(calls, 1);
+  }
+  let calls = 0; const source = adapter(() => { calls++; return response([]); });
+  for (const cursor of [{ kind: 'github-issues-v1', cycle: 0, page: 2 }, { kind: 'github-issues-v2', cycle: 0, page: 1, after: 'opaque' }, { kind: 'github-issues-v2', cycle: 0, page: 2, after: '' }]) await assert.rejects(source.readPage({ cursor }));
+  assert.equal(calls, 0);
 });
