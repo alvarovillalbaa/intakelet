@@ -1,0 +1,16 @@
+{
+  "previousVersion": "0.3.0",
+  "previousSha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84",
+  "currentVersion": "0.4.0",
+  "currentSha256": "64902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35",
+  "changedMembers": [
+    "package.json",
+    "docs/references/migration-integration.md",
+    "README.md",
+    "src/github-migration.mjs"
+  ],
+  "addedMembers": [
+    "docs/specs/github-source-v2.md"
+  ],
+  "unchangedPreviousMembers": 55
+}

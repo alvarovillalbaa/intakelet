@@ -1,0 +1,82 @@
+{
+  "passed": false,
+  "node": "v24.22.2",
+  "cases": [
+    {
+      "id": "G01",
+      "passed": true,
+      "emptyActualRepository": true
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "actualPRsExcluded": 1
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selectedVersion": "2026-03-10",
+      "requestId": "6848:17530D:2B8070:4837CD:6AF9C2A9",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "53",
+      "seconds": 0.131,
+      "rawItems": 0,
+      "pullRequests": 0
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/afs/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 3537,
+      "sha256": "02587bcd27eba1ba1e9cf4bda9f551384d9209cb527d1beaca5622d868ef44b2",
+      "selectedVersion": "2026-03-10",
+      "requestId": "6849:64BE6:2CA896:496E03:6AF9C2A9",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "52",
+      "seconds": 0.208,
+      "rawItems": 1,
+      "pullRequests": 1
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 17814,
+      "sha256": "f3addfedd5db22ff4d2f75f910d7810b04e8f6fe1b867ac29e14bdb7112bfb9a",
+      "selectedVersion": "2026-03-10",
+      "requestId": "6848:17530D:2B809B:483804:6AF9C2A9",
+      "contentType": "application/json; charset=utf-8",
+      "link": "<https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=2&after=Y3Vyc29yOnYyOpLPAAABSfT6hHjOAwAtqw%3D%3D>; rel=\"next\"",
+      "remaining": "51",
+      "seconds": 0.228,
+      "rawItems": 5,
+      "pullRequests": 2
+    }
+  ],
+  "receipts": [],
+  "reviewedRows": 0,
+  "error": {
+    "name": "IntakeletError",
+    "code": "github_pagination",
+    "frames": [
+      "    at runMigration (file:///tmp/intakelet-github-live-ifbocloe/consumer/node_modules/@alvarovillalbaa/intakelet/src/migration.mjs:148:15)",
+      "    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+      "    at async file:///tmp/intakelet-github-live-ifbocloe/source/tests/integration/github-public-live.mjs:61:19"
+    ]
+  },
+  "privacy": "No issue text or author profiles retained; live data existed only in process memory.",
+  "limits": "Unauthenticated public GET; bounded nodejs/node sample and empty cycles, not full-repository migration, mutable-update/delete proof, OAuth, durable host or scheduler."
+}

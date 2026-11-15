@@ -1,0 +1,54 @@
+{
+  "phase": "lock",
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0031969919999994545,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "generate-lock",
+      "argv": [
+        "npm",
+        "install",
+        "--package-lock-only",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.1803300389999976,
+      "stdoutBytes": 18,
+      "stdoutSha256": "ce7bf91f54adc7390cff6bf1c2572fd00ce9cfbd0611637e273059c4710a80c9",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 94943068160,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "generatedLockSha256": "10987706171de004600fbc2f6e4e8c51a23d4f0d843b27ab7ef020161343ac4a",
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [
+    "package-lock.json"
+  ],
+  "sourceGuardPassed": true
+}

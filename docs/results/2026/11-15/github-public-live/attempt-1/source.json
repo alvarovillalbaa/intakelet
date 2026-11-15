@@ -1,0 +1,8 @@
+{
+  "sha": "20d89c5f57a53209b1fa358ef6efe728061d8c78",
+  "paths": [
+    "tests/integration/github-public-live.mjs",
+    "tests/scripts/qualify-github-live.py",
+    "docs/results/2026/11-15/github-public-live/protocol-v1.md"
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "passed": true,
+  "node": "v24.22.2",
+  "cases": [
+    {
+      "id": "G01",
+      "passed": true,
+      "emptyActualRepository": true
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "actualPRsExcluded": 1
+    },
+    {
+      "id": "G03",
+      "passed": true,
+      "reviewedRows": 3,
+      "receipt": {
+        "batchId": "sha256:024bab4ea42529a328b79c619ed52ce9ec856ec7704c9b9d1c276e5c82faf50b",
+        "checkpoint": {
+          "after": "Y3Vyc29yOnYyOpLPAAABSfT6hHjOAwAtqw==",
+          "cycle": 0,
+          "kind": "github-issues-v2",
+          "page": 2
+        },
+        "connectionId": "node-public-sample",
+        "counts": {
+          "created": 3,
+          "deleted": 0,
+          "excluded": 0,
+          "unchanged": 0,
+          "updated": 0
+        },
+        "excludedIds": [],
+        "revision": 1,
+        "schema": "intakelet.migration-receipt",
+        "sourceDone": false,
+        "specId": "sha256:5f8b8be8986f9b736b6838e2ec4d950c8db186a316b7613b0f209df8d50376fa",
+        "version": 1,
+        "workspaceId": "authored-live"
+      }
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "routeId": "sha256:91d7981cb125843e0f286d73f2f88c1f31952626f17f6b75cd3172c2ec4951a1",
+      "polls": 2,
+      "sampledPages": 3,
+      "checkpoint": {
+        "after": "Y3Vyc29yOnYyOpLPAAABSfufVqDOAwFsdQ==",
+        "cycle": 0,
+        "kind": "github-issues-v2",
+        "page": 4
+      },
+      "unauthorisedReads": 0,
+      "authority": "T2 reference route, not production authentication"
+    },
+    {
+      "id": "G05",
+      "passed": true,
+      "completedEmptyCycles": 3,
+      "inventedRecords": 0
+    },
+    {
+      "id": "G06",
+      "passed": true,
+      "actual404": true,
+      "retries": 0,
+      "checkpoint": null
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DB873:2A130EC5:6AF9C5ED",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "58",
+      "seconds": 0.218,
+      "rawItems": 0,
+      "pullRequests": 0
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/afs/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 3537,
+      "sha256": "02587bcd27eba1ba1e9cf4bda9f551384d9209cb527d1beaca5622d868ef44b2",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D809:195622:A946C47:21876F1A:6AF9C5ED",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "57",
+      "seconds": 0.293,
+      "rawItems": 1,
+      "pullRequests": 1
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 17814,
+      "sha256": "f3addfedd5db22ff4d2f75f910d7810b04e8f6fe1b867ac29e14bdb7112bfb9a",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DBAAF:2A1315BE:6AF9C5ED",
+      "contentType": "application/json; charset=utf-8",
+      "link": "<https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=2&after=Y3Vyc29yOnYyOpLPAAABSfT6hHjOAwAtqw%3D%3D>; rel=\"next\"",
+      "remaining": "56",
+      "seconds": 0.264,
+      "rawItems": 5,
+      "pullRequests": 2
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/issues?state=all&sort=created&direction=asc&per_page=5&page=2&after=Y3Vyc29yOnYyOpLPAAABSfT6hHjOAwAtqw%3D%3D",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 20659,
+      "sha256": "293c73f9eac43aaa27bebef50966e89b5e52290a72a9645298c835d02accbfa0",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DBC38:2A131A65:6AF9C5ED",
+      "contentType": "application/json; charset=utf-8",
+      "link": "<https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=3&after=Y3Vyc29yOnYyOpLPAAABSflpc3DOAwE9JQ%3D%3D>; rel=\"next\", <https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=1&before=Y3Vyc29yOnYyOpLPAAABSfXO29jOAwBkKA%3D%3D>; rel=\"prev\"",
+      "remaining": "55",
+      "seconds": 0.252,
+      "rawItems": 5,
+      "pullRequests": 3
+    },
+    {
+      "url": "https://api.github.com/repos/nodejs/node/issues?state=all&sort=created&direction=asc&per_page=5&page=3&after=Y3Vyc29yOnYyOpLPAAABSflpc3DOAwE9JQ%3D%3D",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 24448,
+      "sha256": "9006220b691a77270072341e023045e1ec972bdcef1e71a22ea3a61ad6d00126",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DC301:2A132F79:6AF9C5EE",
+      "contentType": "application/json; charset=utf-8",
+      "link": "<https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=4&after=Y3Vyc29yOnYyOpLPAAABSfufVqDOAwFsdQ%3D%3D>; rel=\"next\", <https://api.github.com/repositories/27193779/issues?state=all&sort=created&direction=asc&per_page=5&page=2&before=Y3Vyc29yOnYyOpLPAAABSfnS9yjOAwFFbw%3D%3D>; rel=\"prev\"",
+      "remaining": "54",
+      "seconds": 0.251,
+      "rawItems": 5,
+      "pullRequests": 2
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DC49B:2A1333DF:6AF9C5EF",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "53",
+      "seconds": 0.026,
+      "rawItems": 0,
+      "pullRequests": 0
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DC4CA:2A133484:6AF9C5EF",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "52",
+      "seconds": 0.026,
+      "rawItems": 0,
+      "pullRequests": 0
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DCA01:2A1344EB:6AF9C5EF",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "51",
+      "seconds": 0.026,
+      "rawItems": 0,
+      "pullRequests": 0
+    },
+    {
+      "url": "https://api.github.com/repos/alvarovillalbaa/intakelet-live-missing-20261115-6ea41bd9/issues?state=all&sort=created&direction=asc&per_page=5&page=1",
+      "method": "GET",
+      "authenticated": false,
+      "requestedVersion": "2026-03-10",
+      "status": 404,
+      "bytes": 126,
+      "sha256": "b0408139de89eec990b16cf723a1afea435f354daf85e3965b873e0d2309bafa",
+      "selectedVersion": "2026-03-10",
+      "requestId": "D808:B6921:D4DCA2B:2A134581:6AF9C5F0",
+      "contentType": "application/json; charset=utf-8",
+      "link": null,
+      "remaining": "50",
+      "seconds": 0.095,
+      "rawItems": null,
+      "pullRequests": null
+    }
+  ],
+  "receipts": [
+    {
+      "batchId": "sha256:024bab4ea42529a328b79c619ed52ce9ec856ec7704c9b9d1c276e5c82faf50b",
+      "checkpoint": {
+        "after": "Y3Vyc29yOnYyOpLPAAABSfT6hHjOAwAtqw==",
+        "cycle": 0,
+        "kind": "github-issues-v2",
+        "page": 2
+      },
+      "connectionId": "node-public-sample",
+      "counts": {
+        "created": 3,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 1,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": false,
+      "specId": "sha256:5f8b8be8986f9b736b6838e2ec4d950c8db186a316b7613b0f209df8d50376fa",
+      "version": 1,
+      "workspaceId": "authored-live"
+    },
+    {
+      "batchId": "sha256:043ad36fe5870c480f0e95ab72b0a8e620e5ea62982adc490eb3f44f9ee84a50",
+      "checkpoint": {
+        "after": "Y3Vyc29yOnYyOpLPAAABSflpc3DOAwE9JQ==",
+        "cycle": 0,
+        "kind": "github-issues-v2",
+        "page": 3
+      },
+      "connectionId": "node-public-sample",
+      "counts": {
+        "created": 2,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 2,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": false,
+      "specId": "sha256:5f8b8be8986f9b736b6838e2ec4d950c8db186a316b7613b0f209df8d50376fa",
+      "version": 1,
+      "workspaceId": "authored-live"
+    },
+    {
+      "batchId": "sha256:dfc9d478ad5bf59543c96aafd782c9144c6d572069bb409a4a8e6a02444a1f13",
+      "checkpoint": {
+        "after": "Y3Vyc29yOnYyOpLPAAABSfufVqDOAwFsdQ==",
+        "cycle": 0,
+        "kind": "github-issues-v2",
+        "page": 4
+      },
+      "connectionId": "node-public-sample",
+      "counts": {
+        "created": 3,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 3,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": false,
+      "specId": "sha256:5f8b8be8986f9b736b6838e2ec4d950c8db186a316b7613b0f209df8d50376fa",
+      "version": 1,
+      "workspaceId": "authored-live"
+    },
+    {
+      "batchId": "sha256:65147db2f121525bd2658369d44d4fabe9a0fc518051c1d3bc05919738c15653",
+      "checkpoint": {
+        "after": null,
+        "cycle": 1,
+        "kind": "github-issues-v2",
+        "page": 1
+      },
+      "connectionId": "own-empty",
+      "counts": {
+        "created": 0,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 1,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": true,
+      "specId": "sha256:85e8374394ad21f2577b840a2753e514b3be68a286a2ac9945430729193d95a5",
+      "version": 1,
+      "workspaceId": "authored-empty"
+    },
+    {
+      "batchId": "sha256:102a3204c924346a183022216f029938b5fefc009bf146b73ae0be2536d84e15",
+      "checkpoint": {
+        "after": null,
+        "cycle": 2,
+        "kind": "github-issues-v2",
+        "page": 1
+      },
+      "connectionId": "own-empty",
+      "counts": {
+        "created": 0,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 2,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": true,
+      "specId": "sha256:85e8374394ad21f2577b840a2753e514b3be68a286a2ac9945430729193d95a5",
+      "version": 1,
+      "workspaceId": "authored-empty"
+    },
+    {
+      "batchId": "sha256:cc8af7e2031b7aec515bc23c18bb03bfb5b006af2f959be1dfbef19de629d90e",
+      "checkpoint": {
+        "after": null,
+        "cycle": 3,
+        "kind": "github-issues-v2",
+        "page": 1
+      },
+      "connectionId": "own-empty",
+      "counts": {
+        "created": 0,
+        "deleted": 0,
+        "excluded": 0,
+        "unchanged": 0,
+        "updated": 0
+      },
+      "excludedIds": [],
+      "revision": 3,
+      "schema": "intakelet.migration-receipt",
+      "sourceDone": true,
+      "specId": "sha256:85e8374394ad21f2577b840a2753e514b3be68a286a2ac9945430729193d95a5",
+      "version": 1,
+      "workspaceId": "authored-empty"
+    }
+  ],
+  "reviewedRows": 3,
+  "error": null,
+  "privacy": "No issue text or author profiles retained; live data existed only in process memory.",
+  "limits": "Unauthenticated public GET; bounded nodejs/node sample and empty cycles, not full-repository migration, mutable-update/delete proof, OAuth, durable host or scheduler."
+}
