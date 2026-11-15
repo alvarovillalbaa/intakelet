@@ -1,10 +1,10 @@
-// Loaded before parsers and inherited by their Node worker threads.
-import http from 'node:http';
-import https from 'node:https';
-import net from 'node:net';
-import tls from 'node:tls';
-import dgram from 'node:dgram';
-import { syncBuiltinESMExports } from 'node:module';
+// CommonJS preload is inherited by parser-owned Node worker threads.
+const http = require('node:http');
+const https = require('node:https');
+const net = require('node:net');
+const tls = require('node:tls');
+const dgram = require('node:dgram');
+const { syncBuiltinESMExports } = require('node:module');
 const denied = () => { throw new Error('document_network_denied'); };
 globalThis.fetch = denied;
 http.request = http.get = https.request = https.get = denied;

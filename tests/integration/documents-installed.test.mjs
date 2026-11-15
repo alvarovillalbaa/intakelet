@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
-import { pathToFileURL } from 'node:url';
+import { pathToFileURL, fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -79,9 +79,9 @@ test('E08 cancellation during real parser startup closes its process and owned s
   assert.deepEqual((await readdir(tmpdir())).filter(name => name.startsWith('intakelet-document-')).sort(), before);
 });
 test('E09 network preload denies main-process and inherited-worker requests before transport', async () => {
-  const entry = require.resolve('@alvarovillalbaa/intakelet/documents/node'), guard = new URL('./document-network-deny.mjs', pathToFileURL(entry));
+  const entry = require.resolve('@alvarovillalbaa/intakelet/documents/node'), guard = new URL('./document-network-deny.cjs', pathToFileURL(entry));
   const code = 'const { Worker }=require("node:worker_threads");(async()=>{try{await fetch("https://example.invalid/")}catch(e){if(e.message!=="document_network_denied")throw e;}const w=new Worker(`const {parentPort}=require("node:worker_threads");try{require("node:https").get("https://example.invalid/")}catch(e){parentPort.postMessage(e.message)}`,{eval:true});w.once("message",m=>{if(m!=="document_network_denied")process.exitCode=1;});})();';
-  const child = spawn(process.execPath, ['--import', guard.href, '--input-type=commonjs', '-e', code], { env: {}, stdio: ['ignore', 'pipe', 'pipe'] }); let stderr = ''; child.stderr.on('data', chunk => { stderr += chunk; });
+  const child = spawn(process.execPath, ['--require', fileURLToPath(guard), '--input-type=commonjs', '-e', code], { env: {}, stdio: ['ignore', 'pipe', 'pipe'] }); let stderr = ''; child.stderr.on('data', chunk => { stderr += chunk; });
   const exit = await new Promise(resolve => child.once('close', (code, signal) => resolve({ code, signal }))); assert.deepEqual(exit, { code: 0, signal: null }, stderr);
 });
 test('E10 all decoder scratch is gone and actual fixture/provenance records are retained', async () => {

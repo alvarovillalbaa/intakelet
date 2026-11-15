@@ -86,9 +86,9 @@ function response(asset, format, status, reason = null) {
   return { schema: 'intakelet.document-extraction', version: 1, status, format, method: null, text: null, sourceSha256: asset.sha256, segments: [], engine: null, reason, complete: false };
 }
 async function parseInProcess(directory, configuration, signal, deadline) {
-  const guard = fileURLToPath(new URL('./document-network-deny.mjs', import.meta.url));
+  const guard = fileURLToPath(new URL('./document-network-deny.cjs', import.meta.url));
   const worker = fileURLToPath(new URL('./document-worker.mjs', import.meta.url));
-  const child = spawn(process.execPath, ['--max-old-space-size=256', '--import', guard, worker], { cwd: directory, detached: process.platform !== 'win32', env: { TMPDIR: directory, TEMP: directory, TMP: directory }, stdio: ['pipe', 'pipe', 'pipe'] });
+  const child = spawn(process.execPath, ['--max-old-space-size=256', '--require', guard, worker], { cwd: directory, detached: process.platform !== 'win32', env: { TMPDIR: directory, TEMP: directory, TMP: directory }, stdio: ['pipe', 'pipe', 'pipe'] });
   let output = [], size = 0, diagnosticBytes = 0, closed = false, overflow = false;
   const completion = new Promise((resolve, reject) => { child.once('error', reject); child.once('close', (code, childSignal) => { closed = true; resolve({ code, signal: childSignal }); }); });
   // Observe cancellation/overflow through the same owned process teardown.
