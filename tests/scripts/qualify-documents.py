@@ -72,7 +72,7 @@ try:
     work = scratch / 'source'
     work.mkdir()
     (scratch / 'tmp').mkdir()
-    env = dict(os.environ, TMPDIR=str(scratch / 'tmp'), npm_config_cache=str(scratch / 'npm-cache'))
+    env = dict(os.environ, TMPDIR=str(scratch / 'tmp'), npm_config_cache=str(scratch / 'npm-cache'), PLAYWRIGHT_BROWSERS_PATH=str(scratch / 'browsers'))
     for key in ['GH_TOKEN', 'GITHUB_TOKEN', 'INTAKELET_RETIRE_TOKEN', 'INTAKELET_PUBLISH_TOKEN']:
         env.pop(key, None)
     for name in names:
@@ -85,10 +85,11 @@ try:
         generated = (work / 'package-lock.json').read_bytes()
         shutil.copyfile(work / 'package-lock.json', output / 'package-lock.json')
         receipt['generatedLockSha256'] = sha(generated)
-    elif phase == 'qualify':
+    elif phase in ['qualify', 'hosted']:
         execute('dependencies', ['npm', 'ci', '--ignore-scripts', '--no-audit', '--no-fund'], 150)
         execute('syntax', ['node', 'scripts/check.mjs'], 30)
-        execute('document-guards', ['node', '--test', 'tests/unit/document-node.test.mjs'], 30)
+        if phase == 'qualify':
+            execute('document-guards', ['node', '--test', 'tests/unit/document-node.test.mjs'], 30)
         execute('pack', ['npm', 'pack', '--json', '--ignore-scripts', '--pack-destination', str(output)], 30)
         archives = list(output.glob('*.tgz'))
         if len(archives) != 1:
@@ -105,23 +106,37 @@ try:
                     raise RuntimeError('Archive source differs: ' + name)
                 members.append({'path': name, 'bytes': len(data), 'sha256': sha(data), 'mode': member.mode})
         (output / 'package-manifest.json').write_text(json.dumps({'file': archive.name, 'bytes': archive.stat().st_size, 'sha256': sha(archive.read_bytes()), 'members': members}, indent=2))
-        consumer = scratch / 'consumer'
-        consumer.mkdir()
-        (consumer / 'package.json').write_text('{"name":"intakelet-document-consumer","version":"0.0.0","private":true,"type":"module"}')
-        execute('installed-archive', ['npm', 'install', '--offline', '--ignore-scripts', '--no-audit', '--no-fund', str(archive)], 60, consumer)
-        shutil.copyfile(consumer / 'package-lock.json', output / 'installed-lock.json')
-        env.update(INTAKELET_DOCUMENT_CONSUMER=str(consumer), INTAKELET_DOCUMENT_OUTPUT=str(output / 'installed'))
-        (output / 'installed').mkdir()
-        locate = "import{createRequire}from'node:module';import{readdir,stat}from'node:fs/promises';import{dirname,join}from'node:path';const r=createRequire(import.meta.url),root=dirname(r.resolve('@tesseract.js-data/eng/package.json'));async function walk(p){for(const n of await readdir(p)){const f=join(p,n),s=await stat(f);if(s.isDirectory()){const found=await walk(f);if(found)return found;}else if(n==='eng.traineddata.gz')return f;}}console.log(await walk(root));"
-        execute('locate-local-ocr-data', ['node', '--input-type=module', '-e', locate], 10)
-        language_path = (output / 'locate-local-ocr-data.stdout.txt').read_text().strip()
-        candidate = Path(language_path)
-        if not candidate.is_file() or not candidate.is_relative_to(work / 'node_modules/@tesseract.js-data/eng'):
-            raise RuntimeError('Unexpected local OCR model path')
-        env['INTAKELET_OCR_FILE'] = str(candidate)
-        execute('actual-installed-documents', ['node', '--test', 'tests/integration/documents-installed.test.mjs'], 180)
-        shutil.copyfile(work / 'tests/fixtures/documents-types.mts', consumer / 'documents-types.mts')
-        execute('installed-node-types', [str(work / 'node_modules/.bin/tsc'), '--noEmit', '--strict', '--module', 'NodeNext', '--moduleResolution', 'NodeNext', '--target', 'ES2022', '--lib', 'ES2022', '--types', 'node', '--typeRoots', str(work / 'node_modules/@types'), 'documents-types.mts'], 30, consumer)
+        if phase == 'hosted' and sha(archive.read_bytes()) != os.environ['INTAKELET_DOCUMENT_ARCHIVE_SHA256']:
+            raise RuntimeError('Hosted source changed the qualified archive')
+        if phase == 'qualify':
+            consumer = scratch / 'consumer'
+            consumer.mkdir()
+            (consumer / 'package.json').write_text('{"name":"intakelet-document-consumer","version":"0.0.0","private":true,"type":"module"}')
+            execute('installed-archive', ['npm', 'install', '--offline', '--ignore-scripts', '--no-audit', '--no-fund', str(archive)], 60, consumer)
+            shutil.copyfile(consumer / 'package-lock.json', output / 'installed-lock.json')
+            env.update(INTAKELET_DOCUMENT_CONSUMER=str(consumer), INTAKELET_DOCUMENT_OUTPUT=str(output / 'installed'))
+            (output / 'installed').mkdir()
+            locate = "import{createRequire}from'node:module';import{readdir,stat}from'node:fs/promises';import{dirname,join}from'node:path';const r=createRequire(import.meta.url),root=dirname(r.resolve('@tesseract.js-data/eng/package.json'));async function walk(p){for(const n of await readdir(p)){const f=join(p,n),s=await stat(f);if(s.isDirectory()){const found=await walk(f);if(found)return found;}else if(n==='eng.traineddata.gz')return f;}}console.log(await walk(root));"
+            execute('locate-local-ocr-data', ['node', '--input-type=module', '-e', locate], 10)
+            language_path = (output / 'locate-local-ocr-data.stdout.txt').read_text().strip()
+            candidate = Path(language_path)
+            if not candidate.is_file() or not candidate.is_relative_to(work / 'node_modules/@tesseract.js-data/eng'):
+                raise RuntimeError('Unexpected local OCR model path')
+            env['INTAKELET_OCR_FILE'] = str(candidate)
+            execute('actual-installed-documents', ['node', '--test', 'tests/integration/documents-installed.test.mjs'], 180)
+            shutil.copyfile(work / 'tests/fixtures/documents-types.mts', consumer / 'documents-types.mts')
+            execute('installed-node-types', [str(work / 'node_modules/.bin/tsc'), '--noEmit', '--strict', '--module', 'NodeNext', '--moduleResolution', 'NodeNext', '--target', 'ES2022', '--lib', 'ES2022', '--types', 'node', '--typeRoots', str(work / 'node_modules/@types'), 'documents-types.mts'], 30, consumer)
+        execute('build', ['npm', 'run', 'build'], 60)
+        shutil.copyfile(work / 'dist/build.json', output / 'build.json')
+        browser = scratch / 'browser'
+        browser.mkdir()
+        shutil.copyfile(work / 'tests/fixtures/browser/package.json', browser / 'package.json')
+        execute('browser-dependencies', ['npm', 'install', '--ignore-scripts', '--no-audit', '--no-fund'], 60, browser)
+        shutil.copyfile(browser / 'package-lock.json', output / 'browser-lock.json')
+        execute('browser-install', ['node', str(browser / 'node_modules/playwright/cli.js'), 'install', '--with-deps', 'chromium'], 150)
+        env.update(INTAKELET_PLAYWRIGHT=str(browser / 'node_modules/playwright/index.mjs'), INTAKELET_GUIDE_OUTPUT=str(output / 'guide'))
+        execute('document-guide-native', ['node', 'tests/e2e/document-guide.mjs'], 90)
+
     else:
         raise RuntimeError('Unknown phase')
     receipt['passed'] = True
