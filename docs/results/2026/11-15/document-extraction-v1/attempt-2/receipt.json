@@ -1,0 +1,199 @@
+{
+  "phase": "qualify",
+  "passed": false,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.003952928000000355,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 3.3459392180000016,
+      "stdoutBytes": 26,
+      "stdoutSha256": "6ec5b39c7f2d97ea4f969b984de3a18ddb5c08f7cb00907254e0cac2c6c57b35",
+      "stderrBytes": 1017,
+      "stderrSha256": "684f891fe8b3f84ef8f4761eecb1f78f141d45699b41e9323b5d1b1809b7208c"
+    },
+    {
+      "name": "runtime-dependency-audit",
+      "argv": [
+        "npm",
+        "audit",
+        "--omit=dev",
+        "--audit-level=high",
+        "--json"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.4304036619999998,
+      "stdoutBytes": 1635,
+      "stdoutSha256": "3b4c3443bc3920a72c007d904abd7c7313294262a10482660255ee6ac7af03ac",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.7771431040000003,
+      "stdoutBytes": 72,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "document-guards",
+      "argv": [
+        "node",
+        "--test",
+        "tests/unit/document-node.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.4792942370000013,
+      "stdoutBytes": 782,
+      "stdoutSha256": "057b7773e6bd7972f89e423923b2671fc67a0481a7685fb53f72fb662f684015",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-document-qualified"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.36928601299999997,
+      "stdoutBytes": 6373,
+      "stdoutSha256": "28debe57dc4da73c5a1495292a8420c280d7c29dba485c8cd0b7c36a04911aeb",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "online-installed-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-document-qualified/alvarovillalbaa-intakelet-0.3.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 5.321250490000001,
+      "stdoutBytes": 26,
+      "stdoutSha256": "61b0f8b1bd52073a5845bcb12de68a42a9481854d4991feba089d776eeef2dac",
+      "stderrBytes": 1017,
+      "stderrSha256": "dfb442c2bed25264d8715eef8aba3cd720d12ebf8fbd53cb1b5b3afd0c3140dc"
+    },
+    {
+      "name": "installed-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-document-qualified/alvarovillalbaa-intakelet-0.3.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 3.0464692319999997,
+      "stdoutBytes": 26,
+      "stdoutSha256": "dde9a2da95c6317bc66b3d0411b0618dfc6a15b151fbc7e895fe88e75d715cf9",
+      "stderrBytes": 1017,
+      "stderrSha256": "dfb442c2bed25264d8715eef8aba3cd720d12ebf8fbd53cb1b5b3afd0c3140dc"
+    },
+    {
+      "name": "locate-local-ocr-data",
+      "argv": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import{createRequire}from'node:module';import{readdir,stat}from'node:fs/promises';import{dirname,join}from'node:path';const r=createRequire(import.meta.url),root=dirname(r.resolve('@tesseract.js-data/eng/package.json'));async function walk(p){for(const n of await readdir(p)){const f=join(p,n),s=await stat(f);if(s.isDirectory()){const found=await walk(f);if(found)return found;}else if(n==='eng.traineddata.gz')return f;}}console.log(await walk(root));"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.027641704000004097,
+      "stdoutBytes": 102,
+      "stdoutSha256": "8c675bf3cd1439edcd67c2602c9d2c1bc81a446a1289dd7d39d658a84f810fa1",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "actual-installed-documents",
+      "argv": [
+        "node",
+        "--test",
+        "tests/integration/documents-installed.test.mjs"
+      ],
+      "code": 1,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.070036094000002,
+      "stdoutBytes": 2361,
+      "stdoutSha256": "6ae2d9c762b2c6d4baf6de0866503d330c3e05d05a451bdbd988f6b796df0f8c",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91498557440,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "error": "RuntimeError('actual-installed-documents did not close successfully')",
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}

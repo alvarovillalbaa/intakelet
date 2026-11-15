@@ -1,13 +1,15 @@
-name: Temporary Intakelet actual installed documents
+name: Temporary Intakelet document publication and retirement
 on:
   push:
     branches: ['qa/intakelet-documents-20261115']
 permissions:
   contents: read
 jobs:
-  qualify:
+  publish-hosted-retire:
     runs-on: ubuntu-24.04
-    timeout-minutes: 8
+    timeout-minutes: 4
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
@@ -15,16 +17,36 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24.22.2'
-      - name: Qualify actual installed parsers, OCR, review, types and guide
+      - name: Publish and independently download the qualified release assets
         env:
-          INTAKELET_DOCUMENT_PHASE: qualify
-          INTAKELET_DOCUMENT_SECONDS: '450'
-          INTAKELET_DOCUMENT_ARTIFACT: ${{ runner.temp }}/intakelet-document-qualified
+          INTAKELET_RELEASE_SOURCE: 60b13b276b14ea11dce842487fc41bdb9b711984
+          INTAKELET_DOCUMENT_ARCHIVE_SHA256: 76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84
+          INTAKELET_DOCUMENT_QUALIFIED_SOURCE: 508adadcd736aea5c92ee4e31f79dd2312027839
+          INTAKELET_DOCUMENT_QUALIFICATION_RUN: '43722488899'
+          INTAKELET_RELEASE_TOKEN: ${{ github.token }}
+          INTAKELET_PUBLICATION_OUTPUT: ${{ runner.temp }}/intakelet-document-publication
+        run: python3 tests/scripts/publish-documents.py
+      - name: Verify the exact public bodies and actual mobile documentation
+        env:
+          INTAKELET_DOCUMENT_PHASE: hosted
+          INTAKELET_DOCUMENT_SECONDS: '210'
+          INTAKELET_DOCUMENT_ARCHIVE_SHA256: 76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84
+          INTAKELET_GUIDE_URL: https://intakelet.vercel.app
+          INTAKELET_DOCUMENT_ARTIFACT: ${{ runner.temp }}/intakelet-document-hosted
         run: python3 tests/scripts/qualify-documents.py
+      - name: Retire only this owned temporary workflow and ref
+        env:
+          INTAKELET_RELEASE_SOURCE: 60b13b276b14ea11dce842487fc41bdb9b711984
+          INTAKELET_RETIRE_TOKEN: ${{ github.token }}
+          INTAKELET_RETIRE_OUTPUT: ${{ runner.temp }}/intakelet-document-retirement
+        run: python3 tests/scripts/retire-documents.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: intakelet-document-qualified-${{ github.run_id }}
-          path: ${{ runner.temp }}/intakelet-document-qualified
+          name: intakelet-document-public-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/intakelet-document-publication
+            ${{ runner.temp }}/intakelet-document-hosted
+            ${{ runner.temp }}/intakelet-document-retirement
           if-no-files-found: error
           retention-days: 7

@@ -1,0 +1,156 @@
+[
+  {
+    "batchId": "sha256:43739e1391620606d0e622c477c400e577fa56cb3b2cc096f24880d5bb52444e",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 2
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 1,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:58dd1937d0d8728d9662e7d5a0a1af89b1d6a143b06f6fffbbc1521289c2e2a3",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 4
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 2,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:c97f276c033ae2e60ea6ac78860da071d94693740d95e1daeb64925615b5850d",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 6
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 3,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:23b85030b2dafd24fd8aaf851cda4261f78488087ab64a4e78c8d63f184606b0",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 8
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 4,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:ba81e112afb7ffa16c0c033ca4962de5444311601510076dce20992a22dbdc85",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 10
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 5,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:89315eb1cfb24fef4de108c75447d28124617ed105605cfb75c5519e0f5c9c24",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 12
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 2,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 6,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": false,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  },
+  {
+    "batchId": "sha256:e84c853d9ced6cc214dc83e54e6afedee17be93af75dc18003099cf91e8ea63f",
+    "checkpoint": {
+      "kind": "file-collection-v1",
+      "next": 13
+    },
+    "connectionId": "documents",
+    "counts": {
+      "created": 1,
+      "deleted": 0,
+      "excluded": 0,
+      "unchanged": 0,
+      "updated": 0
+    },
+    "excludedIds": [],
+    "revision": 7,
+    "schema": "intakelet.migration-receipt",
+    "sourceDone": true,
+    "specId": "sha256:d52c03bb4725b38c7d547f5058d1b67d7f8ed2158a54919bcf970e22061d0827",
+    "version": 1,
+    "workspaceId": "authored"
+  }
+]

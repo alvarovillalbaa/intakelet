@@ -1,0 +1,18 @@
+✔ E01 installed PDF parser extracts both actual pages with exact source identity (187.581898ms)
+✔ E02 installed DOCX parser extracts paragraphs and retains markup as literal text (104.930249ms)
+✔ E03 installed XLSX parser records sheet/cell locations and does not calculate formulas (226.392788ms)
+✔ E04 actual local English OCR recognizes authored PNG and JPEG with model digest (885.729611ms)
+✔ E05 real decoded mixed-file migration exceeds ten files, reviews outputs and resumes exact pages (1423.328118ms)
+✔ E06 missing OCR configuration and wrong language hashes never become extracted text (20.133463ms)
+✔ E07 page/cell/ZIP expansion limits discard complete-prefix claims (385.185365ms)
+✔ E08 cancellation during real parser startup closes its process and owned scratch (33.771448ms)
+✔ E09 network preload denies main-process and inherited-worker requests before transport (72.128864ms)
+✔ E10 all decoder scratch is gone and actual fixture/provenance records are retained (1.123956ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3668.339206

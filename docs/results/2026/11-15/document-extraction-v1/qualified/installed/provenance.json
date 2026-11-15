@@ -1,0 +1,62 @@
+{
+  "node": "v24.22.2",
+  "fixtures": [
+    {
+      "name": "authored.pdf",
+      "bytes": 869,
+      "sha256": "791931525888b752a1be5b19606bd179dbfa7050b33e1004d2c81235d998977f",
+      "status": "extracted",
+      "engine": {
+        "name": "pdfjs-dist",
+        "version": "6.5.438"
+      }
+    },
+    {
+      "name": "authored.docx",
+      "bytes": 1149,
+      "sha256": "f4067565ecd37e76ffea4dfa90d6e4f78e9e9879acc1bc659724792435f0dba6",
+      "status": "extracted",
+      "engine": {
+        "name": "mammoth",
+        "version": "1.12.2"
+      }
+    },
+    {
+      "name": "authored.xlsx",
+      "bytes": 6450,
+      "sha256": "54a3fa0a50de76dd1bec98533b218444be8e926fa49b86ba847f3c60a28ec65a",
+      "status": "extracted",
+      "engine": {
+        "name": "exceljs",
+        "version": "4.4.0"
+      }
+    },
+    {
+      "name": "authored.png",
+      "bytes": 9980,
+      "sha256": "3daf1feb2ced1750707ee8717313b2a38ce945c16d2b33be941add45564b858b",
+      "status": "extracted",
+      "engine": {
+        "name": "tesseract.js",
+        "version": "7.0.0",
+        "languageSha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+      }
+    },
+    {
+      "name": "authored.jpeg",
+      "bytes": 11267,
+      "sha256": "e879dfb3836a1c31b7489adefb13794f49c249103064e01f5413aefef4eec88c",
+      "status": "extracted",
+      "engine": {
+        "name": "tesseract.js",
+        "version": "7.0.0",
+        "languageSha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+      }
+    }
+  ],
+  "language": {
+    "bytes": 10923060,
+    "sha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+  },
+  "scope": "T2 authored actual installed parsing/OCR; not general accuracy or production-host proof"
+}

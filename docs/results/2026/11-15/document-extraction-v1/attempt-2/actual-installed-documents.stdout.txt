@@ -1,0 +1,56 @@
+✔ E01 installed PDF parser extracts both actual pages with exact source identity (193.05063ms)
+✔ E02 installed DOCX parser extracts paragraphs and retains markup as literal text (120.794318ms)
+✔ E03 installed XLSX parser records sheet/cell locations and does not calculate formulas (236.527888ms)
+✔ E04 actual local English OCR recognizes authored PNG and JPEG with model digest (969.794444ms)
+✔ E05 real decoded mixed-file migration exceeds ten files, reviews outputs and resumes exact pages (1608.698545ms)
+✔ E06 missing OCR configuration and wrong language hashes never become extracted text (19.142525ms)
+✔ E07 page/cell/ZIP expansion limits discard complete-prefix claims (424.567617ms)
+✔ E08 cancellation during real parser startup closes its process and owned scratch (34.503178ms)
+✖ E09 network preload denies main-process and inherited-worker requests before transport (97.656938ms)
+✔ E10 all decoder scratch is gone and actual fixture/provenance records are retained (1.679903ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4035.177695
+
+✖ failing tests:
+
+test at tests/integration/documents-installed.test.mjs:81:1
+✖ E09 network preload denies main-process and inherited-worker requests before transport (97.656938ms)
+  AssertionError [ERR_ASSERTION]: 
+  node:internal/event_target:1149
+    process.nextTick(() => { throw err; });
+                             ^
+  Error: getaddrinfo ENOTFOUND example.invalid
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:123:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'example.invalid'
+  }
+  
+  Node.js v24.22.2
+  
+  + actual - expected
+  
+    {
+  +   code: 1,
+  -   code: 0,
+      signal: null
+    }
+  
+      at TestContext.<anonymous> (file:///tmp/intakelet-documents-_kgku4lt/source/tests/integration/documents-installed.test.mjs:85:119)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { code: 1, signal: null },
+    expected: { code: 0, signal: null },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

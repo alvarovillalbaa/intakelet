@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "bodies": [],
+  "errors": [],
+  "contextsClosed": true,
+  "browserClosed": true,
+  "serverClosed": true,
+  "width": {
+    "viewport": 390,
+    "content": 390
+  },
+  "browserVersion": "141.0.7390.37"
+}

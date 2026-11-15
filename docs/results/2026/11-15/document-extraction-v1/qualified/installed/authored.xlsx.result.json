@@ -1,0 +1,45 @@
+{
+  "schema": "intakelet.document-extraction",
+  "version": 1,
+  "status": "extracted",
+  "format": "xlsx",
+  "method": "xlsx-cells",
+  "text": "Authored budget\n42\n=SUM(B2,8)",
+  "sourceSha256": "sha256:54a3fa0a50de76dd1bec98533b218444be8e926fa49b86ba847f3c60a28ec65a",
+  "segments": [
+    {
+      "text": "Authored budget",
+      "location": {
+        "kind": "cell",
+        "sheet": "Fictional team",
+        "cell": "A1",
+        "formula": false
+      }
+    },
+    {
+      "text": "42",
+      "location": {
+        "kind": "cell",
+        "sheet": "Fictional team",
+        "cell": "B2",
+        "formula": false
+      }
+    },
+    {
+      "text": "=SUM(B2,8)",
+      "location": {
+        "kind": "cell",
+        "sheet": "Fictional team",
+        "cell": "C3",
+        "formula": true
+      }
+    }
+  ],
+  "engine": {
+    "name": "exceljs",
+    "version": "4.4.0"
+  },
+  "reason": null,
+  "complete": true,
+  "warnings": []
+}

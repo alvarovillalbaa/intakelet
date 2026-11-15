@@ -1,0 +1,125 @@
+{
+  "phase": "qualify",
+  "passed": false,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.003744544999999988,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.262638107000001,
+      "stdoutBytes": 26,
+      "stdoutSha256": "8e3d23f02d60c3439895bb689178d8ee16982591f7eb140134d146030e32a9a7",
+      "stderrBytes": 1017,
+      "stderrSha256": "818fcbca0c242372d74e0360157aa76602470ef4cd57ae5244e4557a9bd23421"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.8733403540000033,
+      "stdoutBytes": 72,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "document-guards",
+      "argv": [
+        "node",
+        "--test",
+        "tests/unit/document-node.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.5213893280000015,
+      "stdoutBytes": 782,
+      "stdoutSha256": "8e70f7c86015171399f51fe53d672d8a7441e20396bccef2bd8ba1dd325e58e9",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-document-qualified"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.3397299430000018,
+      "stdoutBytes": 6373,
+      "stdoutSha256": "28debe57dc4da73c5a1495292a8420c280d7c29dba485c8cd0b7c36a04911aeb",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--offline",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-document-qualified/alvarovillalbaa-intakelet-0.3.0.tgz"
+      ],
+      "code": 1,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.311095409,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 299,
+      "stderrSha256": "2e2ea7b5380831ad9be26d22031efa33802533989354384c92a0e1e7fdd1400f"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91503824896,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "error": "RuntimeError('installed-archive did not close successfully')",
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}
