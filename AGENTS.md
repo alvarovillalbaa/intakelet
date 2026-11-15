@@ -1,10 +1,48 @@
 # Intakelet
 
-Last updated: 2026-11-14
+Last updated: 2026-11-15
 
 - Dedicated owner Migration/Onboarding SDK brief from personal Notion
   311a1ee8bd06805caa21c5306dd315ac. The returned snapshot is unverified,
   as of10November/edited3November. Read README and docs/specs/sdk-v1.md.
+- GEN-3659 explicitly requests Clous-inspired user/company setup, targeted tours,
+  quickstart, arbitrary-file/bulk migration, app migration/continuous sync, custom
+  outputs and publication docs. The local UI portion is documented in
+  docs/references/onboarding-components.md. New migration source APIs/protocol
+  are in docs/references/migration-integration.md and docs/specs/migration-v1.md;
+  evidence/remaining gates are in docs/results/2026/11-15/migration-core.md.
+  New migration component, visual destination editor, React wrapper and exact
+  receipt validation are recorded in docs/results/2026/11-15/migration-ui.md.
+  These APIs are unreleased; do not claim the old 0.1.0 archive has them.
+- Register migration UI lazily. Full proposals, issues, explicit exclusions and
+  rebuilt-batch review stay visible. Old DOM controls cannot act on a later
+  batch; configuration/disconnection cancel pending work. Late acknowledgements
+  retain original scope and must not advance a replacement view. React guards
+  old transport actions before effects, while always allowing claim release.
+- Bad/missing host receipts are unconfirmed writes, not rollback. Match scope,
+  batch, revision, checkpoint and counts before reporting acknowledgement.
+  Playground records/assets are tab-only with explicit budgets; text decoding
+  is strict/bounded, and binary attachment preservation is still not extraction.
+  Existing parse5 is absent locally; full /element import and native browser
+  proof remain pending. Do not install dependencies to mask that limitation.
+- Migration outputs/rows and accepted checkpoints commit atomically per page;
+  earlier acknowledged pages survive later failure/cancel. Full derivation,
+  revision/ownership checks and fenced claims remain required. Continuous sync
+  requires a separately accepted complete route, not merely a source or state.
+  No hash/client actor field is authorization. Keep tokens outside definitions.
+- Arbitrary binary attachments are byte preservation, not semantic extraction.
+  Node assets are explicitly staged before review; retain shared durable assets
+  on cancel and remove only owned temporary files. Hosts own retention/quotas.
+  GitHub scan completion is not a snapshot or proof of deletion. Live reads
+  failed DNS; do not treat authored HTTP cases as API acceptance.
+- Canonical Clous frontend/backend source references and dirty-worktree limits
+  are in docs/references/clous-onboarding-inspiration.md. No Clous source was
+  modified. Guide presentation remains separate from application authority.
+- New setup/quickstart progress requires an exact application acknowledgement.
+  Keep request IDs content-bound, invalid drafts intact and old-scope late writes
+  observable without advancing a new view. Skip/cancel are not server rollback.
+  Tours are modeless; missing targets cannot complete, and owned observers,
+  listeners, frames/waits must be removed on close/reconfigure/disconnect.
 - The owner delegates choices, all work, personal GitHub publication, free
   Vercel, scoped checks/dependencies and bounded temporary public CI. No paid
   enrollment/API, credential copying, private customer data or messaging.

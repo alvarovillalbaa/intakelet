@@ -1,6 +1,6 @@
 {
   "name": "@alvarovillalbaa/intakelet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reviewed onboarding imports, source-backed knowledge and bounded website research",
   "type": "module",
   "license": "MIT",
@@ -10,6 +10,9 @@
     "./element": { "types": "./src/element.d.mts", "default": "./src/element.mjs" },
     "./react": { "types": "./src/react.d.mts", "default": "./src/react.mjs" },
     "./node": { "types": "./src/node.d.mts", "default": "./src/node.mjs" },
+    "./onboarding": { "types": "./src/onboarding-elements.d.mts", "default": "./src/onboarding-elements.mjs" },
+    "./migration": { "types": "./src/migration-api.d.mts", "default": "./src/migration-api.mjs" },
+    "./migration/node": { "types": "./src/migration-node.d.mts", "default": "./src/migration-node.mjs" },
     "./styles.css": "./src/element.css"
   },
   "bin": { "intakelet": "bin/intakelet.mjs" },

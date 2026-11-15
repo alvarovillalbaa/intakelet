@@ -2,6 +2,8 @@ import { analyzeFiles, createPlan, searchKnowledge, validateSnapshot, LIMITS } f
 import { exact, workspace, requireValue, clone, aborted } from './values.mjs';
 export { createIndexedDBHost } from './indexeddb.mjs';
 export { researchSameOrigin } from './browser-research.mjs';
+export { defineOnboarding } from './onboarding-elements.mjs';
+export { defineMigration } from './migration-elements.mjs';
 const tagName = 'intakelet-onboarding';
 function el(tag, text, className) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (className) n.className = className; return n; }
 function button(text, handler, className = 'il-button') { const n = el('button', text, className); n.type = 'button'; n.addEventListener('click', handler); return n; }

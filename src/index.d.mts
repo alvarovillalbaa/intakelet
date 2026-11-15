@@ -1,4 +1,6 @@
 export type Format = 'csv' | 'json' | 'markdown' | 'text';
+export * from './onboarding.mjs';
+export * from './migration-api.mjs';
 export type Primitive = string | number | boolean | null;
 export interface SourceInput { name: string; text: string; format?: Format; url?: string }
 export interface Source extends SourceInput { id: string; format: Format; bytes: number; sha256: string; aliases?: Array<{ name: string; url?: string }> }

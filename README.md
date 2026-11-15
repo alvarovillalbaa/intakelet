@@ -1,6 +1,6 @@
 # Intakelet
 
-Last updated: 2026-11-14
+Last updated: 2026-11-15
 
 An onboarding SDK for turning customer files and public websites into reviewed
 records, computed insights and a source-backed knowledge base.
@@ -10,6 +10,26 @@ information, generate insights/knowledge, and research a supplied URL. It is a
 new dedicated project; detailed API/interface choices are delegated judgment.
 Classification is rule-based and insights are computed/extractive. No model is
 silently called and no LLM understanding or time-to-value benchmark is claimed.
+
+The local, unreleased component iteration adds reusable user/company setup,
+quickstart checklists and targeted guided tours, with web components, pure state
+and React wrappers. Application acknowledgements bind each completed step to
+its exact scope/input; guide progress never grants access. See the
+[component integration/publication guide](docs/references/onboarding-components.md)
+and [actual source/check limits](docs/results/2026/11-15/onboarding-components.md).
+These additions are not in the existing 0.1.0 archive or hosted playground.
+An additional unreleased migration API now supports reviewed resumable pages,
+custom nested output recipes, fenced accepted sync routes, a GitHub Issues
+source, arbitrary binary attachments and a streaming Node asset store. See the
+[migration integration guide](docs/references/migration-integration.md) and
+[actual evidence/remaining work](docs/results/2026/11-15/migration-core.md).
+The local website now also has file selection, a visual destination-field
+editor and a reusable migration review component, with a React wrapper and
+correctly scoped acknowledgements. [UI evidence](docs/results/2026/11-15/migration-ui.md)
+records controlled checks and missing native/installed qualification. Semantic
+extraction of arbitrary formats, OAuth connection, production-host/API
+qualification and publication remain pending under GEN-3659. The existing
+component/CLI v1 limits below apply.
 
 The SDK supports UTF-8 CSV, JSON records, Markdown and text. It proposes fields,
 keeps invalid/conflicting rows visible and builds an explicit commit plan.

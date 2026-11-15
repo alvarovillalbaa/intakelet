@@ -4,3 +4,5 @@ export interface IntakeletElement extends HTMLElement { configure(config: Config
 export declare function defineIntakelet(registry?: CustomElementRegistry): CustomElementConstructor & { new(): IntakeletElement };
 export declare function createIndexedDBHost(options: { workspaceId: string; databaseName?: string }): Host & { exportRaw(): Promise<unknown>; close(): void };
 export declare function researchSameOrigin(url: string, options?: ResearchOptions): Promise<ResearchReport>;
+export { defineOnboarding } from './onboarding-elements.mjs';
+export { defineMigration, type IntakeletMigrationElement, type MigrationElementConfiguration, type MigrationAcknowledged } from './migration-api.mjs';
