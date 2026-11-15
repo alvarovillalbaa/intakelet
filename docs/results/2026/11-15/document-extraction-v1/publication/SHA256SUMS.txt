@@ -1,0 +1,3 @@
+76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84  alvarovillalbaa-intakelet-0.3.0.tgz
+1cdfad7dbe46f25af854b843af50e8b74b2c3dbea4cec9f1b712a12506970698  extraction-provenance.json
+60a24ab06c7cd3064a65be3fb6486e4311ad121f9c5d8bb3955f98973525141e  release-provenance.json

@@ -1,0 +1,124 @@
+{
+  "source": "60b13b276b14ea11dce842487fc41bdb9b711984",
+  "tag": "v0.3.0",
+  "passed": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/heads/main",
+      "status": 200,
+      "responseSha256": "9cbe3d5039860937f0e8fab54af2af57cb48ae84fad2d70d577d89a4a450b721"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/tags/v0.3.0",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/tags/v0.3.0",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases",
+      "status": 201,
+      "responseSha256": "4e5b03a8f6963de23165d3dd6ec22b9a8fe844df588cee28019a1b5cd227c022"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446109575/assets",
+      "status": 201,
+      "responseSha256": "f6aaf55b49d18adeadda3abef97f8c9736d7561982a1aca2e8485ca8f9ce1ed2"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446109575/assets",
+      "status": 201,
+      "responseSha256": "557d1fb1b94d7cf9ead6eb9d9982a5a1028b7658cb2f8fd79b8438c3b31f6ea0"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446109575/assets",
+      "status": 201,
+      "responseSha256": "ac649f98f973db6d5aab84fd264896a3ba7f02cc0c4ffb3f0be4cac68197d5bd"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446109575/assets",
+      "status": 201,
+      "responseSha256": "c36708d6c4ef249351c5315dddf16a418d2492e8fdab1fb14c0de45dd95eb0a2"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/tags/v0.3.0",
+      "status": 200,
+      "responseSha256": "73fee793641890b3251768a329e54df0a363e81996d520454a9cde567b0906f1"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/heads/main",
+      "status": 200,
+      "responseSha256": "9cbe3d5039860937f0e8fab54af2af57cb48ae84fad2d70d577d89a4a450b721"
+    }
+  ],
+  "release": {
+    "id": 446109575,
+    "url": "https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.3.0",
+    "tag": "v0.3.0"
+  },
+  "assets": [
+    {
+      "id": 751221556,
+      "name": "alvarovillalbaa-intakelet-0.3.0.tgz",
+      "bytes": 97205,
+      "sha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/alvarovillalbaa-intakelet-0.3.0.tgz",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 97205,
+        "sha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84",
+        "equal": true
+      }
+    },
+    {
+      "id": 751221598,
+      "name": "extraction-provenance.json",
+      "bytes": 1763,
+      "sha256": "1cdfad7dbe46f25af854b843af50e8b74b2c3dbea4cec9f1b712a12506970698",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/extraction-provenance.json",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 1763,
+        "sha256": "1cdfad7dbe46f25af854b843af50e8b74b2c3dbea4cec9f1b712a12506970698",
+        "equal": true
+      }
+    },
+    {
+      "id": 751221643,
+      "name": "release-provenance.json",
+      "bytes": 780,
+      "sha256": "60a24ab06c7cd3064a65be3fb6486e4311ad121f9c5d8bb3955f98973525141e",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/release-provenance.json",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 780,
+        "sha256": "60a24ab06c7cd3064a65be3fb6486e4311ad121f9c5d8bb3955f98973525141e",
+        "equal": true
+      }
+    },
+    {
+      "id": 751221661,
+      "name": "SHA256SUMS.txt",
+      "bytes": 285,
+      "sha256": "19ddd1e6ab6b15bec63c081c7b403ef465ad280b8d89bf5914b8cc6e8c46c688",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/SHA256SUMS.txt",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 285,
+        "sha256": "19ddd1e6ab6b15bec63c081c7b403ef465ad280b8d89bf5914b8cc6e8c46c688",
+        "equal": true
+      }
+    }
+  ]
+}

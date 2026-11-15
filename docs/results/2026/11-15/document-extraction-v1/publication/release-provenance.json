@@ -1,0 +1,15 @@
+{
+  "source": "60b13b276b14ea11dce842487fc41bdb9b711984",
+  "qualifiedSource": "508adadcd736aea5c92ee4e31f79dd2312027839",
+  "version": "0.3.0",
+  "archive": {
+    "name": "alvarovillalbaa-intakelet-0.3.0.tgz",
+    "bytes": 97205,
+    "sha256": "76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84"
+  },
+  "qualifiedArchiveMembers": 59,
+  "dependencyLockSha256": "ccb3eb4d1aab8e4a7b22ba259941a00aad33005f5af858bb704e3004fb466e4e",
+  "qualificationRun": 43722488899,
+  "distribution": "GitHub archive; cached runtime dependencies required for the observed offline install",
+  "limits": "Authored document/OCR paths, not general accuracy; no OAuth or durable production host/scheduler. Two moderate uuid advisories retained; no high/critical runtime audit findings."
+}

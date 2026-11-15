@@ -1,0 +1,176 @@
+{
+  "phase": "hosted",
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0043918370000000095,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.664390220000001,
+      "stdoutBytes": 26,
+      "stdoutSha256": "0ee39cd9d5f6b38493c4a3f8294bf4bf0159e4ab0c2e3aa31794790165a1d3fe",
+      "stderrBytes": 1017,
+      "stderrSha256": "818fcbca0c242372d74e0360157aa76602470ef4cd57ae5244e4557a9bd23421"
+    },
+    {
+      "name": "runtime-dependency-audit",
+      "argv": [
+        "npm",
+        "audit",
+        "--omit=dev",
+        "--audit-level=high",
+        "--json"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.472248074999996,
+      "stdoutBytes": 1635,
+      "stdoutSha256": "3b4c3443bc3920a72c007d904abd7c7313294262a10482660255ee6ac7af03ac",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.8844662419999949,
+      "stdoutBytes": 72,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-document-hosted"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.43430167699999345,
+      "stdoutBytes": 6373,
+      "stdoutSha256": "a0125788904dfc9e4cd5445dd2d36da91ad4677a811bc457a6f661a3fb821798",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.2473845470000029,
+      "stdoutBytes": 81,
+      "stdoutSha256": "46e26a0f2df5c7f16d19659b66b382959ae5bac34adacabe70e7a7f9b6577bd1",
+      "stderrBytes": 42,
+      "stderrSha256": "a449e6b3229b0901acf741e01046cd9d6a8d30a36060aea0c93b8d1680601a01"
+    },
+    {
+      "name": "browser-dependencies",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.828930561,
+      "stdoutBytes": 24,
+      "stdoutSha256": "65c731cd02e19c79f6f5a3e84a4dd64a49acd6c47d2ee551d7cc9da191e8c96c",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "browser-install",
+      "argv": [
+        "node",
+        "/tmp/intakelet-documents-zntcy_n9/browser/node_modules/playwright/cli.js",
+        "install",
+        "--with-deps",
+        "chromium"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 20.558135309999997,
+      "stdoutBytes": 16062,
+      "stdoutSha256": "b768c47aab91ceed7382116e59bb72df94a86c418871185e549c280ce1048c10",
+      "stderrBytes": 237,
+      "stderrSha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+    },
+    {
+      "name": "document-guide-native",
+      "argv": [
+        "node",
+        "tests/e2e/document-guide.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 2.2524477750000074,
+      "stdoutBytes": 16603,
+      "stdoutSha256": "5612054d9f1a861bdd462a9ca4191d24ce2ad53e6160c32e56a05d6ef090e337",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91500609536,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}

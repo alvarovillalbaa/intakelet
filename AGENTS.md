@@ -99,5 +99,10 @@ Last updated: 2026-11-15
   uuid findings; do not call the audit clean. No ignored audit/vendor patch or
   automatic downgrade. General OCR accuracy and OS sandboxing are unproven.
   OAuth app connections, other app adapters and durable authenticated sync
-  hosts/schedulers remain required separately. Publication/hosted retirement
-  for the new edition is the next phase; do not rerun unchanged closed flows.
+  hosts/schedulers remain required separately. Version0.3.0 is published from
+  60b13b276b14ea11dce842487fc41bdb9b711984; public run43723266111 accepted
+  all16 bodies/headers, four anonymous release downloads and the390px guide,
+  then retired qa/intakelet-documents-20261115 and documents-v3.yml.
+  New CI227seconds plus earlier250 =477/1200seconds. Do not recreate controls
+  or rerun unchanged closed flows. Inspect remote main; local dirty HEAD stays
+  77d6fc626c4b6386767a4bc19af69d85f7b0dff0 and must not overwrite publication.

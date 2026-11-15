@@ -1,0 +1,57 @@
+{
+  "baseMain": "ede790c62da2a9df2e1ddfdbf16cf82abfffecae",
+  "qaBranch": "qa/intakelet-documents-20261115",
+  "previousV2Seconds": 250,
+  "usedSeconds": 477,
+  "capSeconds": 1200,
+  "jobs": [
+    {
+      "runId": 43720888623,
+      "jobId": 132832410819,
+      "phase": "lock",
+      "source": "d23c04c366bc64a23c7c9ebce81d8c1fc8d5c71b",
+      "seconds": 22,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43721377296,
+      "jobId": 132833896263,
+      "source": "e7f83715d719d80c14dbd56ae6dfe9b5e7526319",
+      "phase": "qualify-initial",
+      "seconds": 13,
+      "conclusion": "failure"
+    },
+    {
+      "runId": 43721559110,
+      "jobId": 132834452150,
+      "source": "27748912257199b237f0a29fba9b8f11afd0ff05",
+      "phase": "qualify-attempt2",
+      "seconds": 26,
+      "conclusion": "failure"
+    },
+    {
+      "runId": 43721888913,
+      "jobId": 132835487777,
+      "source": "d668c26cfbdb1caace09063da32bab5a2b6f9e40",
+      "phase": "qualified",
+      "seconds": 64,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43722488899,
+      "jobId": 132837269935,
+      "source": "508adadcd736aea5c92ee4e31f79dd2312027839",
+      "phase": "final-qualified",
+      "seconds": 51,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43723266111,
+      "jobId": 132839620889,
+      "source": "d12e786598987ab1cfae8cfb5127472097514b7b",
+      "phase": "publish-hosted-retire",
+      "seconds": 51,
+      "conclusion": "success"
+    }
+  ]
+}
