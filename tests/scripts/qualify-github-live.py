@@ -10,7 +10,7 @@ import signal
 import subprocess
 import tempfile
 import time
-import urllib.request
+import tarfile
 import uuid
 
 repo = Path(__file__).resolve().parents[2]
@@ -19,7 +19,8 @@ output.mkdir(exist_ok=False)
 receipt = {'passed': False, 'commands': [], 'cleanup': False}
 scratch = None
 sha = lambda value: hashlib.sha256(value).hexdigest()
-names = ['tests/integration/github-public-live.mjs', 'tests/scripts/qualify-github-live.py', 'docs/results/2026/11-15/github-public-live/protocol-v1.md']
+roots = ['src', 'bin', 'examples', 'docs/specs', 'docs/references', 'README.md', 'LICENSE', 'package.json', 'package-lock.json', 'tests/unit/github-migration.test.mjs', 'tests/integration/github-public-live.mjs', 'tests/scripts/qualify-github-live.py', 'docs/results/2026/11-15/github-public-live/protocol-v1.md', 'docs/results/2026/11-15/github-public-live/protocol-v2.md']
+names = sorted(os.fsdecode(name) for name in subprocess.check_output(['git', 'ls-files', '-z', '--', *roots], cwd=repo).split(b'\0') if name)
 def vector(root):
     return [{'path': name, 'bytes': (root / name).stat().st_size, 'sha256': sha((root / name).read_bytes())} for name in names]
 before = vector(repo)
@@ -78,18 +79,29 @@ try:
     (scratch / 'empty.npmrc').write_text('')
     env = {'PATH': os.environ['PATH'], 'TMPDIR': str(scratch / 'tmp'), 'npm_config_cache': str(scratch / 'npm-cache'), 'npm_config_userconfig': str(scratch / 'empty.npmrc'), 'npm_config_globalconfig': '/dev/null'}
     execute('node-version', ['node', '--version'], 10, scratch)
-    url = 'https://github.com/alvarovillalbaa/intakelet/releases/download/v0.3.0/alvarovillalbaa-intakelet-0.3.0.tgz'
-    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Intakelet-owned-public-acceptance'}), timeout=20) as response:
-        content = response.read(97206)
-        if response.status != 200 or len(content) != 97205 or sha(content) != '76cd7c273fad245bf508241c69827f2b5232b925e87dd235aa90d1bffc7bba84':
-            raise RuntimeError('Anonymous published archive differs')
-        receipt['archive'] = {'url': url, 'status': 200, 'bytes': len(content), 'sha256': sha(content)}
-    archive = scratch / 'intakelet.tgz'
-    archive.write_bytes(content)
+    execute('github-controls', ['node', '--test', 'tests/unit/github-migration.test.mjs'], 15, source)
+    execute('pack-candidate', ['npm', 'pack', '--json', '--ignore-scripts', '--pack-destination', str(output)], 15, source)
+    archives = list(output.glob('*.tgz'))
+    if len(archives) != 1:
+        raise RuntimeError('Expected one candidate archive')
+    archive = archives[0]
+    members = []
+    with tarfile.open(archive) as tar:
+        for member in tar.getmembers():
+            name = member.name.removeprefix('package/')
+            if not member.isfile() or not member.name.startswith('package/') or '..' in Path(name).parts or (name not in ['package.json', 'README.md', 'LICENSE'] and not name.startswith(('src/', 'bin/', 'examples/', 'docs/specs/', 'docs/references/'))):
+                raise RuntimeError('Unexpected archive member')
+            data = tar.extractfile(member).read()
+            if data != (source / name).read_bytes() or bool(member.mode & 0o111) != bool((source / name).stat().st_mode & 0o111):
+                raise RuntimeError('Candidate archive source/mode differs')
+            members.append({'path': name, 'bytes': len(data), 'sha256': sha(data), 'mode': member.mode})
+    content = archive.read_bytes()
+    receipt['archive'] = {'file': archive.name, 'bytes': len(content), 'sha256': sha(content)}
+    (output / 'package-manifest.json').write_text(json.dumps({**receipt['archive'], 'members': members}, indent=2))
     consumer = scratch / 'consumer'
     consumer.mkdir()
     (consumer / 'package.json').write_text('{"name":"intakelet-public-live-consumer","version":"0.0.0","private":true,"type":"module"}')
-    execute('installed-published-archive', ['npm', 'install', '--ignore-scripts', '--no-audit', '--no-fund', str(archive)], 45, consumer)
+    execute('installed-candidate-archive', ['npm', 'install', '--ignore-scripts', '--no-audit', '--no-fund', str(archive)], 45, consumer)
     shutil.copyfile(consumer / 'package-lock.json', output / 'installed-lock.json')
     (output / 'live').mkdir()
     env.update(INTAKELET_LIVE_CONSUMER=str(consumer), INTAKELET_LIVE_OUTPUT=str(output / 'live'))

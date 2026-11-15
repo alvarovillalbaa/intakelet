@@ -1,11 +1,11 @@
-name: Temporary Intakelet 0.4.0 metadata lock
+name: Temporary Intakelet 0.4.0 real public source qualification
 on:
   push:
     branches: ['qa/intakelet-github-public-20261115']
 permissions:
   contents: read
 jobs:
-  lock:
+  actual-candidate-source:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
@@ -15,16 +15,14 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24.22.2'
-      - name: Generate the explicit dependency lock in owned scratch
+      - name: Pack, install and read real public GitHub with source V2
         env:
-          INTAKELET_DOCUMENT_PHASE: lock
-          INTAKELET_DOCUMENT_SECONDS: '160'
-          INTAKELET_DOCUMENT_ARTIFACT: ${{ runner.temp }}/intakelet-github-lock
-        run: python3 tests/scripts/qualify-documents.py
+          INTAKELET_GITHUB_ARTIFACT: ${{ runner.temp }}/intakelet-github-candidate
+        run: python3 tests/scripts/qualify-github-live.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: intakelet-github-lock-${{ github.run_id }}
-          path: ${{ runner.temp }}/intakelet-github-lock
+          name: intakelet-github-candidate-${{ github.run_id }}
+          path: ${{ runner.temp }}/intakelet-github-candidate
           if-no-files-found: error
           retention-days: 7
