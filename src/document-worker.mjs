@@ -7,7 +7,7 @@ let configuration = '', count = 0;
 for await (const chunk of process.stdin) { count += chunk.length; if (count > 8192) throw new Error('Invalid worker configuration'); configuration += chunk; }
 const { format, limits, engines, ocr } = JSON.parse(configuration);
 const bytes = await readFile('input');
-let method = null, engine = null, parts = [], textBytes = 0, reason = null;
+let method = null, engine = null, parts = [], textBytes = 0, reason = null, literalText = null;
 const exceeded = () => { const error = new Error('Document output budget'); error.code = 'document_limit'; throw error; };
 function add(text, location) {
   if (!text) return;
@@ -26,6 +26,8 @@ try {
     method = 'literal-text'; engine = { name: 'node:TextDecoder', version: process.versions.node };
     const text = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
     if (text.includes('\0')) throw new Error('document_binary_text');
+    if (Buffer.byteLength(text) > limits.maxTextBytes) exceeded();
+    literalText = text;
     text.split(/\r?\n/u).forEach((line, index) => add(line, { kind: 'line', line: index + 1 }));
   } else if (format === 'pdf') {
     identify('pdf'); method = 'pdf-text';
@@ -77,5 +79,5 @@ try {
 } catch (error) {
   status = error.code === 'document_limit' ? 'limit' : 'failed'; reason = error.code || (error.name === 'PasswordException' ? 'document_encrypted' : 'document_invalid'); parts = [];
 }
-const text = status === 'extracted' ? parts.map(part => part.text).join('\n') : null;
+const text = status === 'extracted' ? literalText ?? parts.map(part => part.text).join('\n') : null;
 process.stdout.write(JSON.stringify({ status, method, text, segments: parts, engine, reason, complete: status === 'extracted' && reason === null, warnings }) + '\n');

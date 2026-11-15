@@ -7,10 +7,10 @@ const digest = bytes => 'sha256:' + createHash('sha256').update(bytes).digest('h
 const input = (bytes, name = 'authored.txt') => ({ file: new File([bytes], name), asset: { bytes: Buffer.byteLength(bytes), sha256: digest(bytes), assetId: 'authored-asset' } });
 
 test('D01 actual UTF8 subprocess returns literal lines and the staged digest', async () => {
-  const source = input('Fictional source 42\n<script>inert()</script>'), decoder = createNodeDocumentDecoder();
+  const source = input('Fictional source 42\r\n\r\n<script>inert()</script>\n'), decoder = createNodeDocumentDecoder();
   const result = await decoder.decode(source);
   assert.equal(result.status, 'extracted'); assert.equal(result.complete, true); assert.equal(result.sourceSha256, source.asset.sha256);
-  assert.deepEqual(result.segments.map(item => item.location.line), [1, 2]); assert.equal(result.text, 'Fictional source 42\n<script>inert()</script>');
+  assert.deepEqual(result.segments.map(item => item.location.line), [1, 3]); assert.equal(result.text, 'Fictional source 42\r\n\r\n<script>inert()</script>\n');
 });
 test('D02 malformed UTF8, empty text and unsupported bytes remain explicit', async () => {
   const decoder = createNodeDocumentDecoder();
