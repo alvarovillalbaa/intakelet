@@ -1,6 +1,6 @@
 # Setup, quickstart and guided tours
 
-These APIs are **unreleased source additions**. They are not in the existing
+These APIs belong to **0.2.0**. They are not in the preserved
 0.1.0 release archive. The file/research SDK still uses its existing bounded v1
 contracts. No account, server, permissions or external connector is created by
 registering a component.

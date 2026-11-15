@@ -1,0 +1,199 @@
+{
+  "tier": "T2",
+  "cases": [
+    {
+      "id": "N01",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 10000ms exceeded.\n    at /tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:72:16\n    at async run (/tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:25:9)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:69:3",
+      "errors": []
+    },
+    {
+      "id": "N02",
+      "passed": true,
+      "realTargetAdvanced": true,
+      "escapeReturnedFocus": true,
+      "missingTargetCompleted": false,
+      "disconnectedOverlayRemoved": true,
+      "errors": []
+    },
+    {
+      "id": "N03",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /document/. Input:\n\n''\n\n    at migrate (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:106:12)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:129:66\n    at async run (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:25:9)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:129:3",
+      "errors": []
+    },
+    {
+      "id": "N04-18",
+      "passed": true,
+      "setupAcks": [
+        {
+          "receiptId": "authored-old-workspace",
+          "requestId": "sha256:91b5517a31c6e6dd4674d2dc40ef058f129ab2a5674157566120dffadeb426c3",
+          "status": "saved",
+          "stepId": "profile",
+          "flowId": "initial-user",
+          "flowVersion": "1",
+          "scope": {
+            "actorId": "old-actor",
+            "workspaceId": "old-workspace"
+          },
+          "appliedToView": false
+        },
+        {
+          "receiptId": "authored-next-workspace",
+          "requestId": "sha256:caaca1d7a83d24ba5d3679e4bfb066098dad330da3b5ab944cdc8dae0c676375",
+          "status": "saved",
+          "stepId": "profile",
+          "flowId": "initial-user",
+          "flowVersion": "1",
+          "scope": {
+            "actorId": "next-actor",
+            "workspaceId": "next-workspace"
+          },
+          "appliedToView": true
+        }
+      ],
+      "migrationAcks": [
+        {
+          "receipt": {
+            "batchId": "sha256:61f362521978da2d524a652aa803e7e50b6debe5f2acb681d2aa6471d9846189",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 1
+            },
+            "connectionId": "react-files",
+            "counts": {
+              "created": 1,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:0bd1435e26600a7df4711dab1256400bb0d96f995323d5e1af00424a599c5fcf",
+            "version": 1,
+            "workspaceId": "react-migration"
+          },
+          "appliedToView": true
+        }
+      ],
+      "version": "18.3.1",
+      "strictMode": true,
+      "allFourWrappers": true,
+      "errors": []
+    },
+    {
+      "id": "N04-19",
+      "passed": true,
+      "setupAcks": [
+        {
+          "receiptId": "authored-old-workspace",
+          "requestId": "sha256:91b5517a31c6e6dd4674d2dc40ef058f129ab2a5674157566120dffadeb426c3",
+          "status": "saved",
+          "stepId": "profile",
+          "flowId": "initial-user",
+          "flowVersion": "1",
+          "scope": {
+            "actorId": "old-actor",
+            "workspaceId": "old-workspace"
+          },
+          "appliedToView": false
+        },
+        {
+          "receiptId": "authored-next-workspace",
+          "requestId": "sha256:caaca1d7a83d24ba5d3679e4bfb066098dad330da3b5ab944cdc8dae0c676375",
+          "status": "saved",
+          "stepId": "profile",
+          "flowId": "initial-user",
+          "flowVersion": "1",
+          "scope": {
+            "actorId": "next-actor",
+            "workspaceId": "next-workspace"
+          },
+          "appliedToView": true
+        }
+      ],
+      "migrationAcks": [
+        {
+          "receipt": {
+            "batchId": "sha256:613e7807b78c1505559511ca733ef8fa8a0c81e94d2065453d640dc12d60ba10",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 1
+            },
+            "connectionId": "react-files",
+            "counts": {
+              "created": 1,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:dcd34e1be8be72494231ca91c97244c9eff04c0d28e875909e425c6c3de5b861",
+            "version": 1,
+            "workspaceId": "react-migration"
+          },
+          "appliedToView": true
+        }
+      ],
+      "version": "19.3.1",
+      "strictMode": true,
+      "allFourWrappers": true,
+      "errors": []
+    },
+    {
+      "id": "N05-320",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /document/. Input:\n\n''\n\n    at migrate (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:106:12)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:164:107\n    at async run (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:25:9)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:162:35",
+      "errors": []
+    },
+    {
+      "id": "N05-390",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /document/. Input:\n\n''\n\n    at migrate (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:106:12)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:164:107\n    at async run (file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:25:9)\n    at async file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:162:35",
+      "errors": []
+    }
+  ],
+  "contexts": [
+    {
+      "id": "N01",
+      "closed": true
+    },
+    {
+      "id": "N02",
+      "closed": true
+    },
+    {
+      "id": "N03",
+      "closed": true
+    },
+    {
+      "id": "N04-18",
+      "closed": true
+    },
+    {
+      "id": "N04-19",
+      "closed": true
+    },
+    {
+      "id": "N05-320",
+      "closed": true
+    },
+    {
+      "id": "N05-390",
+      "closed": true
+    }
+  ],
+  "hosted": [],
+  "browserClosed": true,
+  "serverClosed": true,
+  "browserVersion": "141.0.7390.37",
+  "passed": false
+}

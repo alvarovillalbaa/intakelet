@@ -117,6 +117,21 @@ try:
                 raise RuntimeError("Archive bytes/mode differ: " + name)
             members.append({"path": name, "bytes": len(content), "sha256": digest(content), "mode": member.mode})
     (output / "package-manifest.json").write_text(json.dumps({"file": tarball.name, "bytes": tarball.stat().st_size, "sha256": digest(tarball.read_bytes()), "members": members}, indent=2))
+    if receipt["phase"] == "final-native":
+        baseline_path = repo / "docs/results/2026/11-15/qualification-v2/run-1/package-manifest.json"
+        baseline_bytes = baseline_path.read_bytes()
+        baseline = json.loads(baseline_bytes)
+        old = {item["path"]: item for item in baseline["members"]}
+        actual = {item["path"]: item for item in members}
+        if set(old) != set(actual):
+            raise RuntimeError("Final documentation edition changed archive membership")
+        changed = sorted(name for name in old if old[name] != actual[name])
+        allowed = {"README.md", "docs/references/onboarding-components.md", "docs/references/migration-integration.md"}
+        if not set(changed).issubset(allowed):
+            raise RuntimeError("Final archive changed qualified runtime bytes/modes")
+        comparison = {"baselineManifestSha256": digest(baseline_bytes), "baselineArchiveSha256": baseline["sha256"], "changedMembers": changed, "unchangedMembers": len(old) - len(changed), "allRuntimeBytesAndModesEqual": True}
+        (output / "archive-comparison.json").write_text(json.dumps(comparison, indent=2))
+        receipt["archiveRuntimePreserved"] = True
     def consumer(name, fixture=None):
         target = scratch / name
         target.mkdir()

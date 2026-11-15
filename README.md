@@ -11,24 +11,25 @@ new dedicated project; detailed API/interface choices are delegated judgment.
 Classification is rule-based and insights are computed/extractive. No model is
 silently called and no LLM understanding or time-to-value benchmark is claimed.
 
-The local, unreleased component iteration adds reusable user/company setup,
+Version0.2.0 adds reusable user/company setup,
 quickstart checklists and targeted guided tours, with web components, pure state
 and React wrappers. Application acknowledgements bind each completed step to
 its exact scope/input; guide progress never grants access. See the
 [component integration/publication guide](docs/references/onboarding-components.md)
 and [actual source/check limits](docs/results/2026/11-15/onboarding-components.md).
-These additions are not in the existing 0.1.0 archive or hosted playground.
-An additional unreleased migration API now supports reviewed resumable pages,
+These additions are separate from the preserved 0.1.0 archive and evidence.
+The migration API supports reviewed resumable pages,
 custom nested output recipes, fenced accepted sync routes, a GitHub Issues
 source, arbitrary binary attachments and a streaming Node asset store. See the
 [migration integration guide](docs/references/migration-integration.md) and
 [actual evidence/remaining work](docs/results/2026/11-15/migration-core.md).
-The local website now also has file selection, a visual destination-field
+The playground also has file selection, a visual destination-field
 editor and a reusable migration review component, with a React wrapper and
 correctly scoped acknowledgements. [UI evidence](docs/results/2026/11-15/migration-ui.md)
-records controlled checks and missing native/installed qualification. Semantic
-extraction of arbitrary formats, OAuth connection, production-host/API
-qualification and publication remain pending under GEN-3659. The existing
+records the original source checks. The [0.2.0 qualification](docs/results/2026/11-15/qualification-v2/result.md)
+binds installed/native evidence and publication identities. Semantic extraction
+of arbitrary formats, OAuth connection and production-host/API qualification
+remain pending under GEN-3659. The existing
 component/CLI v1 limits below apply.
 
 The SDK supports UTF-8 CSV, JSON records, Markdown and text. It proposes fields,
@@ -44,12 +45,12 @@ Browser demonstration is restricted to its own authored sample website;
 production integrations use a server endpoint owned by the application.
 
 Try the [public playground](https://intakelet.vercel.app), or install the archive
-from [release0.1.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.1.0)
+from [release0.2.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.2.0)
 into your Node24+ application. The release archive is a normal npm package;
 there is no npm-registry publication or SDK account requirement.
 
 ```sh
-npm install ./alvarovillalbaa-intakelet-0.1.0.tgz
+npm install ./alvarovillalbaa-intakelet-0.2.0.tgz
 ```
 
 ```js

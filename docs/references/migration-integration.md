@@ -2,13 +2,15 @@
 
 Last updated: 2026-11-15
 
-Unreleased source APIs. The existing 0.1.0 archive, hosted playground, import
-element and CLI have not gained these capabilities. See the
+The0.2.0 migration APIs are separate from the preserved0.1.0 archive, import
+element and CLI contracts. See the
 [protocol and limits](../specs/migration-v1.md) and
 [actual checks](../results/2026/11-15/migration-core.md).
 
 The subsequent [review UI checks](../results/2026/11-15/migration-ui.md) cover
-the new element, React wrapper and local website flow. None is published yet.
+the new element, React wrapper and website flow. The
+[0.2.0 qualification receipt](../results/2026/11-15/qualification-v2/result.md)
+records installed/native checks and exact publication identities separately.
 
 ## Embed the review component
 

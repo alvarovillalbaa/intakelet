@@ -1,0 +1,1 @@
+{"command":"inspect","output":"/tmp/intakelet-v2-w1xty9jb/consumer-tmp/draft.json","schema":"intakelet.draft"}

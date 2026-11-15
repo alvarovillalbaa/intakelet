@@ -1,0 +1,1 @@
+JavaScript syntax checked; imports/behavior require separate consumers.

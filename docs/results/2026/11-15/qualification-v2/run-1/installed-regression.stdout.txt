@@ -1,0 +1,11 @@
+✔ M01 installed executable analyzes, plans, applies and searches real source files (263.987337ms)
+✔ M04 actual snapshot retry is idempotent and other-workspace application fails (144.186611ms)
+✔ M06 rehashed forged plan is refused by the installed CLI without altering its input snapshot (74.589362ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 566.313234

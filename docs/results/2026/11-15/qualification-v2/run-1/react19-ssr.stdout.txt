@@ -1,0 +1,1 @@
+{"browserGlobalRequired":false,"html":["<intakelet-setup></intakelet-setup>","<intakelet-quickstart></intakelet-quickstart>","<intakelet-tour></intakelet-tour>","<intakelet-migration></intakelet-migration>"]}

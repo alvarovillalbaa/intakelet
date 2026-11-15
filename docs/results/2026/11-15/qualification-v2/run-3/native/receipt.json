@@ -1,0 +1,642 @@
+{
+  "tier": "T2",
+  "cases": [
+    {
+      "id": "N05-320",
+      "passed": true,
+      "plans": [
+        {
+          "baseline": {
+            "cursor": null,
+            "revision": 0,
+            "specId": "sha256:4a2ca74a4ec89a9322e2677cfded269b129b3709be1e33bbdfdb33602249b934"
+          },
+          "batchId": "sha256:9bd865464814400ebbd298288ae797cb8ad98ee501c473be1d394f17fd50b936",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "cursorBefore": null,
+            "done": true,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "extracted": null,
+                  "fileId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33:0",
+                  "mediaType": "application/octet-stream",
+                  "name": "authored-0.opaque",
+                  "sha256": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+                },
+                "id": "file-0",
+                "operation": "upsert",
+                "revision": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33:1",
+                  "mediaType": "text/plain",
+                  "name": "authored-1.txt",
+                  "sha256": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+                },
+                "id": "file-1",
+                "operation": "upsert",
+                "revision": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "name": "authored-0.opaque"
+                },
+                "migration": {
+                  "id": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33:0"
+                }
+              },
+              "dataHash": "sha256:fbb3131cd15b49ed3a958a3616afd8ed8e0ff8c2194769e763d3e1d8565a123e",
+              "expected": null,
+              "id": "row-38eef64270e8d80230336de8a14339d267f58a313947dcf23a3dc0b9ae1c9da4",
+              "sourceKey": "file-0"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "name": "authored-1.txt"
+                },
+                "migration": {
+                  "id": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33:1"
+                }
+              },
+              "dataHash": "sha256:7fa108580f59fd0c855e82bc535a3b0c901117f57d79078389168d4477550e3c",
+              "expected": null,
+              "id": "row-d9d46e808cb34580aaa6f7f72bf377123da7bc4f12984e47413a5db4ae0ced9e",
+              "sourceKey": "file-1"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 2,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:02c495f3e9382ee95ad83747a3346d91b3be483bf124d71932374c5543f18249"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:4a2ca74a4ec89a9322e2677cfded269b129b3709be1e33bbdfdb33602249b934",
+          "version": 1
+        }
+      ],
+      "acknowledgements": [
+        {
+          "receipt": {
+            "batchId": "sha256:9bd865464814400ebbd298288ae797cb8ad98ee501c473be1d394f17fd50b936",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:4a2ca74a4ec89a9322e2677cfded269b129b3709be1e33bbdfdb33602249b934",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        }
+      ],
+      "progress": {
+        "busy": false,
+        "connectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+        "lastReceipt": {
+          "batchId": "sha256:9bd865464814400ebbd298288ae797cb8ad98ee501c473be1d394f17fd50b936",
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "connectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+          "counts": {
+            "created": 2,
+            "deleted": 0,
+            "excluded": 0,
+            "unchanged": 0,
+            "updated": 0
+          },
+          "excludedIds": [],
+          "revision": 1,
+          "schema": "intakelet.migration-receipt",
+          "sourceDone": true,
+          "specId": "sha256:4a2ca74a4ec89a9322e2677cfded269b129b3709be1e33bbdfdb33602249b934",
+          "version": 1,
+          "workspaceId": "migration-demo"
+        },
+        "phase": "complete",
+        "result": {
+          "batches": 1,
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "items": 2,
+          "lastReceipt": {
+            "batchId": "sha256:9bd865464814400ebbd298288ae797cb8ad98ee501c473be1d394f17fd50b936",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-a1120b52-08b0-4174-bea6-b4e8e47c3f33",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:4a2ca74a4ec89a9322e2677cfded269b129b3709be1e33bbdfdb33602249b934",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "status": "complete"
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "documentWidth": 320
+      },
+      "initialTourBox": {
+        "x": 16,
+        "y": 465.796875,
+        "width": 288,
+        "height": 408.421875
+      },
+      "settledTourBox": {
+        "x": 16,
+        "y": 419.578125,
+        "width": 288,
+        "height": 408.421875
+      },
+      "touchMigration": true,
+      "errors": []
+    },
+    {
+      "id": "N05-390",
+      "passed": true,
+      "plans": [
+        {
+          "baseline": {
+            "cursor": null,
+            "revision": 0,
+            "specId": "sha256:2cd4bf6ed0c723f4d963178c755ee02733388e5e58bf940e667157ed5c9eacd1"
+          },
+          "batchId": "sha256:2116862abd44501a4e3068f98f1434c97d24e11772a8d161e8407ca2f8f4547b",
+          "issues": [],
+          "observed": [],
+          "page": {
+            "cursorAfter": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "cursorBefore": null,
+            "done": true,
+            "items": [
+              {
+                "data": {
+                  "assetId": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "extracted": null,
+                  "fileId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70:0",
+                  "mediaType": "application/octet-stream",
+                  "name": "authored-0.opaque",
+                  "sha256": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+                },
+                "id": "file-0",
+                "operation": "upsert",
+                "revision": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00"
+              },
+              {
+                "data": {
+                  "assetId": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "extracted": null,
+                  "fileId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70:1",
+                  "mediaType": "text/plain",
+                  "name": "authored-1.txt",
+                  "sha256": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+                },
+                "id": "file-1",
+                "operation": "upsert",
+                "revision": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899"
+              }
+            ]
+          },
+          "ready": true,
+          "review": {
+            "excludedIds": []
+          },
+          "rows": [
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:c3446a5ef14af7478700869334b7d643cea6e211dd8c540ff7f190204fc2ec00",
+                  "bytes": 4,
+                  "name": "authored-0.opaque"
+                },
+                "migration": {
+                  "id": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70:0"
+                }
+              },
+              "dataHash": "sha256:507f4e4169414d5184d8fdb20978b01060d80a3524268c02ac388c8b13021cdb",
+              "expected": null,
+              "id": "row-71fb1caea29de84149ff91a812bcbb846779ff8a2fc3bb6d0bf605dc118afa43",
+              "sourceKey": "file-0"
+            },
+            {
+              "action": "create",
+              "data": {
+                "document": {
+                  "asset": "sha256:18f3b349f851b87a4fc85822a8a61a1a1da2189185de3dbdd2f0ceb3b2a58899",
+                  "bytes": 15,
+                  "name": "authored-1.txt"
+                },
+                "migration": {
+                  "id": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70:1"
+                }
+              },
+              "dataHash": "sha256:8d6353aa1e8972ccaa04879849270ccdab665c5b219e9d317ddf7c597261e5af",
+              "expected": null,
+              "id": "row-0b4aef2d860bda3a1c2918056a0185a18268df9ae063a378d15211fcca6679f6",
+              "sourceKey": "file-1"
+            }
+          ],
+          "schema": "intakelet.migration-batch",
+          "spec": {
+            "connectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+            "output": {
+              "fields": [
+                {
+                  "from": [
+                    "fileId"
+                  ],
+                  "to": [
+                    "migration",
+                    "id"
+                  ]
+                },
+                {
+                  "from": [
+                    "name"
+                  ],
+                  "to": [
+                    "document",
+                    "name"
+                  ]
+                },
+                {
+                  "from": [
+                    "assetId"
+                  ],
+                  "to": [
+                    "document",
+                    "asset"
+                  ]
+                },
+                {
+                  "from": [
+                    "bytes"
+                  ],
+                  "to": [
+                    "document",
+                    "bytes"
+                  ]
+                }
+              ],
+              "id": "uploaded-files",
+              "key": [
+                [
+                  "migration",
+                  "id"
+                ]
+              ],
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "document": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "asset": {
+                        "type": "string"
+                      },
+                      "bytes": {
+                        "minimum": 0,
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "asset",
+                      "bytes"
+                    ],
+                    "type": "object"
+                  },
+                  "migration": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "migration",
+                  "document"
+                ],
+                "type": "object"
+              },
+              "version": "1"
+            },
+            "policy": {
+              "create": true,
+              "delete": false,
+              "update": false
+            },
+            "source": {
+              "configuration": {
+                "collectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+                "decoderVersion": "attachments-v1",
+                "fileCount": 2,
+                "filesPerPage": 4,
+                "manifestHash": "sha256:a69e04864419b8dc6a48fcd9ac16eb8ea157e88900182767e6014f602dae55bf"
+              },
+              "id": "file-collection",
+              "version": "1"
+            },
+            "workspaceId": "migration-demo"
+          },
+          "specId": "sha256:2cd4bf6ed0c723f4d963178c755ee02733388e5e58bf940e667157ed5c9eacd1",
+          "version": 1
+        }
+      ],
+      "acknowledgements": [
+        {
+          "receipt": {
+            "batchId": "sha256:2116862abd44501a4e3068f98f1434c97d24e11772a8d161e8407ca2f8f4547b",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:2cd4bf6ed0c723f4d963178c755ee02733388e5e58bf940e667157ed5c9eacd1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "appliedToView": true
+        }
+      ],
+      "progress": {
+        "busy": false,
+        "connectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+        "lastReceipt": {
+          "batchId": "sha256:2116862abd44501a4e3068f98f1434c97d24e11772a8d161e8407ca2f8f4547b",
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "connectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+          "counts": {
+            "created": 2,
+            "deleted": 0,
+            "excluded": 0,
+            "unchanged": 0,
+            "updated": 0
+          },
+          "excludedIds": [],
+          "revision": 1,
+          "schema": "intakelet.migration-receipt",
+          "sourceDone": true,
+          "specId": "sha256:2cd4bf6ed0c723f4d963178c755ee02733388e5e58bf940e667157ed5c9eacd1",
+          "version": 1,
+          "workspaceId": "migration-demo"
+        },
+        "phase": "complete",
+        "result": {
+          "batches": 1,
+          "checkpoint": {
+            "kind": "file-collection-v1",
+            "next": 2
+          },
+          "items": 2,
+          "lastReceipt": {
+            "batchId": "sha256:2116862abd44501a4e3068f98f1434c97d24e11772a8d161e8407ca2f8f4547b",
+            "checkpoint": {
+              "kind": "file-collection-v1",
+              "next": 2
+            },
+            "connectionId": "selection-f54a6a4a-476c-4bcc-b297-a5a9760baf70",
+            "counts": {
+              "created": 2,
+              "deleted": 0,
+              "excluded": 0,
+              "unchanged": 0,
+              "updated": 0
+            },
+            "excludedIds": [],
+            "revision": 1,
+            "schema": "intakelet.migration-receipt",
+            "sourceDone": true,
+            "specId": "sha256:2cd4bf6ed0c723f4d963178c755ee02733388e5e58bf940e667157ed5c9eacd1",
+            "version": 1,
+            "workspaceId": "migration-demo"
+          },
+          "status": "complete"
+        }
+      },
+      "viewport": {
+        "width": 390,
+        "documentWidth": 390
+      },
+      "initialTourBox": {
+        "x": 16,
+        "y": 517.796875,
+        "width": 358,
+        "height": 333.3125
+      },
+      "settledTourBox": {
+        "x": 16,
+        "y": 494.6875,
+        "width": 358,
+        "height": 333.3125
+      },
+      "touchMigration": true,
+      "errors": []
+    }
+  ],
+  "contexts": [
+    {
+      "id": "N05-320",
+      "closed": true
+    },
+    {
+      "id": "N05-390",
+      "closed": true
+    }
+  ],
+  "hosted": [],
+  "browserClosed": true,
+  "serverClosed": true,
+  "browserVersion": "141.0.7390.37",
+  "passed": true
+}

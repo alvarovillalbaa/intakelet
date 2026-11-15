@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Every selected native case and owned teardown must pass
+
+false !== true
+
+    at file:///tmp/intakelet-v2-w1xty9jb/source/tests/e2e/onboarding-migration.mjs:178:8 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.2

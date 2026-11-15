@@ -1,0 +1,17 @@
+[
+  {
+    "url": "http://127.0.0.1:33479/react19/index.html",
+    "method": "GET",
+    "type": "document"
+  },
+  {
+    "url": "http://127.0.0.1:33479/react19/styles.css",
+    "method": "GET",
+    "type": "stylesheet"
+  },
+  {
+    "url": "http://127.0.0.1:33479/react19/consumer.js",
+    "method": "GET",
+    "type": "script"
+  }
+]

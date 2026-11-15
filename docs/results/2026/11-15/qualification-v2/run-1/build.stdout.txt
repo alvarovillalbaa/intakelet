@@ -1,0 +1,5 @@
+
+> @alvarovillalbaa/intakelet@0.2.0 build
+> node scripts/build.mjs
+
+{"files":16}

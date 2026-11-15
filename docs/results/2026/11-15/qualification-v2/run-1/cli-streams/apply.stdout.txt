@@ -1,0 +1,1 @@
+{"command":"apply","output":"/tmp/intakelet-v2-w1xty9jb/consumer-tmp/applied.json","schema":"intakelet.applied"}

@@ -1,0 +1,22 @@
+[
+  {
+    "url": "http://127.0.0.1:33479/",
+    "method": "GET",
+    "type": "document"
+  },
+  {
+    "url": "http://127.0.0.1:33479/style.css",
+    "method": "GET",
+    "type": "stylesheet"
+  },
+  {
+    "url": "http://127.0.0.1:33479/intakelet.css",
+    "method": "GET",
+    "type": "stylesheet"
+  },
+  {
+    "url": "http://127.0.0.1:33479/app.js",
+    "method": "GET",
+    "type": "script"
+  }
+]

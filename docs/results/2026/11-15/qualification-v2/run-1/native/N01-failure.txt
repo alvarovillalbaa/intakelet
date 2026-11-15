@@ -1,0 +1,253 @@
+i.
+intakelet
+SDK / 0.1
+Integration
+Source ↗
+
+THE FIRST USEFUL IMPORT
+
+Start with what
+customers already have.
+
+Files become reviewed records. Websites become source-backed knowledge. Put both inside your onboarding flow.
+
+Try the SDK ↓
+01 / COLLECT
+
+Drop a file or research a site.
+
+↓
+02 / REVIEW
+
+Keep sources. Resolve the exceptions.
+
+↓
+03 / USE
+
+Import once. Start with evidence.
+
+A REAL COMPONENT, EMBEDDED HERE
+
+Meet your first workspace.
+
+Try authored sample files or your own CSV, JSON records, Markdown and text. This demo’s host saves on your device after you approve an import.
+
+Load sample files
+Use sample website
+
+The public demo researches its own fictional company website. To research your customers’ sites, connect the Node SDK through your application server. No file upload, account or model service is used here.
+
+Workspace ready · revision0
+
+0
+Saved records
+0
+Knowledge chunks
+0
+Revision
+1. Bring your information
+
+CSV, JSON records, Markdown or text. Classification happens on this device; nothing is written to the host until you import the review.
+
+Add files
+Research a website
+Research website
+3. Use your knowledge
+
+Saved source quotes and structured records. Search matches literal terms; it does not generate an answer.
+
+Search saved knowledge
+
+Import a reviewed source to create knowledge.
+
+SETUP · QUICKSTART · GUIDED TOURS
+
+More than a first import.
+
+Embed setup for a person or a company, a quickstart checklist, or a guide that points to real elements in your application.
+
+Try the guided tour
+
+These examples use an in-memory handler in this tab. Use authored details: no account is created, no domain is verified and no setup fields are uploaded or stored after a reload. Your application supplies the real handler and authority.
+
+A good place to start
+
+0 of 2 steps · 0 skipped
+
+Make this space yours
+
+Your application decides where these details are saved.
+
+What should we call you? · required
+Save and continue
+
+Progress stays in this component unless your application stores it. It is separate from account access.
+
+Welcome to your workspace
+
+0 of 2 steps · 0 skipped
+
+Set up your team’s space
+
+These details do not verify domain ownership or grant workspace access.
+
+Company name · required
+Company website · optional
+Save and continue
+
+Progress stays in this component unless your application stores it. It is separate from account access.
+
+A useful first session
+
+0 of 3 steps · 0 skipped
+
+1
+Make the demo yours
+
+Complete the first user setup step above.
+
+Check setup
+2
+Stage a source
+
+Use Load sample files or add a supported file, then inspect the proposal.
+
+Check staged source
+3
+Keep a reviewed import
+
+Use Import reviewed plan in the import component before checking this step.
+
+Check import
+Skip
+
+Complete the first user setup step above Your draft is still here.
+
+Progress stays in this component unless your application stores it. It is separate from account access.
+
+BUILT TO LIVE IN YOUR APP
+
+Your onboarding.
+Your host. Your data.
+
+Use a web component, React wrapper, Node module or CLI. The same plans, revision checks and replay receipts connect them.
+
+Deterministic classification and computed/source-quoted insights. No hidden AI call or fabricated company enrichment.
+
+Read the integration guide ↗
+
+YOUR SERVER
+
+import { researchWebsite } from
+  '@alvarovillalbaa/intakelet/node';
+
+const report = await researchWebsite(url);
+// Authenticate and rate-limit in your app.
+// Keep its sources and coverage visible.
+
+YOUR ONBOARDING
+
+const draft = await analyzeFiles(files, {
+  workspaceId: trustedWorkspaceId
+});
+const plan = await createPlan(draft, review);
+await host.commit(plan, {
+  expectedRevision: workspace.revision
+});
+
+INSTALL · CONNECT · PUBLISH
+
+Use the components in your product.
+Bring your application handler
+import { defineOnboarding, initialSetup }
+  from '@alvarovillalbaa/intakelet/onboarding';
+
+defineOnboarding();
+setup.configure({
+  flow: initialSetup('company', trustedScope),
+  submit: saveStepInYourApplication
+});
+
+The host validates the authenticated actor/workspace and returns a matching acknowledgement. Progress never grants account permissions.
+
+Publish with the evidence
+
+The setup, quickstart and tour APIs are unreleased source additions. The existing 0.1.0 archive contains the earlier file/research SDK. Read the new integration guide before packaging an updated release.
+
+Inspect package exports, install the actual archive in a separate consumer, and check browser/React/Node behaviour before publishing the archive and matching website.
+
+Component and publication guide ↗
+
+FILES → YOUR DATABASE SHAPE
+
+Bring the whole selection.
+
+Keep any file type as an attachment, name your destination fields, and review resumable batches. Duplicate filenames stay separate.
+
+This example keeps raw assets and destination records in memory in this tab: 2MiB per file and 8MiB of distinct assets, with no fixed file-count cap. Nothing is uploaded. Reloading clears this example; your application supplies durable storage. PDF, Office and image content is preserved as bytes.
+
+Choose files
+Output collection name
+Destination fields
+
+Use dots for nested objects, such as file.name. These names become the output schema stored by your host.
+
+Destination path
+Source value
+Stable file ID
+File name
+Media type
+Size in bytes
+Content digest
+Stored asset ID
+Extracted text (nullable)
+Remove
+Destination path
+Source value
+Stable file ID
+File name
+Media type
+Size in bytes
+Content digest
+Stored asset ID
+Extracted text (nullable)
+Remove
+Destination path
+Source value
+Stable file ID
+File name
+Media type
+Size in bytes
+Content digest
+Stored asset ID
+Extracted text (nullable)
+Remove
+Destination path
+Source value
+Stable file ID
+File name
+Media type
+Size in bytes
+Content digest
+Stored asset ID
+Extracted text (nullable)
+Remove
+Add a destination field
+Destination identity field
+externalId
+file.name
+file.asset
+file.bytes
+Extract UTF-8 text from .txt, .md, .csv and .json files (up to 256KiB each). Other file types have no extracted text.
+Prepare this migration
+
+Generated output recipe for your integration
+Recent acknowledgements in this tab
+
+The embeddable migration component and these APIs are unreleased source additions. This example does not connect accounts or run background app sync. Migration integration and publication guide ↗
+
+intakelet / developer preview
+
+Rule-based imports. Literal source evidence. Website coverage has explicit limits.
+
+Licenses
