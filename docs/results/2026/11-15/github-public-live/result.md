@@ -1,7 +1,7 @@
 # Intakelet0.4.0 real GitHub source qualification
 
-15November2026. Current corrected candidate; public package/hosted publication
-and temporary retirement are next. This closes a real public-pagination defect,
+15November2026. Version0.4.0 is published with accepted public downloads,
+hosted guide and temporary retirement. This closes a real public-pagination defect,
 not OAuth/private access or a durable production migration/sync service.
 
 ## Original published failure
@@ -75,9 +75,43 @@ resource, credential, OAuth app, database or external write was used. Owned
 scratch/installations and process groups were removed; source stayed equal.
 No local heavy work or dirty HEAD/index/ref movement was used.
 
-CI through this acceptance:56seconds new plus previous477 =533/1200seconds.
-The source/publication/retirement budget remains active; retain every job.
+## Publication, hosted guide and retirement
+
+[Release0.4.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.4.0)
+and its tag target1af59b022b02be680fef4f03dbec7489827c232e. The original
+accepted candidate archive is published unchanged:60 members,98,506bytes,
+SHA25664902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35.
+[Run43727520647](https://github.com/alvarovillalbaa/intakelet/actions/runs/43727520647)
+at9cdc4e939775518e3a4d43901c55d31ae410afff passed in49seconds. All four
+provider asset digests/sizes matched; separate unauthenticated ordinary
+downloads matched every byte. The [publication receipt](publication/receipt.json)
+and its public provenance/checksums are retained. Distribution is a GitHub
+archive, not an npm registry publication. Earlier releases/tags were preserved.
+
+The actual production deployment dpl_BfKgLrFBBt1pxqak1rZYZxShVt5W was READY
+at that exact release source and owned intakelet.vercel.app before testing.
+Hosted qualification repacked the same archive, built exact source and compared
+all16 anonymous public response bodies/digests and declared security headers.
+The real390px Chromium guide displayed the0.4.0 installation instructions with
+no horizontal overflow or browser errors. Native context/browser closure,
+normal process-group exit, unchanged source and owned scratch removal passed.
+See [hosted receipt](hosted/receipt.json), [guide](hosted/guide/receipt.json),
+original streams/screenshot and [deployment metadata](tested-deployment.json).
+Older document/OCR/React/native flows were not rerun or relabelled as new proof.
+
+The [retirement receipt](retirement.json) records workflow deletion200,
+workflow absence404, exact retired commit5d512e9236b0dae9c4a9342c6cbe61b80907357d,
+owned QA ref deletion204 and absence404, with main unchanged. Deletion used a
+serialized exact owner-head read; GitHub DELETE ref supplies no atomic CAS.
+Separate provider inventory returned zero deployments for the owned QA branch.
+Final evidence changes are confined to documentation/receipts and preserve all
+package members and qualified source/build inputs. Any resulting automatic
+documentation deployment carries that identity, not another browser execution.
+
+CI is105seconds new plus previous477 =582/1200seconds (9m42s total), including
+all failed, lock, candidate, publication and retirement jobs. The original job
+identities/durations are retained in [the cumulative ledger](ci-ledger.json).
 OAuth one-click connections, other application adapters, durable authenticated
 storage/scheduling, broader provider/format/quality/scale coverage remain open.
-The unchanged dependency set retains0.3.0's documented moderate uuid advisories;
-this is not a fresh zero-advisory audit claim.
+The actual hosted runtime audit reported zero high/critical and two retained
+moderate uuid findings; unchanged dependencies do not imply a clean audit.

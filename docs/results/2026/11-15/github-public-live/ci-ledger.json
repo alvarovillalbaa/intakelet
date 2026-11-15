@@ -1,0 +1,38 @@
+{
+  "previousSeconds": 477,
+  "usedSeconds": 582,
+  "capSeconds": 1200,
+  "jobs": [
+    {
+      "runId": 43724957199,
+      "jobId": 132844778105,
+      "source": "20d89c5f57a53209b1fa358ef6efe728061d8c78",
+      "seconds": 15,
+      "conclusion": "failure"
+    },
+    {
+      "runId": 43725770107,
+      "jobId": 132847248700,
+      "source": "e53eb0ae671503769b987e6880d65c0f6903c05a",
+      "phase": "0.4-lock",
+      "seconds": 18,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43726211283,
+      "jobId": 132848585797,
+      "source": "71a786bb176585d395f6e7e6aa137ec5464c0523",
+      "phase": "0.4-candidate",
+      "seconds": 23,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43727520647,
+      "jobId": 132852587505,
+      "source": "9cdc4e939775518e3a4d43901c55d31ae410afff",
+      "phase": "0.4-publication-hosted-retirement",
+      "seconds": 49,
+      "conclusion": "success"
+    }
+  ]
+}

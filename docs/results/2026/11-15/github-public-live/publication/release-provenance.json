@@ -1,0 +1,26 @@
+{
+  "source": "1af59b022b02be680fef4f03dbec7489827c232e",
+  "qualifiedSource": "71a786bb176585d395f6e7e6aa137ec5464c0523",
+  "version": "0.4.0",
+  "githubSourceVersion": "2",
+  "archive": {
+    "name": "alvarovillalbaa-intakelet-0.4.0.tgz",
+    "bytes": 98506,
+    "sha256": "64902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35"
+  },
+  "qualifiedArchiveMembers": 60,
+  "dependencyLockSha256": "10987706171de004600fbc2f6e4e8c51a23d4f0d843b27ab7ef020161343ac4a",
+  "qualificationRun": 43726211283,
+  "actualPublicGETRequests": 9,
+  "acceptedCases": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06"
+  ],
+  "privacy": "No issue text or author profiles retained; live data existed only in process memory.",
+  "distribution": "GitHub archive, not npm registry",
+  "limits": "Unauthenticated public GET; bounded nodejs/node sample and empty cycles, not full-repository migration, mutable-update/delete proof, OAuth, durable host or scheduler."
+}

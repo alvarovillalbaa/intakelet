@@ -93,8 +93,13 @@ Last updated: 2026-11-15
   Archive60 members/98,506bytes, SHA256
   64902be7e0cec56e647c6b9be464abba503ce7e6423aec2266e3c40d1dda0f35.
   Only two root lock version fields changed; all265 dependency entries match.
-  Publication/hosted/retirement remain next. CI533/1200seconds cumulative;
-  use only qa/intakelet-github-public-20261115 / github-public-live.yml.
+  Release/tag1af59b022b02be680fef4f03dbec7489827c232e is published; public
+  run43727520647 passed four anonymous assets,16 bodies/headers and the390px
+  guide, then removed qa/intakelet-github-public-20261115 and its workflow.
+  Zero QA deployments. CI582/1200seconds cumulative, including failures.
+  Preserve source/build identity when adding evidence; do not recreate these
+  controls or rerun unchanged accepted flows. Remaining Auth/durable-host
+  gates are not supplied by these bounded public reads.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.
