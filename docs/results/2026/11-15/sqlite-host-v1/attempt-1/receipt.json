@@ -1,0 +1,84 @@
+{
+  "phase": "qualify",
+  "passed": false,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0042901969999995515,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "schema-generation-check",
+      "argv": [
+        "node",
+        "scripts/generate-sqlite-schema.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.04391571600000077,
+      "stdoutBytes": 102,
+      "stdoutSha256": "cdeb1412e0fc14d88e1a33f8fa717bb4d2ade7db9397f54289505bcfb14cf345",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 5.600922809,
+      "stdoutBytes": 26,
+      "stdoutSha256": "0ee39cd9d5f6b38493c4a3f8294bf4bf0159e4ab0c2e3aa31794790165a1d3fe",
+      "stderrBytes": 1226,
+      "stderrSha256": "c5cc49120806bed0ad9106a811222a53d640a5fb2de7cb7e35b9f5e875468ed6"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 1,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.9451935720000009,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 543,
+      "stderrSha256": "903233a69135a2d45fe3726f567e65b86de38376dd041641dba6a80e0e6dedbf"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91497488384,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "error": "syntax did not close successfully",
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}

@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: D01 explicit initialization and separate-process reopen reject unknown workspace/schema
+ok 1 - D01 explicit initialization and separate-process reopen reject unknown workspace/schema
+  ---
+  duration_ms: 307.66924
+  type: 'test'
+  ...
+# Subtest: D02 real reviewed pages resume in a fresh process with custom outputs and no duplicate rows
+ok 2 - D02 real reviewed pages resume in a fresh process with custom outputs and no duplicate rows
+  ---
+  duration_ms: 197.348597
+  type: 'test'
+  ...
+# Subtest: D03 a withheld caller receipt is recovered after process restart without a second write
+ok 3 - D03 a withheld caller receipt is recovered after process restart without a second write
+  ---
+  duration_ms: 224.598222
+  type: 'test'
+  ...
+# Subtest: D04 independent workers contend and persisted expiry fences the older write/release
+ok 4 - D04 independent workers contend and persisted expiry fences the older write/release
+  ---
+  duration_ms: 1244.291785
+  type: 'test'
+  ...
+# Subtest: D05 accepted routes persist; a fresh revoked/unaccepted poll performs no source read
+ok 5 - D05 accepted routes persist; a fresh revoked/unaccepted poll performs no source read
+  ---
+  duration_ms: 171.720934
+  type: 'test'
+  ...
+# Subtest: D06 a real trigger refusal rolls back rows, source ownership, checkpoint and receipt together
+ok 6 - D06 a real trigger refusal rolls back rows, source ownership, checkpoint and receipt together
+  ---
+  duration_ms: 56.055973
+  type: 'test'
+  ...
+# Subtest: D07 a killed claimant cannot advance; a new process reclaims only after real expiry
+ok 7 - D07 a killed claimant cannot advance; a new process reclaims only after real expiry
+  ---
+  duration_ms: 1323.863027
+  type: 'test'
+  ...
+# Subtest: D08 real local edits, foreign source identities and stale checkpoints refuse complete pages
+ok 8 - D08 real local edits, foreign source identities and stale checkpoints refuse complete pages
+  ---
+  duration_ms: 71.965054
+  type: 'test'
+  ...
+# Subtest: D09 polling across worker lifetimes retains updates, cancellation and failure checkpoints
+ok 9 - D09 polling across worker lifetimes retains updates, cancellation and failure checkpoints
+  ---
+  duration_ms: 109.970677
+  type: 'test'
+  ...
+# Subtest: D10 native SQLite busy, full and read-only errors never acknowledge a write
+ok 10 - D10 native SQLite busy, full and read-only errors never acknowledge a write
+  ---
+  duration_ms: 253.311631
+  type: 'test'
+  ...
+# Subtest: D11 installed Node exports retain real attachment streaming alongside the new worker/schema
+ok 11 - D11 installed Node exports retain real attachment streaming alongside the new worker/schema
+  ---
+  duration_ms: 37.881974
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4056.772088

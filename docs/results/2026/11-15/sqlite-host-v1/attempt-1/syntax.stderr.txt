@@ -1,0 +1,15 @@
+node:internal/fs/promises:1668
+  const result = await PromisePrototypeThen(
+                 ^
+
+Error: ENOENT: no such file or directory, scandir '/tmp/intakelet-sqlite-3d8r9x9q/source/web'
+    at async readdir (node:internal/fs/promises:1668:18)
+    at async walk (file:///tmp/intakelet-sqlite-3d8r9x9q/source/scripts/check.mjs:5:54)
+    at async file:///tmp/intakelet-sqlite-3d8r9x9q/source/scripts/check.mjs:6:54 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/tmp/intakelet-sqlite-3d8r9x9q/source/web'
+}
+
+Node.js v24.22.2

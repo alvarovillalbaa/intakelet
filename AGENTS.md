@@ -100,6 +100,24 @@ Last updated: 2026-11-15
   Preserve source/build identity when adding evidence; do not recreate these
   controls or rerun unchanged accepted flows. Remaining Auth/durable-host
   gates are not supplied by these bounded public reads.
+- The owner explicitly approved all pending technical proposals with “Autorizo
+  todo” after the blocked audit. SQLite host/schema/isolated acceptance is now
+  authorized under docs/proposals/sqlite-migration-host-v1.md. Existing
+  CI582/1200seconds leaves618seconds; no extension or local storage exception.
+  Its new source is not part of published0.4.0 and supplies no OAuth/Auth service.
+  The earlier inactive gate remains historical in sqlite-host-gate.md. Keep all
+  real provider/customer database boundaries and the named proposal limits.
+- SQLite0.5.0 source84c1ffbf860f2793236266b581eda59033ad93a2 / run43747746882
+  passed all11 real installed SQLite/process cases and strict Node-only types.
+  Archive65 members/108,782bytes, SHA256
+  fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a.
+  V1 SQL1,673bytes/SHA256c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863.
+  Source/process/owned-database/scratch guards passed; one deliberate claimant
+  kill is distinct from seven normally closed children. Preserve the earlier
+  missing-web-input preparation failure; it accepted no SQLite case.
+  All265 dependencies stay identical. CI632/1200seconds;568seconds remain.
+  Publication/hosted readback/retirement are next; do not rerun these unchanged
+  SQLite identities. Evidence: docs/results/2026/11-15/sqlite-host-v1/result.md.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.

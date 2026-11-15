@@ -1,0 +1,176 @@
+{
+  "phase": "qualify",
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0028268679999996493,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "schema-generation-check",
+      "argv": [
+        "node",
+        "scripts/generate-sqlite-schema.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.030861504999990075,
+      "stdoutBytes": 102,
+      "stdoutSha256": "cdeb1412e0fc14d88e1a33f8fa717bb4d2ade7db9397f54289505bcfb14cf345",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 3.512937127000015,
+      "stdoutBytes": 26,
+      "stdoutSha256": "6ec5b39c7f2d97ea4f969b984de3a18ddb5c08f7cb00907254e0cac2c6c57b35",
+      "stderrBytes": 1226,
+      "stderrSha256": "9a960a040114fe0689811032dca015740669b220315af875f8c9c7bda880172f"
+    },
+    {
+      "name": "syntax",
+      "argv": [
+        "node",
+        "scripts/check.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.6662596520000079,
+      "stdoutBytes": 72,
+      "stdoutSha256": "f6bf24ee57870c92cece81fc72cdab22b76061e1d6717e2797b8889763abbd2b",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "pack-candidate",
+      "argv": [
+        "npm",
+        "pack",
+        "--json",
+        "--ignore-scripts",
+        "--pack-destination",
+        "/home/runner/work/_temp/intakelet-sqlite-qualified"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.2569821719999936,
+      "stdoutBytes": 7019,
+      "stdoutSha256": "e3d28e8edc5de3527978939f096c3e30f2ba8ee51fcc309bece5310a06e458a3",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-candidate-archive",
+      "argv": [
+        "npm",
+        "install",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund",
+        "/home/runner/work/_temp/intakelet-sqlite-qualified/alvarovillalbaa-intakelet-0.5.0.tgz"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.325468472000011,
+      "stdoutBytes": 26,
+      "stdoutSha256": "77697c2b5cb9b5d64217f1fb55029941ab6d255cff59e7a16d2a5c7269a744aa",
+      "stderrBytes": 1017,
+      "stderrSha256": "dfb442c2bed25264d8715eef8aba3cd720d12ebf8fbd53cb1b5b3afd0c3140dc"
+    },
+    {
+      "name": "actual-installed-sqlite",
+      "argv": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/integration/sqlite-installed.test.mjs"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 4.08684550800001,
+      "stdoutBytes": 2834,
+      "stdoutSha256": "1bf84020ddc7ccddaf9cd03930af36a29bcdbd332d33b7798ae5068bed74c537",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "installed-node-types",
+      "argv": [
+        "/tmp/intakelet-sqlite-b4f8vlm4/source/node_modules/.bin/tsc",
+        "--noEmit",
+        "--strict",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--target",
+        "ES2022",
+        "--lib",
+        "ES2022",
+        "--types",
+        "node",
+        "--typeRoots",
+        "/tmp/intakelet-sqlite-b4f8vlm4/source/node_modules/@types",
+        "sqlite-node-consumer.mts"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.010491681000019,
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 94941540352,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "archive": {
+    "file": "alvarovillalbaa-intakelet-0.5.0.tgz",
+    "bytes": 108782,
+    "sha256": "fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a"
+  },
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [],
+  "sourceGuardPassed": true
+}
