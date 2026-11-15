@@ -1,0 +1,65 @@
+{
+  "generator": "intakelet-static-v1",
+  "files": {
+    "app.js": {
+      "bytes": 499536,
+      "sha256": "4360da4a60fab62df24e6a2c6e31941c77bb802cee90762a19f4f8cf418a7dd4"
+    },
+    "fixtures/company/about.html": {
+      "bytes": 481,
+      "sha256": "3aa483391dba2be5383085d66ad4efe7610170b176835aaaeb6c64a596fbc1fb"
+    },
+    "fixtures/company/index.html": {
+      "bytes": 945,
+      "sha256": "2dbd8c2bb6cf7727b93fb22c7a4cf27f22bbb849777a3ae664ad08e58e0a96aa"
+    },
+    "fixtures/company/marker.js": {
+      "bytes": 121,
+      "sha256": "63c168bd87e2c514627573e37e5e46de0fc7c05071d14d3b9d4567eaa3c4f4c7"
+    },
+    "fixtures/company/private.html": {
+      "bytes": 303,
+      "sha256": "2f04abc55d18d259e57025a8ae978e54f3f2da4a133e87f98cde43d8de96d6b8"
+    },
+    "fixtures/company/products.html": {
+      "bytes": 490,
+      "sha256": "ff1908ffc677369966876942d87c2ad6d10519d2bbeae05cc1861169bede4afb"
+    },
+    "fixtures/company/support.html": {
+      "bytes": 468,
+      "sha256": "0f7e12d1ca8a801e9877bad33efd1b12fbf2abc14a0821248284480e6c2941da"
+    },
+    "fixtures/contacts.csv": {
+      "bytes": 157,
+      "sha256": "a9f559e8b0d75e88f4050fcebd7202916b56fe5bf8b913742ce9b95c6ed734d5"
+    },
+    "fixtures/handbook.md": {
+      "bytes": 420,
+      "sha256": "fd61754160bb2b5670e1a569c9b4c8d573e3cfa041565572686419aa6209826a"
+    },
+    "icon.svg": {
+      "bytes": 252,
+      "sha256": "af8c9ae9dacea26f5b6c8e6a0c8a6df74fd0f2ac4b0e8a60304bc6edd285828c"
+    },
+    "index.html": {
+      "bytes": 8675,
+      "sha256": "70d62cfa349e5aa5dd8cd125939f02717cc260d6a326d42ea14a9e434de9edf2"
+    },
+    "intakelet.css": {
+      "bytes": 10372,
+      "sha256": "9650aca8a18e6b129417d4c9a7f543f9e378d96f8fcb0afa39a37835503347f7"
+    },
+    "robots.txt": {
+      "bytes": 55,
+      "sha256": "289192c195c199b22d731ea5ecbfb8c70b32107977aa535de0b25592ccf36502"
+    },
+    "style.css": {
+      "bytes": 7067,
+      "sha256": "06577455f593e9659c277c982798b5980308b486d7597b3e389857a3e8388eb1"
+    },
+    "third-party-notices.txt": {
+      "bytes": 3613,
+      "sha256": "92eb269daab933bc5339b738523cb204657f08667c32a3efde3e71b7eabe2f11"
+    }
+  }
+}

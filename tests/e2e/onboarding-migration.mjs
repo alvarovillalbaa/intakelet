@@ -60,6 +60,7 @@ try {
       const response = await fetch(new URL(name === 'index.html' ? '/' : '/' + name, site), { redirect: 'error', signal: AbortSignal.timeout(15000) });
       const bytes = Buffer.from(await response.arrayBuffer()), row = { path: name, status: response.status, bytes: bytes.length, sha256: hash(bytes), headers: Object.fromEntries(response.headers) }; receipt.hosted.push(row);
       assert.equal(row.status, 200); assert.equal(row.bytes, expected.bytes); assert.equal(row.sha256, expected.sha256);
+      for (const header of config.headers[0].headers) assert.equal(row.headers[header.key.toLowerCase()], header.value);
       const path = join(output, 'hosted-bodies', name); await mkdir(resolve(path, '..'), { recursive: true }); await writeFile(path, bytes);
     }
   }

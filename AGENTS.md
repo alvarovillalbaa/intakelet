@@ -13,7 +13,10 @@ Last updated: 2026-11-15
   evidence/remaining gates are in docs/results/2026/11-15/migration-core.md.
   New migration component, visual destination editor, React wrapper and exact
   receipt validation are recorded in docs/results/2026/11-15/migration-ui.md.
-  These APIs are unreleased; do not claim the old 0.1.0 archive has them.
+  These APIs belong to the0.2.0 edition; never claim the old0.1.0 archive has them.
+  Installed/typed/native acceptance and remaining publication gates are recorded
+  in docs/results/2026/11-15/qualification-v2/result.md. Preserve original failed
+  scopes and the distinction between accepted identities across runs.
 - Register migration UI lazily. Full proposals, issues, explicit exclusions and
   rebuilt-batch review stay visible. Old DOM controls cannot act on a later
   batch; configuration/disconnection cancel pending work. Late acknowledgements

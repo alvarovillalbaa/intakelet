@@ -1,0 +1,8 @@
+
+  ../react18/consumer.js  1.2mb ⚠️
+
+⚡ Done in 64ms
+
+  ../react19/consumer.js  1.3mb ⚠️
+
+⚡ Done in 70ms
