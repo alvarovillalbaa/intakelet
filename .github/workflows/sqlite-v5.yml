@@ -1,11 +1,11 @@
-name: Temporary Intakelet SQLite lock metadata
+name: Temporary Intakelet 0.5.0 installed SQLite acceptance
 on:
   push:
     branches: ['qa/intakelet-sqlite-20261115']
 permissions:
   contents: read
 jobs:
-  lock-only:
+  installed-sqlite:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
@@ -15,15 +15,15 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24.22.2'
-      - name: Generate only the new edition lock metadata
+      - name: Pack, install, qualify real SQLite processes and Node declarations
         env:
-          INTAKELET_SQLITE_PHASE: lock
-          INTAKELET_SQLITE_ARTIFACT: ${{ runner.temp }}/intakelet-sqlite-lock
+          INTAKELET_SQLITE_PHASE: qualify
+          INTAKELET_SQLITE_ARTIFACT: ${{ runner.temp }}/intakelet-sqlite-qualified
         run: python3 tests/scripts/qualify-sqlite.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: intakelet-sqlite-lock-${{ github.run_id }}
-          path: ${{ runner.temp }}/intakelet-sqlite-lock
+          name: intakelet-sqlite-qualified-${{ github.run_id }}
+          path: ${{ runner.temp }}/intakelet-sqlite-qualified
           if-no-files-found: error
           retention-days: 7
