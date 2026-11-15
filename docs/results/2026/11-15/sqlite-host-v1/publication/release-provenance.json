@@ -1,0 +1,15 @@
+{
+  "source": "1e401b943afd851519b7a08a566083c594fa1fd8",
+  "qualifiedSource": "84c1ffbf860f2793236266b581eda59033ad93a2",
+  "version": "0.5.0",
+  "archive": {
+    "name": "alvarovillalbaa-intakelet-0.5.0.tgz",
+    "bytes": 108782,
+    "sha256": "fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a"
+  },
+  "qualifiedArchiveMembers": 65,
+  "dependencyLockSha256": "6501dc4651c91749a77c08c947166fbd6a8c901cda0324437d46c8baf01b2206",
+  "schemaSha256": "c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863",
+  "qualificationRun": 43747746882,
+  "distribution": "GitHub archive, not npm registry"
+}

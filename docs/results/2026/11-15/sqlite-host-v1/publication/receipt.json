@@ -1,0 +1,143 @@
+{
+  "source": "1e401b943afd851519b7a08a566083c594fa1fd8",
+  "tag": "v0.5.0",
+  "passed": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/heads/main",
+      "status": 200,
+      "responseSha256": "1457e9134c9e1ec63c8254e846b122fdfdd782149f9a993457785752d3caf8ab"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/tags/v0.5.0",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/tags/v0.5.0",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases",
+      "status": 201,
+      "responseSha256": "d6730b30142a44ba75126d3d7b0cac842fc3b288a4b3f9a76b07e54a3ac858fe"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446282143/assets",
+      "status": 201,
+      "responseSha256": "10d396281ce79208f8cdf411b7f56249e0f642308963820c5a3b15a79515cfe8"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446282143/assets",
+      "status": 201,
+      "responseSha256": "76ea228d88d2fc81ec1079af5df5d247f1051f89e635be35a444ca9cebd1442b"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446282143/assets",
+      "status": 201,
+      "responseSha256": "eab58199f22ea13a134d06a66fce325114299c7afe3004eb4214b46bff7f831d"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446282143/assets",
+      "status": 201,
+      "responseSha256": "f79c71b891d41b30e573cec17558797702f123b386db62bdef3530ad8352ed9a"
+    },
+    {
+      "method": "POST",
+      "path": "/repos/alvarovillalbaa/intakelet/releases/446282143/assets",
+      "status": 201,
+      "responseSha256": "a02dbce095f1d85d62cdcfe04e3f3ce624ad552dd9a372000faf4ffc40228f87"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/tags/v0.5.0",
+      "status": 200,
+      "responseSha256": "c23a7af2d7788465fbba43868a96028d93a0a8a73c6651583509068507ae198b"
+    },
+    {
+      "method": "GET",
+      "path": "/repos/alvarovillalbaa/intakelet/git/ref/heads/main",
+      "status": 200,
+      "responseSha256": "1457e9134c9e1ec63c8254e846b122fdfdd782149f9a993457785752d3caf8ab"
+    }
+  ],
+  "release": {
+    "id": 446282143,
+    "url": "https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.5.0",
+    "tag": "v0.5.0"
+  },
+  "assets": [
+    {
+      "id": 751983572,
+      "name": "alvarovillalbaa-intakelet-0.5.0.tgz",
+      "bytes": 108782,
+      "sha256": "fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.5.0/alvarovillalbaa-intakelet-0.5.0.tgz",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 108782,
+        "sha256": "fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a",
+        "equal": true
+      }
+    },
+    {
+      "id": 751983602,
+      "name": "sqlite-acceptance.json",
+      "bytes": 1091,
+      "sha256": "526efe15cd3180472d5211412f2e0036e8e420ba6d1c98e32785ea0324edb945",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.5.0/sqlite-acceptance.json",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 1091,
+        "sha256": "526efe15cd3180472d5211412f2e0036e8e420ba6d1c98e32785ea0324edb945",
+        "equal": true
+      }
+    },
+    {
+      "id": 751983630,
+      "name": "sqlite-host-v1.sql",
+      "bytes": 1673,
+      "sha256": "c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.5.0/sqlite-host-v1.sql",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 1673,
+        "sha256": "c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863",
+        "equal": true
+      }
+    },
+    {
+      "id": 751983692,
+      "name": "release-provenance.json",
+      "bytes": 621,
+      "sha256": "d0b462004f9fb3a34882ceb0bad0b324f527cbafb92a55743405ecf737dd98be",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.5.0/release-provenance.json",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 621,
+        "sha256": "d0b462004f9fb3a34882ceb0bad0b324f527cbafb92a55743405ecf737dd98be",
+        "equal": true
+      }
+    },
+    {
+      "id": 751983730,
+      "name": "SHA256SUMS.txt",
+      "bytes": 366,
+      "sha256": "21114e4e8e465f0d50e9823f757f34bfb5c87a0b9dbfbf31e52e84b4e6cd0d43",
+      "url": "https://github.com/alvarovillalbaa/intakelet/releases/download/v0.5.0/SHA256SUMS.txt",
+      "anonymousDownload": {
+        "status": 200,
+        "bytes": 366,
+        "sha256": "21114e4e8e465f0d50e9823f757f34bfb5c87a0b9dbfbf31e52e84b4e6cd0d43",
+        "equal": true
+      }
+    }
+  ]
+}

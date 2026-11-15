@@ -2,9 +2,9 @@
 
 15 November 2026. The owner approved the pending technical scopes with
 “Autorizo todo”; [authorization](../technical-authorization.md) preserves the
-named limits and earlier deferrals. The current0.5.0 candidate has actual
-installed SQLite/process/Node-type acceptance. Publication/hosted verification
-and owned temporary retirement are next. This does not complete OAuth/private
+named limits and earlier deferrals. Version0.5.0 is published with actual
+installed SQLite/process/Node-type and public/hosted acceptance; the owned
+temporary controls are retired. This does not complete OAuth/private
 app connections, production authentication or operated background scheduling.
 
 ## Implementation and exact artifact
@@ -85,10 +85,43 @@ isolated source whitelist. The changed supervisor includes web; no application
 assertion was weakened. [Original streams/receipt](attempt-1/receipt.json)
 retain its source/process/scratch guards and explicit failed outcome.
 
-CI through current acceptance:50seconds new plus previous582 =632/1200seconds.
-[Cumulative ledger](ci-ledger.json) includes every failure/lock/qualification job;
-568seconds remain for publication/verification/retirement. No local install,
-database, app build/browser or dirty HEAD/index/ref movement was used.
+## Publication, hosted guide and retirement
+
+[Release0.5.0](https://github.com/alvarovillalbaa/intakelet/releases/tag/v0.5.0)
+and its tag target1e401b943afd851519b7a08a566083c594fa1fd8. The accepted
+108,782-byte65-member archive is published without repacking or alteration.
+All five provider asset digests/sizes and separate ordinary anonymous downloads
+match: archive, SQLite acceptance metadata, generated V1 SQL, provenance and
+checksum manifest. See [publication receipt](publication/receipt.json).
+
+[Run43748731892](https://github.com/alvarovillalbaa/intakelet/actions/runs/43748731892)
+at4caa342ffb4c81dece5bd43cbca91e16fbee22f9 passed in45seconds. The exact
+release source was production READY at dpl_6yY96z72Q3bx6DFiLmpvSRMYLotY and
+owned intakelet.vercel.app before acceptance. Hosted qualification repacked the
+same artifact, built its source and compared all16 anonymous public bodies/
+digests and declared security headers. The real390px Chromium guide displays
+the0.5.0 installation command with no overflow or browser errors. Native
+contexts/browser/process group close normally; source equality and owned
+scratch removal pass. [Hosted receipt](hosted/receipt.json),
+[guide/screenshot](hosted/guide/receipt.json) and
+[deployment metadata](tested-deployment.json) retain those observations.
+Closed SQLite/document/OCR/UI journeys were not rerun or relabelled as new proof.
+
+[Retirement](retirement.json) records workflow deletion200/read404, exact retired
+commit1cc7742ae76977e88cb243afe3a712d15a28836d, owned QA branch deletion204/
+read404 and unchanged main. GitHub DELETE ref has no atomic CAS; the request
+used serialized exact owner-head reads. Separate Vercel inventory returned zero
+deployments for qa/intakelet-sqlite-20261115. Final evidence changes preserve
+every package member and source/build/non-documentation blob; any automatic
+evidence-only production deployment carries identity, not a new browser run.
+
+Actual CI is95seconds new plus previous582 =677/1200seconds (11m17s), including
+every failure, lock, qualification, publication and retirement job.
+[Cumulative ledger](ci-ledger.json) retains their IDs/durations.523seconds remain;
+no cap extension is inferred. The fresh hosted runtime audit has zero high/
+critical and two retained moderate uuid findings; it is not clean.
+No local install, database, app build/browser or dirty HEAD/index/ref movement
+was used. Earlier releases, failure evidence and original local work remain.
 
 Hardware power-loss behavior, database encryption, network filesystems,
 multi-host HA, enterprise throughput, real private apps/OAuth/JWT and an

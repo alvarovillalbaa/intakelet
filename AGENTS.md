@@ -115,9 +115,11 @@ Last updated: 2026-11-15
   Source/process/owned-database/scratch guards passed; one deliberate claimant
   kill is distinct from seven normally closed children. Preserve the earlier
   missing-web-input preparation failure; it accepted no SQLite case.
-  All265 dependencies stay identical. CI632/1200seconds;568seconds remain.
-  Publication/hosted readback/retirement are next; do not rerun these unchanged
-  SQLite identities. Evidence: docs/results/2026/11-15/sqlite-host-v1/result.md.
+  All265 dependencies stay identical. Release/tag1e401b943afd851519b7a08a566083c594fa1fd8
+  is published. Run43748731892 accepted all five anonymous assets,16 website
+  bodies/headers and the390px guide, then retired sqlite-v5.yml and its owned
+  QA branch. Zero QA deployments. CI677/1200seconds;523seconds remain. Do not
+  rerun unchanged closed identities. Evidence: docs/results/2026/11-15/sqlite-host-v1/result.md.
 - Tests declare T2 authored data. Keep checks under tests/unit, integration,
   e2e or adversarial; receipts in docs/results/YYYY/MM-DD. Use primary sources
   for API/library contracts, and preserve exact installed archives/locks.

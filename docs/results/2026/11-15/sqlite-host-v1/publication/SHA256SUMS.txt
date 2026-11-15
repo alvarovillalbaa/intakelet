@@ -1,0 +1,4 @@
+fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a  alvarovillalbaa-intakelet-0.5.0.tgz
+526efe15cd3180472d5211412f2e0036e8e420ba6d1c98e32785ea0324edb945  sqlite-acceptance.json
+c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863  sqlite-host-v1.sql
+d0b462004f9fb3a34882ceb0bad0b324f527cbafb92a55743405ecf737dd98be  release-provenance.json

@@ -1,0 +1,40 @@
+{
+  "source": "1e401b943afd851519b7a08a566083c594fa1fd8",
+  "qualifiedSource": "84c1ffbf860f2793236266b581eda59033ad93a2",
+  "qualificationRun": 43747746882,
+  "tier": "T2 authored data with actual installed Node/SQLite/process execution",
+  "cases": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11"
+  ],
+  "archive": {
+    "bytes": 108782,
+    "sha256": "fa92aa9478c9027e1cec302580165a45f3631c0f808b9d8989defd676047e38a",
+    "members": 65
+  },
+  "schema": {
+    "version": 1,
+    "bytes": 1673,
+    "sha256": "c4df28fca7cdc33d60f17e9da37c8608dbc76e6c35519f0271aa819029349863"
+  },
+  "closedOwnedDatabases": 11,
+  "normalChildren": 7,
+  "deliberatelyKilledClaimants": 1,
+  "installedNodeTypes": true,
+  "sourceGuardPassed": true,
+  "ownedScratchRemoved": true,
+  "limits": [
+    "Node24.22.2 SQLite release candidate/stability1.2",
+    "No real provider, OAuth, production authentication or operated scheduler",
+    "No hardware power-loss, network filesystem, encryption, multi-host or enterprise-scale proof"
+  ]
+}

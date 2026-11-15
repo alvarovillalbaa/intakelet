@@ -1,6 +1,6 @@
 {
   "previousSeconds": 477,
-  "usedSeconds": 632,
+  "usedSeconds": 677,
   "capSeconds": 1200,
   "jobs": [
     {
@@ -56,6 +56,14 @@
       "source": "84c1ffbf860f2793236266b581eda59033ad93a2",
       "phase": "0.5-qualified",
       "seconds": 25,
+      "conclusion": "success"
+    },
+    {
+      "runId": 43748731892,
+      "jobId": 132917715278,
+      "source": "4caa342ffb4c81dece5bd43cbca91e16fbee22f9",
+      "phase": "0.5-publication-hosted-retirement",
+      "seconds": 45,
       "conclusion": "success"
     }
   ]
