@@ -32,7 +32,7 @@ try {
   page.on('pageerror', error => receipt.errors.push(error.message)); await page.goto(url); const guide = page.locator('#document-node-guide'); await guide.scrollIntoViewIfNeeded(); await guide.waitFor({ state: 'visible' });
   assert.match(await guide.innerText(), /PDF text, DOCX paragraphs, XLSX cells/); assert.match(await guide.innerText(), /preserves binary attachments/);
   const link = page.getByRole('link', { name: 'Node document extraction guide ↗' }); assert.equal(await link.getAttribute('href'), 'https://github.com/alvarovillalbaa/intakelet/blob/main/docs/references/document-extraction.md'); assert.equal(await link.getAttribute('target'), '_blank'); assert.match(await link.getAttribute('rel'), /noopener/);
-  assert.ok((await page.locator('body').innerText()).includes('npm install ./alvarovillalbaa-intakelet-0.4.0.tgz'));
+  assert.ok((await page.locator('body').innerText()).includes('npm install ./alvarovillalbaa-intakelet-0.5.0.tgz'));
   receipt.width = await page.evaluate(() => ({ viewport: innerWidth, content: document.documentElement.scrollWidth })); assert.ok(receipt.width.content <= receipt.width.viewport); assert.deepEqual(receipt.errors, []);
   await page.screenshot({ path: join(output, 'document-guide-390.png'), animations: 'disabled' }); receipt.browserVersion = browser.version(); receipt.passed = true;
 } finally {

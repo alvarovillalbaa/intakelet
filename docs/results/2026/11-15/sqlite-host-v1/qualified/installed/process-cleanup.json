@@ -1,0 +1,123 @@
+{
+  "observations": [
+    {
+      "child": 1,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D01",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "child": 2,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D02",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "child": 3,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "child": 4,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D03",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "child": 5,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D04",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "child": 6,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D05",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "case": "D06",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "child": 7,
+      "expectedKill": true,
+      "code": null,
+      "signal": "SIGKILL",
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "child": 8,
+      "expectedKill": false,
+      "code": 0,
+      "signal": null,
+      "stdoutBytes": 0,
+      "stderrBytes": 0
+    },
+    {
+      "case": "D07",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "case": "D08",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "case": "D09",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "case": "D10",
+      "closed": true,
+      "removed": true
+    },
+    {
+      "case": "D11",
+      "closed": true,
+      "removed": true
+    }
+  ]
+}

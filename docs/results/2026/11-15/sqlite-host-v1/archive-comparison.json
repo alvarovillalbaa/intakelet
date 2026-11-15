@@ -1,0 +1,20 @@
+{
+  "previousVersion": "0.4.0",
+  "currentVersion": "0.5.0",
+  "previousMembers": 60,
+  "currentMembers": 65,
+  "changedMembers": [
+    "package.json",
+    "README.md",
+    "src/migration-node.mjs",
+    "src/migration-node.d.mts"
+  ],
+  "addedMembers": [
+    "docs/references/durable-sqlite.md",
+    "src/sqlite-migration-host.mjs",
+    "src/sqlite-migration-worker.mjs",
+    "src/sqlite-schema-v1.mjs",
+    "src/sqlite-host-v1.sql"
+  ],
+  "unchangedPreviousMembers": 56
+}

@@ -1,0 +1,71 @@
+{
+  "phase": "lock",
+  "passed": true,
+  "commands": [
+    {
+      "name": "node-version",
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.0037532889999987162,
+      "stdoutBytes": 9,
+      "stdoutSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "schema-generation-check",
+      "argv": [
+        "node",
+        "scripts/generate-sqlite-schema.mjs",
+        "--check"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 0.03125526000000178,
+      "stdoutBytes": 102,
+      "stdoutSha256": "cdeb1412e0fc14d88e1a33f8fa717bb4d2ade7db9397f54289505bcfb14cf345",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "generate-lock",
+      "argv": [
+        "npm",
+        "install",
+        "--package-lock-only",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "code": 0,
+      "timedOut": false,
+      "leaderReaped": true,
+      "groupAbsent": true,
+      "seconds": 1.6655784259999997,
+      "stdoutBytes": 18,
+      "stdoutSha256": "ce7bf91f54adc7390cff6bf1c2572fd00ce9cfbd0611637e273059c4710a80c9",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanup": true,
+  "storage": {
+    "freeBytes": 91493437440,
+    "requiredBytes": 36507222016,
+    "passed": true
+  },
+  "generatedLockSha256": "6501dc4651c91749a77c08c947166fbd6a8c901cda0324437d46c8baf01b2206",
+  "sourceUnchanged": true,
+  "intentionalGeneratedChanges": [
+    "package-lock.json"
+  ],
+  "sourceGuardPassed": true
+}
