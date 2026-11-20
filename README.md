@@ -1,5 +1,9 @@
 # Intakelet
 
+<!-- project-family:start -->
+> **Project family:** [Developer Tools & Extensions](https://github.com/alvarovillalbaa#developer-tools-and-extensions) · **Area:** Onboarding SDKs
+<!-- project-family:end -->
+
 Last updated: 2026-11-15
 
 An onboarding SDK for turning customer files and public websites into reviewed
